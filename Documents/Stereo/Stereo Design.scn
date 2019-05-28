@@ -1,0 +1,89 @@
+<Version=1>
+<Sceen="Stereo Design">
+<File="E:\My Projects\Grape\Documents\Stereo\Stereo Design.scn">
+<Folder="E:\My Projects\Grape\Documents\Stereo">
+<EyeOrg=-3.0978;1.29765;-3.91449>
+<EyeAng=0.0623774;0.267193;-0.0173348;0.961466>
+<Color=0.5;0.5;0.5;1>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=0>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=-1>
+<OcclusionOn=-1>
+<OcclusionArea=0.08092>
+<WaitState=0>
+<Object="T3dfxRect">
+<Uid=8>
+<CalcNum=4>
+<Org=0;0;0>
+<Scl=4.66267;2.8235;1>
+<Quat=0.707107;0;0;0.707107>
+<VelMax=0.1>
+<EyePnt=0.5;0;0>
+<LookAtInd=2>
+<Size=1;1;0.001>
+</Object>
+<Object="T3dfxLightBulb">
+<Name="New Light Bulb">
+<Uid=9>
+<CalcNum=12>
+<Org=1.67447;1.71429;-2.04204>
+<Scl=0.2;0.2;0.2>
+<VelMax=0.1>
+<EyePnt=0.1;0;0>
+<LookAtInd=2>
+<Light="T3dfxLightPoint">
+<Use=-1>
+<Name="New Light Bulb">
+<Color=1;1;1;1>
+<Factor=4>
+<Ambient=0.8>
+<Diffuse=0.8>
+<Specular=0.8>
+<Range=20>
+</Light>
+</Object>
+<Object="T3dfxCompInst">
+<Name="PC Table Comp">
+<Uid=10>
+<CalcNum=0>
+<Org=0;0;0>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\PC Table Comp.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Logitech Satelite">
+<Uid=50>
+<CalcNum=0>
+<Org=-1.53538;0;0.438318>
+<Quat=0;-0.144492;0;0.989505>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Satelite.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Logitech Satelite">
+<Uid=55>
+<CalcNum=0>
+<Org=1.49108;0;0.42903>
+<Quat=0;0.109778;0;0.993956>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Satelite.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="TV Table">
+<Uid=56>
+<Org=-1.11487;0.0274;0>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\TV Table.cmp">
+</Object>
+</Sceen>

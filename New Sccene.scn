@@ -1,0 +1,32 @@
+<Version=1>
+<Sceen="New Sccene">
+<File="New Sccene.scn">
+<Folder="E:\My Projects\Grape\Documents">
+<EyeOrg=-1.44346;0.903266;-9.51334>
+<EyeAng=0.0275915;0.157561;0.150427;0.975596>
+<Color=0;0;0;0>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=0>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=0>
+<OcclusionOn=0>
+<OcclusionArea=5000>
+<WaitState=0>
+<Object="T3dfxCube">
+<Uid=2>
+<Org=1;1;1>
+<EyePnt=0.5;0;0>
+<CalcNum=2>
+</Object>
+</Sceen>

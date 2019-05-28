@@ -1,0 +1,37 @@
+<Version=1>
+<Comp="Logitech Front Speaker">
+<Object="T3dfxContainer">
+<Name="Logitech Front Speaker">
+<Uid=2>
+<CalcNum=0>
+<Org=0;0;0>
+<VelMax=0.1>
+<Object="T3dfxCube">
+<Name="Speaker">
+<Uid=3>
+<CalcNum=1>
+<Org=0;0.0144104;-0.00340604>
+<Scl=0.17;0.1;0.09>
+<Quat=0.0000000030573;0.99755;0.0699428;-0.0000000436043>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.085;0;0>
+<Color=0;0;0;1>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\LogitechSmall.jpg">
+<TxtStyle=0>
+</Object>
+<Object="T3dfxCube">
+<Name="Foot">
+<Uid=4>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.4;0.005;0.2>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.2;0;0>
+<Color=0;0;0;0>
+<Size=0.285714;1;0.428571>
+</Object>
+</Object>
+</Comp>

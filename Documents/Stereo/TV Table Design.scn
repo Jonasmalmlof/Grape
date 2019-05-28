@@ -1,0 +1,133 @@
+<Version=1>
+<Sceen="TV Table Design">
+<File="E:\My Projects\Grape\Documents\Stereo\TV Table Design.scn">
+<Folder="E:\My Projects\Grape\Documents\Stereo">
+<EyeOrg=2.39335;1.25347;-1.79969>
+<EyeAng=0.0942831;-0.374006;0.0382527;0.921828>
+<Color=0;0;0;1>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=0>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=-1>
+<OcclusionOn=-1>
+<OcclusionArea=0.12088>
+<WaitState=0>
+<Object="T3dfxContainer">
+<Name="TV Table">
+<Uid=2>
+<CalcNum=0>
+<Org=0;0;0>
+<Quat=0;-0.000398458;0;0.999999>
+<VelMax=0.1>
+<Object="T3dfxCompInst">
+<Name="Logitech Sub Wofer">
+<Uid=3>
+<CalcNum=0>
+<Org=0.295658;0.0745645;0.283876>
+<Quat=0;0.707107;0;0.707107>
+<VelMax=0.1>
+<EyePnt=0.165;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Sub Wofer.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Logitech Front Speaker">
+<Uid=5>
+<CalcNum=0>
+<Org=0.411667;0.610741;0.102442>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Front Speaker.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Logitech Control">
+<Uid=9>
+<CalcNum=0>
+<Org=0.644427;0.0712049;0.123501>
+<Quat=0;0.984864;0;-0.173324>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Control.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Cable Tuner">
+<Uid=13>
+<CalcNum=0>
+<Org=0.230388;0.431932;0.184798>
+<Quat=0;0.999897;0;-0.014203>
+<VelMax=0.1>
+<EyePnt=0.115;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Cable Tuner.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Stereo Bench">
+<Uid=15>
+<CalcNum=0>
+<Org=0;0;0>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Stereo Bench.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="TV Philips">
+<Uid=27>
+<CalcNum=0>
+<Org=0.412242;0.61127;0.336826>
+<Quat=0;0.999983;0;0.00579624>
+<CenterY=0>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\TV Philips.cmp">
+</Object>
+</Object>
+<Object="T3dfxLightBulb">
+<Name="New Light Bulb">
+<Uid=31>
+<CalcNum=12>
+<Org=0.640236;1.17862;1.71304>
+<Scl=0.2;0.2;0.2>
+<VelMax=0.1>
+<EyePnt=0.1;0;0>
+<LookAtInd=2>
+<Light="T3dfxLightPoint">
+<Use=-1>
+<Name="New Light Bulb">
+<Color=1;1;1;1>
+<Factor=1.94286>
+<Ambient=0.8>
+<Diffuse=0.8>
+<Specular=0.8>
+<Range=20>
+</Light>
+</Object>
+<Object="T3dfxRect">
+<Uid=32>
+<CalcNum=4>
+<Org=-1.10822;0.977247;0.271813>
+<Scl=2.81969;1.62297;1>
+<Quat=0;-0.707107;0;0.707109>
+<VelMax=0.1>
+<EyePnt=0.5;0;0>
+<LookAtInd=2>
+<Color=0.75;0.75;0.75;1>
+<Size=1.01562;0.885417;0.001>
+</Object>
+<Object="T3dfxRect">
+<Uid=33>
+<CalcNum=4>
+<Org=0;0;0.390033>
+<Scl=1.81216;2.36796;1>
+<Quat=0.707107;0;0;0.707107>
+<VelMax=0.1>
+<EyePnt=0.5;0;0>
+<LookAtInd=2>
+<Color=0.5;0.25;0;1>
+<Size=1;1;0.001>
+</Object>
+</Sceen>

@@ -1,0 +1,30 @@
+<Version=1>
+<Comp="Spacer Fin">
+<Object="T3dfxContainer">
+<Name="Spacer Fin">
+<Uid=54>
+<Org=0;0;0>
+<Object="T3dfxTube">
+<Uid=53>
+<CalcNum=12>
+<Org=0.4;0.586913;2.09117>
+<Scl=0.101797;1;1.22191>
+<Size=0.6;0.9;0.6>
+</Object>
+<Object="T3dfxTube">
+<Uid=51>
+<CalcNum=12>
+<Org=0;1.03255;2.09117>
+<Scl=0.112659;1.93427;1.22191>
+<Quat=0.0000000237076;-0.00000000263429;0.70711;0.707104>
+<Size=0.6;0.9;0.6>
+</Object>
+<Object="T3dfxTube">
+<Uid=49>
+<CalcNum=12>
+<Org=-0.4;0.586913;2.09117>
+<Scl=0.101797;1;1.22191>
+<Size=0.6;0.9;0.6>
+</Object>
+</Object>
+</Comp>

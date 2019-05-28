@@ -1,0 +1,15 @@
+<Version=1>
+<Comp="PC Midi">
+<Object="T3dfxCube">
+<Name="PC Midi">
+<Uid=26>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.27;0.22;0.35>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.135;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\PcVrum.jpg">
+</Object>
+</Comp>

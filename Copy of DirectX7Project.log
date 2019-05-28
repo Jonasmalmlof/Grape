@@ -1,0 +1,57 @@
+13:52:21.394    Memory (b) Main Created        48776
+13:52:21.396    Memory (b)                     48732 (48732)
+13:52:21.399  
+13:52:21.401  String Resources.StartUp:
+13:52:21.411    Memory (b)                     57804 (9072)
+13:52:21.413  
+13:52:21.416  TMySettings.StartUp:
+13:52:21.419    Memory (b)                     57856 (52)
+13:52:21.421  
+13:52:21.423  TMyMessageFactory.StartUp
+13:52:21.426    Memory (b)                     58028 (172)
+13:52:21.428  
+13:52:21.430  TGrapeMain.Create:
+13:52:21.434    TTextureFrame.Create           72992 (14964)
+13:52:21.437    TFrame1.Create                 68556 (-4436)
+13:52:21.441    TTrackFrame.Create             76844 (8288)
+13:52:21.446    TObjectListFrame.Create        85024 (8180)
+13:52:21.453    TLogFrame.Create               91864 (6840)
+13:52:21.458    TSubPropFrame.Create           107620 (15756)
+13:52:21.463    TObjectFrame.Create            103236 (-4384)
+13:52:21.470    TSceenFrame.Create             109588 (6352)
+13:52:21.476    T3dfxProcAppInit.Create        106632 (-2956)
+13:52:21.479  
+13:52:21.481  T3dfxProcAppInit.Perform 1:
+13:52:21.485    TGrapeMain.StartUp             106956 (324)
+13:52:21.493    TLogFrame.StartUp              106948 (-8)
+13:52:21.497    TTextureFrame.StartUp          107524 (576)
+13:52:21.499    TFrame1.StartUp                107516 (-8)
+13:52:21.502    TTrackFrame.StartUp            107520 (4)
+13:52:21.510  Frame W 287 H 461
+13:52:21.532  WM_RESIZEMAIN
+13:52:21.535  WM_RESIZEMAIN
+13:52:21.543  
+13:52:21.545  TGrapeMain.MainLoop:
+13:52:21.548    Run                            120100 (12580)
+13:52:21.550  
+13:52:21.553  T3dfxProcAppInit.Perform 2:
+13:52:21.556    T3dfxProcAppInit.StartUp       120192 (92)
+13:52:21.559    T3dfx.StartUp                  120332 (140)
+13:52:21.585    T3dfx.CreateDevice
+13:52:21.648    Capabilities:
+13:52:21.652    Fog Range                      On
+13:52:21.652    Max Lights                     10
+13:52:21.656    N-Pathces                      Off
+13:52:21.656    B-splines                      Off
+13:52:21.664    RT-patches                     Off
+13:52:21.664    RT-Pathces Zero                Off
+13:52:21.668  Screen Height 1080
+13:52:21.668  Screen Width  1920
+13:52:21.672  Want Height 287 Got 461
+13:52:21.672  Want Width  461 Got 287
+13:52:21.676    Texture Memory                 4095(Mb)
+13:52:21.676    Query Device                   Ok
+13:52:21.684    T3dfx.InitD3D                  121120 (788)
+13:52:21.688    T3dfxTextureD3D.StartUp        137428 (16308)
+13:52:21.692    T3dfxCompFactory.StartUp       137516 (88)
+13:52:21.692    Load Scene                     

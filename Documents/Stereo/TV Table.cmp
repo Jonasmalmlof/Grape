@@ -1,0 +1,66 @@
+<Version=1>
+<Comp="TV Table">
+<Object="T3dfxContainer">
+<Name="TV Table">
+<Uid=2>
+<CalcNum=0>
+<Org=0;0;0>
+<Quat=0;-0.000398458;0;0.999999>
+<VelMax=0.1>
+<Object="T3dfxCompInst">
+<Name="Logitech Sub Wofer">
+<Uid=3>
+<CalcNum=0>
+<Org=0.295658;0.0745645;0.283876>
+<Quat=0;0.707107;0;0.707107>
+<VelMax=0.1>
+<EyePnt=0.165;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Sub Wofer.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Logitech Front Speaker">
+<Uid=4>
+<CalcNum=0>
+<Org=0.411667;0.610741;0.102442>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Front Speaker.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Logitech Control">
+<Uid=5>
+<CalcNum=0>
+<Org=0.644427;0.0712049;0.123501>
+<Quat=0;0.984864;0;-0.173324>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Logitech Control.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Cable Tuner">
+<Uid=6>
+<CalcNum=0>
+<Org=0.230388;0.431932;0.184798>
+<Quat=0;0.999897;0;-0.014203>
+<VelMax=0.1>
+<EyePnt=0.115;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Cable Tuner.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Stereo Bench">
+<Uid=7>
+<CalcNum=0>
+<Org=0;0;0>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\Stereo Bench.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="TV Philips">
+<Uid=8>
+<CalcNum=0>
+<Org=0.412242;0.61127;0.336826>
+<Quat=0;0.999983;0;0.00579624>
+<CenterY=0>
+<VelMax=0.1>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\TV Philips.cmp">
+</Object>
+</Object>
+</Comp>

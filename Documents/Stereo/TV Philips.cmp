@@ -1,0 +1,46 @@
+<Version=1>
+<Comp="TV Philips">
+<Object="T3dfxContainer">
+<Name="TV Philips">
+<Uid=2>
+<CalcNum=0>
+<Org=0;0;0>
+<VelMax=0.1>
+<Object="T3dfxCube">
+<Name="Screen">
+<Uid=3>
+<CalcNum=1>
+<Org=0;0.42;0.0249832>
+<Scl=1;0.6;0.03>
+<Quat=0;0.0549723;0;0.998488>
+<VelMax=0.1>
+<EyePnt=0.5;0;0>
+<Color=0;0;0;1>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\PhilipsScreen.jpg">
+<TxtStyle=0>
+</Object>
+<Object="T3dfxCube">
+<Name="Stand">
+<Uid=4>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.07;0.181257;0.05>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.035;0;0>
+<Color=0;0;0;0>
+</Object>
+<Object="T3dfxCube">
+<Name="Foot">
+<Uid=5>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.4;0.005;0.2>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.2;0;0>
+<Color=0;0;0;0>
+</Object>
+</Object>
+</Comp>

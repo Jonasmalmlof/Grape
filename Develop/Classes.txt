@@ -1,0 +1,1408 @@
+Classes in Hiearchy:
+
+TObject
+  Size: 4(b)
+  Used in Modules:
+     DirectX7Unit.pas
+     DirectX7Unit.pas
+     DirectX7Unit.pas
+     T3dfxUnit.pas
+     T3dfxUnit.pas
+     T3dfxUnit.pas
+     TFrame1Unit.pas
+     TFrame1Unit.pas
+     TFrame1Unit.pas
+     TMySettingsUnit.pas
+     TMySettingsUnit.pas
+     TMySettingsUnit.pas
+  Sub Classes:
+    T3dfxProcList
+      Size: 8(b)
+      Module: T3dfxProcBaseUnit.pas
+      Lines: 178
+      Used in Modules:
+         DirectX7Unit.pas
+    T3dfxRenderer
+      Size: 160(b)
+      Module: T3dfxRendererUnit.pas
+      Lines: 1720
+      Used in Modules:
+         DirectX7Unit.pas
+    T3dfxRenderObj
+      Size: 156(b)
+      Module: T3dfxRendererUnit.pas
+      Lines. (1720)
+    T3dfxViewPort
+      Size: 468(b)
+      Module: T3dfxViewPortUnit.pas
+      Lines: 2326
+      Used in Modules:
+         DirectX7Unit.pas
+         T3dfxUnit.pas
+    TCustomIniFile
+      Size: 8(b)
+      Sub Classes:
+        TIniFile
+          Size: 8(b)
+          Sub Classes:
+            TGenIniFile
+              Size: 8(b)
+              Module: TGenIniFileUnit.pas
+              Lines: 314
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+                 TMySettingsUnit.pas
+                 TMySettingsUnit.pas
+                 TMySettingsUnit.pas
+    TGenAppPropBase
+      Size: 20(b)
+      Module: TGenAppPropUnit.pas
+      Lines: 1559
+      Sub Classes:
+        TGenAppPropBool
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropColor
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropCustomColors
+          Size: 28(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropDouble
+          Size: 32(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropFont
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropInt
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropPoint
+          Size: 28(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropRect
+          Size: 36(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropString
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+        TGenAppPropStringList
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+          Lines. (1559)
+    TGenAppPropList
+      Size: 8(b)
+      Module: TGenAppPropUnit.pas
+      Lines. (1559)
+    TGenHsv
+      Size: 16(b)
+      Module: TGenHsvUnit.pas
+      Lines: 378
+    TGenLog
+      Size: 480(b)
+      Module: TGenLogUnit.pas
+      Lines: 263
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+    TGenObject
+      Size: 4(b)
+      Module: TGenObjectUnit.pas
+      Lines: 145
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         T3dfxUnit.pas
+         T3dfxUnit.pas
+         T3dfxUnit.pas
+         TMySettingsUnit.pas
+         TMySettingsUnit.pas
+         TMySettingsUnit.pas
+      Sub Classes:
+        T3dfx
+          Size: 88(b)
+          Module: T3dfxUnit.pas
+          Lines: 586
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             TFrame1Unit.pas
+             TFrame1Unit.pas
+             TMySettingsUnit.pas
+             TMySettingsUnit.pas
+             TResStringUnit.pas
+             TResStringUnit.pas
+        T3dfxBase
+          Size: 264(b)
+          Module: T3dfxBaseUnit.pas
+          Lines: 3376
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             T3dfxUnit.pas
+             T3dfxUnit.pas
+             TFrame1Unit.pas
+             TFrame1Unit.pas
+             TMySettingsUnit.pas
+             TMySettingsUnit.pas
+          Sub Classes:
+            T3dfxViewBase
+              Size: 368(b)
+              Module: T3dfxViewBaseUnit.pas
+              Lines: 540
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+              Sub Classes:
+                T3dfxChildBase
+                  Size: 380(b)
+                  Module: T3dfxChildBaseUnit.pas
+                  Lines: 744
+                  Used in Modules:
+                     DirectX7Unit.pas
+                     DirectX7Unit.pas
+                  Sub Classes:
+                    T3dfxActionBase
+                      Size: 384(b)
+                      Module: T3dfxActionBaseUnit.pas
+                      Lines: 870
+                      Used in Modules:
+                         DirectX7Unit.pas
+                         DirectX7Unit.pas
+                      Sub Classes:
+                        T3dfxPropBase
+                          Size: 384(b)
+                          Module: T3dfxPropBaseUnit.pas
+                          Lines: 680
+                          Used in Modules:
+                             DirectX7Unit.pas
+                             DirectX7Unit.pas
+                          Sub Classes:
+                            T3dfxCompInst
+                              Size: 388(b)
+                              Module: T3dfxCompInstUnit.pas
+                              Lines: 519
+                              Used in Modules:
+                                 DirectX7Unit.pas
+                            T3dfxContainer
+                              Size: 384(b)
+                              Module: T3dfxContainerUnit.pas
+                              Lines: 148
+                              Used in Modules:
+                                 DirectX7Unit.pas
+                                 DirectX7Unit.pas
+                              Sub Classes:
+                                T3dfxComponent
+                                  Size: 388(b)
+                                  Module: T3dfxComponentUnit.pas
+                                  Lines: 475
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                T3dfxLightContainer
+                                  Size: 384(b)
+                                  Module: T3dfxLightContainerUnit.pas
+                                  Lines: 60
+                            T3dfxPrim
+                              Size: 428(b)
+                              Module: T3dfxPrimUnit.pas
+                              Lines: 917
+                              Used in Modules:
+                                 DirectX7Unit.pas
+                                 DirectX7Unit.pas
+                              Sub Classes:
+                                T3dfxMesh
+                                  Size: 460(b)
+                                  Module: T3dfxMeshUnit.pas
+                                  Lines: 535
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                     DirectX7Unit.pas
+                                  Sub Classes:
+                                    T3dfxMeshFile
+                                      Size: 464(b)
+                                      Module: T3dfxMeshFileUnit.pas
+                                      Lines: 589
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                         DirectX7Unit.pas
+                                    T3dfxMeshText
+                                      Size: 480(b)
+                                      Module: T3dfxMeshTextUnit.pas
+                                      Lines: 693
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                         DirectX7Unit.pas
+                                T3dfxVertexed
+                                  Size: 440(b)
+                                  Module: T3dfxVertexedUnit.pas
+                                  Lines: 201
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                     DirectX7Unit.pas
+                                  Sub Classes:
+                                    T3dfxConLine
+                                      Size: 480(b)
+                                      Module: T3dfxConLineUnit.pas
+                                      Lines: 652
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                    T3dfxEyeView
+                                      Size: 440(b)
+                                      Module: T3dfxEyeViewUnit.pas
+                                      Lines: 165
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                    T3dfxLineList
+                                      Size: 440(b)
+                                      Module: T3dfxLineListUnit.pas
+                                      Lines: 83
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                      Sub Classes:
+                                        T3dfxExtentBoxSimple
+                                          Size: 448(b)
+                                          Module: T3dfxExtentBoxSimpleUnit.pas
+                                          Lines: 523
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxLaserLine
+                                          Size: 504(b)
+                                          Module: T3dfxLaserLineUnit.pas
+                                          Lines: 467
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxLine
+                                          Size: 444(b)
+                                          Module: T3dfxLineUnit.pas
+                                          Lines: 551
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                          Sub Classes:
+                                            T3dfxDebugLine
+                                              Size: 448(b)
+                                              Module: T3dfxDebugLineUnit.pas
+                                              Lines: 109
+                                        T3dfxOcclusionBox
+                                          Size: 512(b)
+                                          Module: T3dfxOcclusionBoxUnit.pas
+                                          Lines: 299
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxScreenLine
+                                          Size: 440(b)
+                                          Module: T3dfxScreenLineUnit.pas
+                                          Lines: 126
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxWorld
+                                          Size: 440(b)
+                                          Module: T3dfxWorldUnit.pas
+                                          Lines: 113
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                    T3dfxPointList
+                                      Size: 440(b)
+                                      Module: T3dfxPointListUnit.pas
+                                      Lines: 263
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                         DirectX7Unit.pas
+                                         T3dfxUnit.pas
+                                         T3dfxUnit.pas
+                                      Sub Classes:
+                                        T3dfxBeacon
+                                          Size: 448(b)
+                                          Module: T3dfxBeaconUnit.pas
+                                          Lines: 481
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxGalax
+                                          Size: 440(b)
+                                          Module: T3dfxGalaxUnit.pas
+                                          Lines: 184
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxGrid
+                                          Size: 440(b)
+                                          Module: T3dfxGridUnit.pas
+                                          Lines: 219
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxPointFire
+                                          Size: 440(b)
+                                          Module: T3dfxPointFireUnit.pas
+                                          Lines: 230
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxScraps
+                                          Size: 468(b)
+                                          Module: T3dfxScrapsUnit.pas
+                                          Lines: 316
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                             DirectX7Unit.pas
+                                    T3dfxShockWave
+                                      Size: 464(b)
+                                      Module: T3dfxShockWaveUnit.pas
+                                      Lines: 351
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                         DirectX7Unit.pas
+                                    T3dfxTriStripe
+                                      Size: 440(b)
+                                      Module: T3dfxTriStripeUnit.pas
+                                      Lines: 130
+                                      Used in Modules:
+                                         DirectX7Unit.pas
+                                         DirectX7Unit.pas
+                                      Sub Classes:
+                                        T3dfxArrow
+                                          Size: 440(b)
+                                          Module: T3dfxArrowUnit.pas
+                                          Lines: 199
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxBoard
+                                          Size: 440(b)
+                                          Module: T3dfxBoardUnit.pas
+                                          Lines: 188
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxBullet
+                                          Size: 476(b)
+                                          Module: T3dfxBulletUnit.pas
+                                          Lines: 385
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxRocket
+                                          Size: 504(b)
+                                          Module: T3dfxRocketUnit.pas
+                                          Lines: 570
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                        T3dfxTexture
+                                          Size: 480(b)
+                                          Module: T3dfxTextureUnit.pas
+                                          Lines: 956
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                          Sub Classes:
+                                            T3dfxDynamic
+                                              Size: 504(b)
+                                              Module: T3dfxDynamicUnit.pas
+                                              Lines: 417
+                                              Used in Modules:
+                                                 DirectX7Unit.pas
+                                              Sub Classes:
+                                                T3dfxCube
+                                                  Size: 536(b)
+                                                  Module: T3dfxCubeUnit.pas
+                                                  Lines: 926
+                                                  Used in Modules:
+                                                     DirectX7Unit.pas
+                                                T3dfxGlobe
+                                                  Size: 504(b)
+                                                  Module: T3dfxGlobeUnit.pas
+                                                  Lines: 382
+                                                  Used in Modules:
+                                                     DirectX7Unit.pas
+                                                  Sub Classes:
+                                                    T3dfxEye
+                                                      Size: 504(b)
+                                                      Module: T3dfxEyeUnit.pas
+                                                      Lines: 163
+                                                      Used in Modules:
+                                                         DirectX7Unit.pas
+                                                T3dfxRect
+                                                  Size: 508(b)
+                                                  Module: T3dfxRectUnit.pas
+                                                  Lines: 511
+                                                  Used in Modules:
+                                                     DirectX7Unit.pas
+                                                T3dfxTube
+                                                  Size: 508(b)
+                                                  Module: T3dfxTubeUnit.pas
+                                                  Lines: 358
+                                                  Used in Modules:
+                                                     DirectX7Unit.pas
+                                            T3dfxTriComp
+                                              Size: 484(b)
+                                              Module: T3dfxTriCompUnit.pas
+                                              Lines: 309
+                                              Used in Modules:
+                                                 DirectX7Unit.pas
+                                        T3dfxTriEdit
+                                          Size: 472(b)
+                                          Module: T3dfxTriEditUnit.pas
+                                          Lines: 709
+                                          Used in Modules:
+                                             DirectX7Unit.pas
+                                             TFrame1Unit.pas
+                                    T3dfxXyxLines
+                                      Size: 440(b)
+                                      Module: T3dfxXyxLinesUnit.pas
+                                      Lines: 147
+        T3dfxCompType
+          Size: 20(b)
+          Module: T3dfxCompTypeUnit.pas
+          Lines: 398
+          Used in Modules:
+             DirectX7Unit.pas
+        T3dfxExtent
+          Size: 32(b)
+          Module: T3dfxExtentUnit.pas
+          Lines: 439
+          Used in Modules:
+             DirectX7Unit.pas
+        T3dfxHit
+          Size: 176(b)
+          Module: T3dfxHitUnit.pas
+          Lines: 618
+          Used in Modules:
+             TFrame1Unit.pas
+        T3dfxLight
+          Size: 160(b)
+          Module: T3dfxLightUnit.pas
+          Lines: 1103
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             T3dfxUnit.pas
+             T3dfxUnit.pas
+          Sub Classes:
+            T3dfxLightFlash
+              Size: 184(b)
+              Module: T3dfxLightFlashUnit.pas
+              Lines: 251
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            T3dfxLightPoint
+              Size: 160(b)
+              Module: T3dfxLightPointUnit.pas
+              Lines: 74
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            T3dfxLightSpot
+              Size: 160(b)
+              Module: T3dfxLightSpotUnit.pas
+              Lines: 292
+              Used in Modules:
+                 DirectX7Unit.pas
+        T3dfxLightList
+          Size: 24(b)
+          Module: T3dfxLightListUnit.pas
+          Lines: 409
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             T3dfxUnit.pas
+             T3dfxUnit.pas
+        T3dfxObjectFileId
+          Size: 8(b)
+          Module: T3dfxObjectFileIdsUnit.pas
+          Lines: 453
+        T3dfxObjectListBase
+          Size: 24(b)
+          Module: T3dfxObjectListBaseUnit.pas
+          Lines: 882
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+          Sub Classes:
+            T3dfxCompObjectList
+              Size: 24(b)
+              Module: T3dfxCompObjectListUnit.pas
+              Lines: 69
+            T3dfxObjectChildList
+              Size: 28(b)
+              Module: T3dfxObjectChildListUnit.pas
+              Lines: 91
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            T3dfxObjectList
+              Size: 28(b)
+              Module: T3dfxObjectListUnit.pas
+              Lines: 195
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+        T3dfxProcBase
+          Size: 4(b)
+          Module: T3dfxProcBaseUnit.pas
+          Lines. (178)
+          Used in Modules:
+             DirectX7Unit.pas
+          Sub Classes:
+            T3dfxProcAppInit
+              Size: 4(b)
+              Module: T3dfxProcAppInitUnit.pas
+              Lines: 142
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxProcConLineEdit
+              Size: 44(b)
+              Module: T3dfxProcConLineEditUnit.pas
+              Lines: 320
+            T3dfxProcKeys
+              Size: 8(b)
+              Module: T3dfxProcKeysUnit.pas
+              Lines: 495
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxProcLineEdit
+              Size: 52(b)
+              Module: T3dfxProcLineEditUnit.pas
+              Lines: 405
+            T3dfxProcMainShutDown
+              Size: 4(b)
+              Module: T3dfxProcMainShutDownUnit.pas
+              Lines: 212
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxProcObjBase
+              Size: 12(b)
+              Module: T3dfxProcObjBaseUnit.pas
+              Lines: 84
+            T3dfxProcObjEdit
+              Size: 100(b)
+              Module: T3dfxProcObjEditUnit.pas
+              Lines: 564
+            T3dfxProcRender
+              Size: 76(b)
+              Module: T3dfxProcRenderUnit.pas
+              Lines: 539
+        T3dfxSceen
+          Size: 100(b)
+          Module: T3dfxSceenUnit.pas
+          Lines: 2072
+          Used in Modules:
+             DirectX7Unit.pas
+             T3dfxUnit.pas
+             TMySettingsUnit.pas
+        T3dfxScenePick
+          Size: 16(b)
+          Module: T3dfxScenePickUnit.pas
+          Lines: 117
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             TMySettingsUnit.pas
+             TMySettingsUnit.pas
+        T3dfxTextureD3D
+          Size: 16(b)
+          Module: T3dfxTextureD3DUnit.pas
+          Lines: 351
+          Used in Modules:
+             DirectX7Unit.pas
+        T3dfxVertex
+          Size: 40(b)
+          Module: T3dfxVertexUnit.pas
+          Lines: 1386
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+        T3dfxVertexBuffer
+          Size: 36(b)
+          Module: T3dfxVertexBufferUnit.pas
+          Lines: 821
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+          Sub Classes:
+            T3dfxVbArrow
+              Size: 36(b)
+              Module: T3dfxVbArrowUnit.pas
+              Lines: 148
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbBoard
+              Size: 36(b)
+              Module: T3dfxVbBoardUnit.pas
+              Lines: 168
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbBullet
+              Size: 36(b)
+              Module: T3dfxVbBulletUnit.pas
+              Lines: 151
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbConLine
+              Size: 36(b)
+              Module: T3dfxVbConLineUnit.pas
+              Lines: 128
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbCubeNormal
+              Size: 100(b)
+              Module: T3dfxVbCubeNormalUnit.pas
+              Lines: 396
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbCubeTexture
+              Size: 128(b)
+              Module: T3dfxVbCubeTextureUnit.pas
+              Lines: 779
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbExtentBox
+              Size: 48(b)
+              Module: T3dfxVbExtentBoxUnit.pas
+              Lines: 346
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbExtentBoxSimple
+              Size: 44(b)
+              Module: T3dfxVbExtentBoxSimpleUnit.pas
+              Lines: 294
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbGalax
+              Size: 36(b)
+              Module: T3dfxVbGalaxUnit.pas
+              Lines: 113
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbGrid
+              Size: 36(b)
+              Module: T3dfxVbGridUnit.pas
+              Lines: 148
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbLaserLine
+              Size: 36(b)
+              Module: T3dfxVbLaserLineUnit.pas
+              Lines: 154
+            T3dfxVbLineList
+              Size: 36(b)
+              Module: T3dfxVbLineListUnit.pas
+              Lines: 424
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbLookAt
+              Size: 36(b)
+              Module: T3dfxVbLookAtUnit.pas
+              Lines: 153
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbNormals
+              Size: 44(b)
+              Module: T3dfxVbNormalsUnit.pas
+              Lines: 286
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbPointFire
+              Size: 60(b)
+              Module: T3dfxVbPointFireUnit.pas
+              Lines: 455
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbPositions
+              Size: 52(b)
+              Module: T3dfxVbPositionsUnit.pas
+              Lines: 299
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbRay
+              Size: 36(b)
+              Module: T3dfxVbRayUnit.pas
+              Lines: 167
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbRays
+              Size: 10072(b)
+              Module: T3dfxVbRaysUnit.pas
+              Lines: 252
+            T3dfxVbRectNormal
+              Size: 36(b)
+              Module: T3dfxVbRectNormalUnit.pas
+              Lines: 193
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbRectTexture
+              Size: 36(b)
+              Module: T3dfxVbRectTextureUnit.pas
+              Lines: 193
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbRocket
+              Size: 56(b)
+              Module: T3dfxVbRocketUnit.pas
+              Lines: 215
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            T3dfxVbScent
+              Size: 36(b)
+              Module: T3dfxVbScentUnit.pas
+              Lines: 117
+            T3dfxVbScraps
+              Size: 36(b)
+              Module: T3dfxVbScrapsUnit.pas
+              Lines: 117
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            T3dfxVbShockWave
+              Size: 36(b)
+              Module: T3dfxVbShockWaveUnit.pas
+              Lines: 125
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            T3dfxVbSphereNormal
+              Size: 36(b)
+              Module: T3dfxVbSphereNormalUnit.pas
+              Lines: 195
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbSphereTexture
+              Size: 36(b)
+              Module: T3dfxVbSphereTextureUnit.pas
+              Lines: 238
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbTriangle
+              Size: 40(b)
+              Module: T3dfxVbTriangleUnit.pas
+              Lines: 132
+            T3dfxVbTriStripe
+              Size: 52(b)
+              Module: T3dfxVbTriStripeUnit.pas
+              Lines: 292
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbTubeNormal
+              Size: 36(b)
+              Module: T3dfxVbTubeNormalUnit.pas
+              Lines: 201
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbTubeTexture
+              Size: 36(b)
+              Module: T3dfxVbTubeTextureUnit.pas
+              Lines: 221
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbWorld
+              Size: 36(b)
+              Module: T3dfxVbWorldUnit.pas
+              Lines: 170
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxVbXyzLines
+              Size: 48(b)
+              Module: T3dfxVbXyzLinesUnit.pas
+              Lines: 187
+        T3dfxVertexList
+          Size: 16(b)
+          Module: T3dfxVertexUnit.pas
+          Lines. (1386)
+        TFpsTimer
+          Size: 32(b)
+          Module: TFpsTimerUnit.pas
+          Lines: 157
+          Used in Modules:
+             T3dfxUnit.pas
+             T3dfxUnit.pas
+        TGenAverage
+          Size: 16(b)
+          Module: TGenAverageUnit.pas
+          Lines: 82
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+        TGenClasses
+          Size: 4(b)
+          Module: TGenClassesUnit.pas
+          Lines: 2328
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             T3dfxUnit.pas
+             T3dfxUnit.pas
+             TFrame1Unit.pas
+             TFrame1Unit.pas
+             TMySettingsUnit.pas
+             TMySettingsUnit.pas
+             TResStringUnit.pas
+             TResStringUnit.pas
+        TGenSleep
+          Size: 16(b)
+          Module: TGenSleepUnit.pas
+          Lines: 84
+          Used in Modules:
+             DirectX7Unit.pas
+        TGenStrObj
+          Size: 8(b)
+          Module: TGenStrObjUnit.pas
+          Lines: 260
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+          Sub Classes:
+            T3dfxStrObj
+              Size: 8(b)
+              Module: T3dfxStrObjUnit.pas
+              Lines: 495
+              Used in Modules:
+                 DirectX7Unit.pas
+                 TResStringUnit.pas
+        TMyClass
+          Size: 32(b)
+          Module: TGenClassesUnit.pas
+          Lines. (2328)
+        TMyClassList
+          Size: 8(b)
+          Module: TGenClassesUnit.pas
+          Lines. (2328)
+        TMyFactoryBase
+          Size: 4(b)
+          Module: TMyFactoryBaseUnit.pas
+          Lines: 84
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+          Sub Classes:
+            T3dfxBaseFactory
+              Size: 28(b)
+              Module: T3dfxBaseFactoryUnit.pas
+              Lines: 691
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxCompFactory
+              Size: 12(b)
+              Module: T3dfxCompFactoryUnit.pas
+              Lines: 357
+              Used in Modules:
+                 DirectX7Unit.pas
+            T3dfxLightFactory
+              Size: 12(b)
+              Module: T3dfxLightFactoryUnit.pas
+              Lines: 315
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            T3dfxObjectFileIdList
+              Size: 8(b)
+              Module: T3dfxObjectFileIdsUnit.pas
+              Lines. (453)
+            T3dfxSceneFactory
+              Size: 4(b)
+              Module: T3dfxSceneFactoryUnit.pas
+              Lines: 452
+              Used in Modules:
+                 DirectX7Unit.pas
+                 TMySettingsUnit.pas
+            T3dfxTextureFactory
+              Size: 8(b)
+              Module: T3dfxTextureD3DUnit.pas
+              Lines. (351)
+            TMyMenuList
+              Size: 20(b)
+              Module: TMyMenuUnit.pas
+              Lines: 2489
+            TMyMessageFactory
+              Size: 60(b)
+              Module: TMyMessageFactoryUnit.pas
+              Lines: 1388
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+            TMyObjActionFactory
+              Size: 16(b)
+              Module: TMyObjActionFactoryUnit.pas
+              Lines: 273
+              Used in Modules:
+                 DirectX7Unit.pas
+                 DirectX7Unit.pas
+        TMyMenuBase
+          Size: 16(b)
+          Module: TMyMenuUnit.pas
+          Lines. (2489)
+        TMyModule
+          Size: 32(b)
+          Module: TGenClassesUnit.pas
+          Lines. (2328)
+        TMyModuleList
+          Size: 20(b)
+          Module: TGenClassesUnit.pas
+          Lines. (2328)
+        TMyObjActionList
+          Size: 56(b)
+          Module: TMyObjActionListUnit.pas
+          Lines: 829
+          Used in Modules:
+             DirectX7Unit.pas
+        TMySettings
+          Size: 108(b)
+          Module: TMySettingsUnit.pas
+          Lines: 560
+          Used in Modules:
+             DirectX7Unit.pas
+             T3dfxUnit.pas
+             TFrame1Unit.pas
+        TMySubscription
+          Size: 12(b)
+          Module: TMyMessageFactoryUnit.pas
+          Lines. (1388)
+        TMySymbol
+          Size: 20(b)
+          Module: TGenClassesUnit.pas
+          Lines. (2328)
+        TMySymbolList
+          Size: 8(b)
+          Module: TGenClassesUnit.pas
+          Lines. (2328)
+        TPropNode
+          Size: 84(b)
+          Module: TPropNodeUnit.pas
+          Lines: 2138
+          Used in Modules:
+             DirectX7Unit.pas
+          Sub Classes:
+            TPropNodeBool
+              Size: 92(b)
+              Module: TPropNodeUnit.pas
+              Lines. (2138)
+            TPropNodeNovalue
+              Size: 88(b)
+              Module: TPropNodeUnit.pas
+              Lines. (2138)
+            TPropNodeSingle
+              Size: 116(b)
+              Module: TPropNodeUnit.pas
+              Lines. (2138)
+              Sub Classes:
+                TPropNodeInteger
+                  Size: 120(b)
+                  Module: TPropNodeUnit.pas
+                  Lines. (2138)
+            TPropNodeText
+              Size: 88(b)
+              Module: TPropNodeUnit.pas
+              Lines. (2138)
+            TPropNodeTypes
+              Size: 100(b)
+              Module: TPropNodeUnit.pas
+              Lines. (2138)
+    TGenPickFolder
+      Size: 16(b)
+      Module: TGenPickFolderUnit.pas
+      Lines: 296
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         TMySettingsUnit.pas
+         TMySettingsUnit.pas
+    TGenTextFile
+      Size: 476(b)
+      Module: TGenTextFileUnit.pas
+      Lines: 792
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         TMySettingsUnit.pas
+         TMySettingsUnit.pas
+         TMySettingsUnit.pas
+      Sub Classes:
+        T3dfxObjectFile
+          Size: 500(b)
+          Module: T3dfxObjectFileUnit.pas
+          Lines: 539
+          Used in Modules:
+             DirectX7Unit.pas
+             TMySettingsUnit.pas
+    TGenTime
+      Size: 200(b)
+      Module: TGenTimeUnit.pas
+      Lines: 717
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+    THsvBaseFrame
+      Size: 44(b)
+      Module: THsvBaseFrameUnit.pas
+      Lines: 191
+      Sub Classes:
+        THsvHueCircleFrame
+          Size: 68(b)
+          Module: THsvHueCircleFrameUnit.pas
+          Lines: 390
+        THsvHueFrame
+          Size: 44(b)
+          Module: THsvHueFrameUnit.pas
+          Lines: 106
+        THsvSatFrame
+          Size: 44(b)
+          Module: THsvSatFrameUnit.pas
+          Lines: 107
+        THsvSatValFrame
+          Size: 44(b)
+          Module: THsvSatValFrameUnit.pas
+          Lines: 127
+        THsvValueFrame
+          Size: 44(b)
+          Module: THsvValueFrameUnit.pas
+          Lines: 106
+    THsvHueSatFrame
+      Size: 44(b)
+      Module: THsvHueSatFrameUnit.pas
+      Lines: 223
+    TList
+      Size: 16(b)
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+         T3dfxUnit.pas
+         T3dfxUnit.pas
+         T3dfxUnit.pas
+         TResStringUnit.pas
+         TResStringUnit.pas
+         TResStringUnit.pas
+      Sub Classes:
+        TObjectList
+          Size: 20(b)
+          Used in Modules:
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             DirectX7Unit.pas
+             T3dfxUnit.pas
+             T3dfxUnit.pas
+             T3dfxUnit.pas
+          Sub Classes:
+            TDebugObjectList
+              Size: 20(b)
+              Module: TGenObjectUnit.pas
+              Lines. (145)
+    TMyMessage
+      Size: 24(b)
+      Module: TMyMessageFactoryUnit.pas
+      Lines. (1388)
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+    TMyObjActionBase
+      Size: 12(b)
+      Module: TMyObjActionBaseUnit.pas
+      Lines: 588
+      Used in Modules:
+         DirectX7Unit.pas
+         DirectX7Unit.pas
+      Sub Classes:
+        TMyObjActionBaseProc
+          Size: 28(b)
+          Module: TMyObjActionBaseProcUnit.pas
+          Lines: 319
+          Used in Modules:
+             DirectX7Unit.pas
+          Sub Classes:
+            TMyObjActionDockShip
+              Size: 112(b)
+              Module: TMyObjActionDockShipUnit.pas
+              Lines: 323
+              Used in Modules:
+                 DirectX7Unit.pas
+            TMyObjActionLaunchShip
+              Size: 36(b)
+              Module: TMyObjActionLaunchShipUnit.pas
+              Lines: 198
+              Used in Modules:
+                 DirectX7Unit.pas
+            TMyObjActionSearchEnemy
+              Size: 88(b)
+              Module: TMyObjActionSearchEnemyUnit.pas
+              Lines: 453
+              Used in Modules:
+                 DirectX7Unit.pas
+            TMyObjActionTrackRandom
+              Size: 52(b)
+              Module: TMyObjActionTrackRandomUnit.pas
+              Lines: 584
+              Used in Modules:
+                 DirectX7Unit.pas
+              Sub Classes:
+                TMyObjActionBombEnemy
+                  Size: 68(b)
+                  Module: TMyObjActionBombEnemyUnit.pas
+                  Lines: 371
+                  Used in Modules:
+                     DirectX7Unit.pas
+                TMyObjActionGoEnemy
+                  Size: 88(b)
+                  Module: TMyObjActionGoEnemyUnit.pas
+                  Lines: 442
+                  Used in Modules:
+                     DirectX7Unit.pas
+                  Sub Classes:
+                    TMyObjActionBomberToEnemy
+                      Size: 88(b)
+                      Module: TMyObjActionBomberToEnemyUnit.pas
+                      Lines: 158
+                      Used in Modules:
+                         DirectX7Unit.pas
+                TMyObjActionGoHome
+                  Size: 80(b)
+                  Module: TMyObjActionGoHomeUnit.pas
+                  Lines: 554
+                  Used in Modules:
+                     DirectX7Unit.pas
+        TMyObjActionFire
+          Size: 68(b)
+          Module: TMyObjActionFireUnit.pas
+          Lines: 845
+          Used in Modules:
+             DirectX7Unit.pas
+        TMyObjActionFlash
+          Size: 76(b)
+          Module: TMyObjActionFlashUnit.pas
+          Lines: 472
+          Used in Modules:
+             DirectX7Unit.pas
+        TMyObjActionMotherShip
+          Size: 44(b)
+          Module: TMyObjActionMotherShipUnit.pas
+          Lines: 800
+          Used in Modules:
+             DirectX7Unit.pas
+        TMyObjActionMove
+          Size: 40(b)
+          Module: TMyObjActionMoveUnit.pas
+          Lines: 614
+          Used in Modules:
+             DirectX7Unit.pas
+        TMyObjActionRotate
+          Size: 76(b)
+          Module: TMyObjActionRotateUnit.pas
+          Lines: 732
+          Used in Modules:
+             DirectX7Unit.pas
+        TMyObjActionScale
+          Size: 40(b)
+          Module: TMyObjActionScaleUnit.pas
+          Lines: 600
+          Used in Modules:
+             DirectX7Unit.pas
+        TMyObjActionTime
+          Size: 28(b)
+          Module: TMyObjActionTimeUnit.pas
+          Lines: 531
+          Used in Modules:
+             DirectX7Unit.pas
+        TMyObjActionTrackObj
+          Size: 40(b)
+          Module: TMyObjActionTrackObjUnit.pas
+          Lines: 605
+          Used in Modules:
+             DirectX7Unit.pas
+    TPersistent
+      Size: 4(b)
+      Sub Classes:
+        TComponent
+          Size: 48(b)
+          Used in Modules:
+             TFrame1Unit.pas
+             TFrame1Unit.pas
+             TFrame1Unit.pas
+          Sub Classes:
+            TCommonDialog
+              Size: 88(b)
+              Sub Classes:
+                TOpenDialog
+                  Size: 180(b)
+                  Sub Classes:
+                    TGenOpenDialog
+                      Size: 192(b)
+                      Module: TGenOpenDialogUnit.pas
+                      Lines: 133
+                      Used in Modules:
+                         DirectX7Unit.pas
+                         DirectX7Unit.pas
+                    TSaveDialog
+                      Size: 184(b)
+                      Sub Classes:
+                        TGenSaveAsDialog
+                          Size: 192(b)
+                          Module: TGenSaveAsDialogUnit.pas
+                          Lines: 132
+                          Used in Modules:
+                             DirectX7Unit.pas
+            TControl
+              Size: 348(b)
+              Sub Classes:
+                TWinControl
+                  Size: 516(b)
+                  Used in Modules:
+                     T3dfxUnit.pas
+                     T3dfxUnit.pas
+                     T3dfxUnit.pas
+                  Sub Classes:
+                    TCustomEdit
+                      Size: 544(b)
+                      Sub Classes:
+                        TCustomMemo
+                          Size: 556(b)
+                          Sub Classes:
+                            TCustomRichEdit
+                              Size: 648(b)
+                              Sub Classes:
+                                TGenRtfFile
+                                  Size: 664(b)
+                                  Module: TGenRtfFileUnit.pas
+                                  Lines: 752
+                    TScrollingWinControl
+                      Size: 540(b)
+                      Sub Classes:
+                        TCustomForm
+                          Size: 760(b)
+                          Sub Classes:
+                            TForm
+                              Size: 760(b)
+                              Used in Modules:
+                                 DirectX7Unit.pas
+                                 DirectX7Unit.pas
+                                 DirectX7Unit.pas
+                              Sub Classes:
+                                TGenColorPick
+                                  Size: 2248(b)
+                                  Module: TGenColorPickUnit.pas
+                                  Lines: 2048
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                     DirectX7Unit.pas
+                                     DirectX7Unit.pas
+                                TGenPickFont
+                                  Size: 828(b)
+                                  Module: TGenPickFontUnit.pas
+                                  Lines: 562
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                     DirectX7Unit.pas
+                                     DirectX7Unit.pas
+                                TGenProgressWin
+                                  Size: 780(b)
+                                  Module: TGenProgressWinUnit.pas
+                                  Lines: 235
+                                TGrapeMain
+                                  Size: 864(b)
+                                  Module: DirectX7Unit.pas
+                                  Lines: 1380
+                                TTimeZoneDlg
+                                  Size: 788(b)
+                                  Module: TTimeZoneDlgUnit.pas
+                                  Lines: 163
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                     DirectX7Unit.pas
+                        TCustomFrame
+                          Size: 544(b)
+                          Sub Classes:
+                            TFrame
+                              Size: 544(b)
+                              Used in Modules:
+                                 DirectX7Unit.pas
+                                 TFrame1Unit.pas
+                              Sub Classes:
+                                TFrame1
+                                  Size: 552(b)
+                                  Module: TFrame1Unit.pas
+                                  Lines: 328
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                TLogFrame
+                                  Size: 588(b)
+                                  Module: TLogFrameUnit.pas
+                                  Lines: 294
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                TObjectFrame
+                                  Size: 600(b)
+                                  Module: ObjectFrameUnit.pas
+                                  Lines: 423
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                TObjectListFrame
+                                  Size: 596(b)
+                                  Module: TObjectListFrameUnit.pas
+                                  Lines: 883
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                TSceenFrame
+                                  Size: 604(b)
+                                  Module: TSceenFrameUnit.pas
+                                  Lines: 685
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                TSubPropFrame
+                                  Size: 652(b)
+                                  Module: TSubPropFrameUnit.pas
+                                  Lines: 1072
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                TTextureFrame
+                                  Size: 616(b)
+                                  Module: TTextureFrameUnit.pas
+                                  Lines: 564
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+                                     TFrame1Unit.pas
+                                TTrackFrame
+                                  Size: 728(b)
+                                  Module: TTrackFrameUnit.pas
+                                  Lines: 1085
+                                  Used in Modules:
+                                     DirectX7Unit.pas
+    TPropNodeList
+      Size: 12(b)
+      Module: TPropNodeUnit.pas
+      Lines. (2138)
+    TTempDataBase
+      Size: 4(b)
+      Module: TTempDataBaseUnit.pas
+      Lines: 98
+      Used in Modules:
+         DirectX7Unit.pas
+      Sub Classes:
+        TGenAmmoData
+          Size: 12(b)
+          Module: TGenAmmoDataUnit.pas
+          Lines: 63
+          Used in Modules:
+             DirectX7Unit.pas
+        TGenShipData
+          Size: 60(b)
+          Module: TGenShipDataUnit.pas
+          Lines: 145
+          Used in Modules:
+             DirectX7Unit.pas
+          Sub Classes:
+            TBombShipData
+              Size: 60(b)
+              Module: TBombShipDataUnit.pas
+              Lines: 61
+              Used in Modules:
+                 DirectX7Unit.pas
+            TScoutShipData
+              Size: 60(b)
+              Module: TScoutShipDataUnit.pas
+              Lines: 62
+              Used in Modules:
+                 DirectX7Unit.pas

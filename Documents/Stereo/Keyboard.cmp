@@ -1,0 +1,18 @@
+<Version=1>
+<Comp="Keyboard">
+<Object="T3dfxCube">
+<Name="Keyboard">
+<Uid=20>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.45;0.15;0.012>
+<Quat=-0.707107;0;0;0.707107>
+<CenterZ=0>
+<VelMax=0.1>
+<EyePnt=0.225;0;0>
+<Color=0;0;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\Keyboard.jpg">
+<TxtStyle=0>
+</Object>
+</Comp>

@@ -1,0 +1,46 @@
+<Version=1>
+<Comp="Logitech Satelite">
+<Object="T3dfxContainer">
+<Name="Logitech Satelite">
+<Uid=2>
+<CalcNum=0>
+<Org=0;0;0>
+<VelMax=0.1>
+<Object="T3dfxCube">
+<Name="Foot">
+<Uid=3>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.23;0.03;0.23>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.115;0;0>
+<Color=0;0;0;0>
+</Object>
+<Object="T3dfxTube">
+<Name="Stand">
+<Uid=4>
+<CalcNum=5>
+<Org=0;0.0257143;0>
+<Scl=0.0114271;0.842564;0.0114271>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.0025;0;0>
+<Color=0;0;0;0>
+</Object>
+<Object="T3dfxCube">
+<Name="Speaker">
+<Uid=5>
+<CalcNum=1>
+<Org=0;0.93;0>
+<Scl=0.16;0.1;0.09>
+<Quat=0.707107;0.707107;-0.0000000309086;-0.0000000309086>
+<VelMax=0.1>
+<EyePnt=0.08;0;0>
+<Color=0;0;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\LogitechSmall.jpg">
+<TxtStyle=0>
+</Object>
+</Object>
+</Comp>

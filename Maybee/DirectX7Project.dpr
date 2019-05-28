@@ -1,0 +1,176 @@
+program DirectX7Project;
+
+
+
+{%File 'Develop\Classes.txt'}
+{%File 'Develop\ClassHier.txt'}
+{%File 'Develop\Ducument.txt'}
+{%File 'Develop\Modules.txt'}
+{%File 'Develop\Symbols.txt'}
+
+uses
+  Forms,
+  TMyLogUnit in '..\MyDirectx\TMyLogUnit.pas',
+  DirectX7Unit in 'DirectX7Unit.pas' {GrapeMain},
+  TMyClassesUnit in '..\My Units\TMyClassesUnit.pas',
+  TFrame1Unit in 'TFrame1Unit.pas' {Frame1: TFrame},
+  T3dfxUnit in 'T3dfxUnit.pas',
+  T3dfxGalaxUnit in '..\MyDirectx\T3dfxGalaxUnit.pas',
+  T3dfxRectUnit in '..\MyDirectx\T3dfxRectUnit.pas',
+  T3dfxMeshUnit in '..\MyDirectx\T3dfxMeshUnit.pas',
+  T3dfxEyeViewUnit in '..\MyDirectx\T3dfxEyeViewUnit.pas',
+  TAverageUnit in '..\My Units\TAverageUnit.pas',
+  T3dfxRocketUnit in '..\MyDirectx\T3dfxRocketUnit.pas',
+  T3dfxShockWaveUnit in '..\MyDirectx\T3dfxShockWaveUnit.pas',
+  T3dfxScrapsUnit in '..\MyDirectx\T3dfxScrapsUnit.pas',
+  T3dfxSceenUnit in '..\MyDirectx\T3dfxSceenUnit.pas',
+  T3dfxSceenAllUnit in '..\MyDirectx\T3dfxSceenAllUnit.pas',
+  T3dfxSpotLightUnit in '..\MyDirectx\T3dfxSpotLightUnit.pas',
+  T3dfxSceenShipsUnit in '..\MyDirectx\T3dfxSceenShipsUnit.pas',
+  T3dfxSceenRoomsUnit in '..\MyDirectx\T3dfxSceenRoomsUnit.pas',
+  T3dfxBillyUnit in '..\MyDirectx\T3dfxBillyUnit.pas',
+  T3dfxBoardUnit in '..\MyDirectx\T3dfxBoardUnit.pas',
+  T3dfxOakCubbardUnit in '..\MyDirectx\T3dfxOakCubbardUnit.pas',
+  T3dfxContainerUnit in '..\MyDirectx\T3dfxContainerUnit.pas',
+  T3dfxOakTableUnit in '..\MyDirectx\T3dfxOakTableUnit.pas',
+  T3dfxTvTableUnit in '..\MyDirectx\T3dfxTvTableUnit.pas',
+  T3dfxOptiquestUnit in '..\MyDirectx\T3dfxOptiquestUnit.pas',
+  T3dfxSmallLampUnit in '..\MyDirectx\T3dfxSmallLampUnit.pas',
+  T3dfxTvPhilpsUnit in '..\MyDirectx\T3dfxTvPhilpsUnit.pas',
+  T3dfxLogitechSpeakerUnit in '..\MyDirectx\T3dfxLogitechSpeakerUnit.pas',
+  T3dfxWorkTableUnit in '..\MyDirectx\T3dfxWorkTableUnit.pas',
+  T3dfxWorkShelfUnit in '..\MyDirectx\T3dfxWorkShelfUnit.pas',
+  T3dfxTextureD3DUnit in '..\MyDirectx\T3dfxTextureD3DUnit.pas',
+  T3dfxKitchenTableUnit in '..\MyDirectx\T3dfxKitchenTableUnit.pas',
+  T3dfxWindowUnit in '..\MyDirectx\T3dfxWindowUnit.pas',
+  T3dfxCubeUnit in '..\MyDirectx\T3dfxCubeUnit.pas',
+  T3dfxTaraceDoorUnit in '..\MyDirectx\T3dfxTaraceDoorUnit.pas',
+  T3dfxFrontDoorUnit in '..\MyDirectx\T3dfxFrontDoorUnit.pas',
+  T3dfxIndoorDoorUnit in '..\MyDirectx\T3dfxIndoorDoorUnit.pas',
+  T3dfxScreenLineUnit in '..\MyDirectx\T3dfxScreenLineUnit.pas',
+  T3dfxGeometryUnit in '..\MyDirectx\T3dfxGeometryUnit.pas',
+  T3dfxPointListUnit in '..\MyDirectx\T3dfxPointListUnit.pas',
+  T3dfxLineListUnit in '..\MyDirectx\T3dfxLineListUnit.pas',
+  T3dfxTriStripeUnit in '..\MyDirectx\T3dfxTriStripeUnit.pas',
+  T3dfxHitUnit in '..\MyDirectx\T3dfxHitUnit.pas',
+  T3dfxLineUnit in '..\MyDirectx\T3dfxLineUnit.pas',
+  T3dfxAiLightUnit in '..\MyDirectx\T3dfxAiLightUnit.pas',
+  T3dfxLightBulbUnit in '..\MyDirectx\T3dfxLightBulbUnit.pas',
+  T3dfxKitchenLightUnit in '..\MyDirectx\T3dfxKitchenLightUnit.pas',
+  TFpsTimerUnit in '..\MyDirectx\TFpsTimerUnit.pas',
+  T3dfxBulletUnit in '..\MyDirectx\T3dfxBulletUnit.pas',
+  T3dfxSceenTestUnit in '..\MyDirectx\T3dfxSceenTestUnit.pas',
+  T3dfxEyeUnit in '..\MyDirectx\T3dfxEyeUnit.pas',
+  ObjectFrameUnit in '..\MyDirectx\ObjectFrameUnit.pas' {ObjectFrame: TFrame},
+  T3dfxGuiUnit in '..\MyDirectx\T3dfxGuiUnit.pas',
+  SubFrameBaseUnit in '..\MyDirectx\SubFrameBaseUnit.pas' {SubFrameBase: TFrame},
+  TTRackFrameUnit in '..\MyDirectx\TTRackFrameUnit.pas' {TRackFrame: TFrame},
+  TObjectListFrameUnit in '..\MyDirectx\TObjectListFrameUnit.pas' {ObjectListFrame: TFrame},
+  TLogFrameUnit in '..\MyDirectx\TLogFrameUnit.pas' {LogFrame: TFrame},
+  T3dfxWorldUnit in '..\MyDirectx\T3dfxWorldUnit.pas',
+  T3dfxArrowUnit in '..\MyDirectx\T3dfxArrowUnit.pas',
+  T3dfxLightUnit in '..\MyDirectx\T3dfxLightUnit.pas',
+  T3dfxTubeUnit in '..\MyDirectx\T3dfxTubeUnit.pas',
+  T3dfxLightListUnit in '..\MyDirectx\T3dfxLightListUnit.pas',
+  T3dfxObjectListUnit in '..\MyDirectx\T3dfxObjectListUnit.pas',
+  TSubPropFrameUnit in '..\MyDirectx\TSubPropFrameUnit.pas' {SubPropFrame: TFrame},
+  TSceenFrameUnit in '..\MyDirectx\TSceenFrameUnit.pas' {SceenFrame: TFrame},
+  T3dfxGridUnit in '..\MyDirectx\T3dfxGridUnit.pas',
+  T3dfxVbUnit in '..\MyDirectx\T3dfxVbUnit.pas',
+  T3dfxTriEditUnit in '..\MyDirectx\T3dfxTriEditUnit.pas',
+  T3dfxTriCompUnit in '..\MyDirectx\T3dfxTriCompUnit.pas',
+  T3dfxVertexUnit in '..\MyDirectx\T3dfxVertexUnit.pas',
+  TTextureFrameUnit in '..\MyDirectx\TTextureFrameUnit.pas' {TextureFrame: TFrame},
+  T3dfxVertexBufferUnit in '..\MyDirectx\T3dfxVertexBufferUnit.pas',
+  T3dfxVbNormalsUnit in '..\MyDirectx\T3dfxVbNormalsUnit.pas',
+  T3dfxVbPositionsUnit in '..\MyDirectx\T3dfxVbPositionsUnit.pas',
+  T3dfxExtentUnit in '..\MyDirectx\T3dfxExtentUnit.pas',
+  T3dfxVbTriStripeUnit in '..\MyDirectx\T3dfxVbTriStripeUnit.pas',
+  T3dfxTypesUnit in '..\MyDirectx\T3dfxTypesUnit.pas',
+  T3dfxVbWorldUnit in '..\MyDirectx\T3dfxVbWorldUnit.pas',
+  T3dfxVbLookAtUnit in '..\MyDirectx\T3dfxVbLookAtUnit.pas',
+  T3dfxVbRayUnit in '..\MyDirectx\T3dfxVbRayUnit.pas',
+  T3dfxVbExtentBoxUnit in '..\MyDirectx\T3dfxVbExtentBoxUnit.pas',
+  T3dfxVbShockWaveUnit in '..\MyDirectx\T3dfxVbShockWaveUnit.pas',
+  T3dfxVbBulletUnit in '..\MyDirectx\T3dfxVbBulletUnit.pas',
+  T3dfxVbRocketUnit in '..\MyDirectx\T3dfxVbRocketUnit.pas',
+  T3dfxVbGalaxUnit in '..\MyDirectx\T3dfxVbGalaxUnit.pas',
+  T3dfxVbScrapsUnit in '..\MyDirectx\T3dfxVbScrapsUnit.pas',
+  T3dfxVbLineListUnit in '..\MyDirectx\T3dfxVbLineListUnit.pas',
+  T3dfxGlobeUnit in '..\MyDirectx\T3dfxGlobeUnit.pas',
+  T3dfxExtentBoxSimpleUnit in '..\MyDirectx\T3dfxExtentBoxSimpleUnit.pas',
+  T3dfxVbExtentBoxSimpleUnit in '..\MyDirectx\T3dfxVbExtentBoxSimpleUnit.pas',
+  T3dfxVbArrowUnit in '..\MyDirectx\T3dfxVbArrowUnit.pas',
+  T3dfxVbTubeNormalUnit in '..\MyDirectx\T3dfxVbTubeNormalUnit.pas',
+  T3dfxVbTubeTextureUnit in '..\MyDirectx\T3dfxVbTubeTextureUnit.pas',
+  TMyStrUnit in '..\My Units\TMyStrUnit.pas',
+  T3dfxGenUnit in '..\MyDirectx\T3dfxGenUnit.pas',
+  TMyTextFileUnit in '..\My Units\TMyTextFileUnit.pas',
+  T3dfxObjectFileUnit in '..\MyDirectx\T3dfxObjectFileUnit.pas',
+  TMyCompPickUnit in '..\MyDirectx\TMyCompPickUnit.pas',
+  TMyTexturePickUnit in '..\MyDirectx\TMyTexturePickUnit.pas',
+  TMyColorPickUnit in '..\MyDirectx\TMyColorPickUnit.pas',
+  T3dfxCompTypeUnit in '..\MyDirectx\T3dfxCompTypeUnit.pas',
+  T3dfxObjectListBaseUnit in '..\MyDirectx\T3dfxObjectListBaseUnit.pas',
+  T3dfxCompObjectListUnit in '..\MyDirectx\T3dfxCompObjectListUnit.pas',
+  T3dfxCompTypeListUnit in '..\MyDirectx\T3dfxCompTypeListUnit.pas',
+  T3dfxCompInstUnit in '..\MyDirectx\T3dfxCompInstUnit.pas',
+  T3dfxObjectChildListUnit in '..\MyDirectx\T3dfxObjectChildListUnit.pas',
+  T3dfxVbSphereNormalUnit in '..\MyDirectx\T3dfxVbSphereNormalUnit.pas',
+  T3dfxVbSphereTextureUnit in '..\MyDirectx\T3dfxVbSphereTextureUnit.pas',
+  T3dfxVbRectNormalUnit in '..\MyDirectx\T3dfxVbRectNormalUnit.pas',
+  T3dfxVbRectTextureUnit in '..\MyDirectx\T3dfxVbRectTextureUnit.pas',
+  T3dfxVbBoardUnit in '..\MyDirectx\T3dfxVbBoardUnit.pas',
+  T3dfxVbCubeNormalUnit in '..\MyDirectx\T3dfxVbCubeNormalUnit.pas',
+  T3dfxVbCubeTextureUnit in '..\MyDirectx\T3dfxVbCubeTextureUnit.pas',
+  T3dfxVbGridUnit in '..\MyDirectx\T3dfxVbGridUnit.pas',
+  T3dfxMeshTextUnit in '..\MyDirectx\T3dfxMeshTextUnit.pas',
+  T3dfxMeshFileUnit in '..\MyDirectx\T3dfxMeshFileUnit.pas',
+  TMyPickFontDlgUnit in '..\MyDirectx\TMyPickFontDlgUnit.pas' {MyPickFontDlg},
+  TMySettingsUnit in 'TMySettingsUnit.pas',
+  TMyPickFolderUnit in '..\My Units\TMyPickFolderUnit.pas',
+  TMySaveObjectAsUnit in '..\MyDirectx\TMySaveObjectAsUnit.pas',
+  TMyActionUnit in '..\MyDirectx\TMyActionUnit.pas',
+  TMyPickSceneUnit in '..\MyDirectx\TMyPickSceneUnit.pas',
+  TMySaveSceneAsUnit in '..\MyDirectx\TMySaveSceneAsUnit.pas',
+  T3dfxSceenResUnit in '..\MyDirectx\T3dfxSceenResUnit.pas',
+  T3dfxLightPointUnit in '..\MyDirectx\T3dfxLightPointUnit.pas',
+  T3dfxLightSpotUnit in '..\MyDirectx\T3dfxLightSpotUnit.pas',
+  T3dfxLightFlashUnit in '..\MyDirectx\T3dfxLightFlashUnit.pas',
+  T3dfxRendererUnit in '..\MyDirectx\T3dfxRendererUnit.pas',
+  T3dfxOcclusionBoxUnit in '..\MyDirectx\T3dfxOcclusionBoxUnit.pas',
+  T3dfxVbTriangleUnit in '..\MyDirectx\T3dfxVbTriangleUnit.pas',
+  T3dfxVbRaysUnit in '..\MyDirectx\T3dfxVbRaysUnit.pas',
+  T3dfxActionBaseUnit in '..\MyDirectx\T3dfxActionBaseUnit.pas',
+  T3dfxActionListUnit in '..\MyDirectx\T3dfxActionListUnit.pas',
+  T3dfxProcBaseUnit in '..\MyDirectx\T3dfxProcBaseUnit.pas',
+  T3dfxProcUpdateRenderGuiUnit in '..\MyDirectx\T3dfxProcUpdateRenderGuiUnit.pas',
+  T3dfxProcRenderUnit in '..\MyDirectx\T3dfxProcRenderUnit.pas',
+  T3dfxProcAppInitUnit in '..\MyDirectx\T3dfxProcAppInitUnit.pas',
+  TMySleepUnit in '..\MyDirectx\TMySleepUnit.pas',
+  T3dfxProcMainShutDownUnit in '..\MyDirectx\T3dfxProcMainShutDownUnit.pas',
+  T3dfxProcKeysUnit in '..\MyDirectx\T3dfxProcKeysUnit.pas',
+  TMyIniFileUnit in '..\MyDirectx\TMyIniFileUnit.pas',
+  TMyMeshPickUnit in '..\MyDirectx\TMyMeshPickUnit.pas';
+
+{$R DirectX7Project.res}
+
+begin
+  // Start Logging before anything else
+
+  LogStartup;
+
+  Application.Initialize;
+  Application.Title := resGrape;
+
+  // Start Application Settings first
+
+  AppSettingsStartup;
+
+  Application.CreateForm(TGrapeMain, GrapeMain);
+  Application.Run;
+
+  // Shutdown Loging last
+
+  LogShutDown;
+end.

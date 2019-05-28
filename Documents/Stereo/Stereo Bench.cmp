@@ -1,0 +1,143 @@
+<Version=1>
+<Comp="Stereo Bench">
+<Object="T3dfxContainer">
+<Name="Stereo Bench">
+<Uid=2>
+<CalcNum=0>
+<Org=0;0;0>
+<Quat=0;-0.000398458;0;0.999999>
+<VelMax=0.1>
+<Object="T3dfxCube">
+<Name="Table Top">
+<Uid=3>
+<CalcNum=1>
+<Org=0.41;0.6;0.24>
+<Scl=0.82;0.02;0.48>
+<Quat=0;1;0;-0.0000000437114>
+<VelMax=0.1>
+<EyePnt=0.41;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\TvBoardTop.jpg">
+</Object>
+<Object="T3dfxCube">
+<Name="Table Bottom">
+<Uid=4>
+<CalcNum=1>
+<Org=0.41;0.06;0.24>
+<Scl=0.82;0.02;0.48>
+<Quat=0;1;0;-0.0000000437114>
+<VelMax=0.1>
+<EyePnt=0.41;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\TvBoardTop.jpg">
+</Object>
+<Object="T3dfxGlobe">
+<Name="Wheel">
+<Uid=5>
+<CalcNum=12>
+<Org=0.025;0.025;0.025>
+<Scl=0.05;0.05;0.05>
+<VelMax=0.1>
+<EyePnt=0.0125;0;0>
+<Color=0.1;0.1;0.1;0.1>
+</Object>
+<Object="T3dfxGlobe">
+<Name="Wheel">
+<Uid=6>
+<CalcNum=12>
+<Org=0.795;0.025;0.025>
+<Scl=0.05;0.05;0.05>
+<VelMax=0.1>
+<EyePnt=0.0125;0;0>
+<Color=0.0384615;0.0320513;0.0320513;1>
+</Object>
+<Object="T3dfxGlobe">
+<Name="Wheel">
+<Uid=7>
+<CalcNum=12>
+<Org=0.025;0.025;0.455>
+<Scl=0.05;0.05;0.05>
+<VelMax=0.1>
+<EyePnt=0.0125;0;0>
+<Color=0.1;0.1;0.1;0.1>
+</Object>
+<Object="T3dfxGlobe">
+<Name="Wheel">
+<Uid=8>
+<CalcNum=12>
+<Org=0.795;0.025;0.455>
+<Scl=0.05;0.05;0.05>
+<VelMax=0.1>
+<EyePnt=0.0125;0;0>
+<Color=0.1;0.1;0.1;0.1>
+<Ambient=0.525641>
+<Diffuse=0>
+</Object>
+<Object="T3dfxCube">
+<Name="Table Right Side">
+<Uid=9>
+<CalcNum=1>
+<Org=0.81;0.33;0.24>
+<Scl=0.52;0.02;0.48>
+<Quat=0.707107;0.707107;-0.0000000309086;-0.0000000309086>
+<VelMax=0.1>
+<EyePnt=0.26;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\TvBoardTop.jpg">
+</Object>
+<Object="T3dfxCube">
+<Name="Table Left Side">
+<Uid=10>
+<CalcNum=1>
+<Org=0.01;0.33;0.24>
+<Scl=0.52;0.02;0.48>
+<Quat=0.707107;0.707107;-0.0000000309086;-0.0000000309086>
+<VelMax=0.1>
+<EyePnt=0.26;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\TvBoardTop.jpg">
+</Object>
+<Object="T3dfxCube">
+<Name="Table Shelf">
+<Uid=11>
+<CalcNum=1>
+<Org=0.41;0.420514;0.25>
+<Scl=0.78;0.02;0.44>
+<Quat=0;1;0;-0.0000000437114>
+<VelMax=0.1>
+<EyePnt=0.39;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\TvBoardTop.jpg">
+</Object>
+<Object="T3dfxRect">
+<Name="Left Door">
+<Uid=12>
+<CalcNum=1>
+<Org=0.0218742;0.07;0>
+<Scl=0.992987;1;1>
+<CenterX=0>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.5;0;0>
+<Color=0.4;0.4;0.6;0.4>
+<Ttransp=-1>
+<TranspFct=1>
+<Size=0.39;0.52;0.001>
+</Object>
+<Object="T3dfxRect">
+<Name="Right Door">
+<Uid=13>
+<CalcNum=1>
+<Org=0.798209;0.07;0>
+<Scl=0.986862;1;1>
+<CenterX=2>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.5;0;0>
+<Color=0.4;0.4;0.6;0.4>
+<Ttransp=-1>
+<TranspFct=0.99359>
+<Size=0.39;0.52;0.001>
+</Object>
+</Object>
+</Comp>

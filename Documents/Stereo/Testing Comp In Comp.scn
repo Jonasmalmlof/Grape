@@ -1,0 +1,65 @@
+<Version=1>
+<Sceen="Testing Comp In Comp">
+<File="E:\My Projects\Grape\Documents\Stereo\Testing Comp In Comp.scn">
+<Folder="E:\My Projects\Grape\Documents\Stereo">
+<EyeOrg=-0.650006;1.14286;-2.20809>
+<EyeAng=0.0852232;0.187702;-0.01635;0.978385>
+<Color=0.5;0.5;0.5;1>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=0>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=0>
+<OcclusionOn=0>
+<OcclusionArea=5000>
+<WaitState=0>
+<Object="T3dfxRect">
+<Uid=2>
+<CalcNum=4>
+<Org=0;0;0>
+<Scl=3.21518;5.26206;3.21518>
+<Quat=-0.707107;0;0;0.707107>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Furniture\LivingroomFloor.jpg">
+<TxtMultX=6>
+<TxtMultY=6>
+<Size=1;1;0.001>
+</Object>
+<Object="T3dfxCompInst">
+<Name="TV Table">
+<Uid=3>
+<Org=0;0;0>
+<Quat=0;-0.0998325;0;0.994995>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\TV Table.cmp">
+</Object>
+<Object="T3dfxLightContainer">
+<Uid=4>
+<Org=1.25;2.875;-1.92708>
+<Light="T3dfxLightPoint">
+<Use=-1>
+<Name="Light Bulb">
+<Color=1;1;1;1>
+<Factor=4>
+<Ambient=0.8>
+<Diffuse=0.8>
+<Specular=0.8>
+<Range=20>
+</Light>
+<Object="T3dfxGlobe">
+<Uid=5>
+<CalcNum=12>
+<Org=0;0;0>
+<Scl=0.2;0.2;0.2>
+</Object>
+</Object>
+</Sceen>

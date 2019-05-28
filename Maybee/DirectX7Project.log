@@ -1,0 +1,38 @@
+12:44:40.0   LogStartup
+12:44:40.16  AppSettingsStartup
+12:44:40.31  T3dfxProcList.Create
+12:44:40.0   ---------------------------- INITIATING ----------------------------
+12:44:40.16  ActionListStartup
+12:44:40.47  T3dfxProcList.Create
+12:44:40.78  Capabilities:
+12:44:40.0   FogRange On
+12:44:40.0   TextureListStartup
+12:44:40.16  ObjectListStartup
+12:44:40.0   LightListStartup
+12:44:40.0   CompTypesStartup
+12:44:40.0   RendererStartup
+12:44:40.0   
+12:44:40.15  SceneLoadFromFile E:\My Projects\Grape\Documents\Sun and Ships.scn
+12:44:40.0   ERROR: (Load Scene) No File E:\My Projects\Grape\Documents\Sun and Ships.scn
+12:44:40.16  T3dfxSceen.Create New
+12:44:40.0   Refresh Scene Properties
+12:44:40.15  T3dfxSize 616
+12:44:40.0   ------------------------------ INITATED -----------------------------
+12:44:55.0   ------------------------------- CLOSING -----------------------------
+12:44:55.0   SceneShutDown
+12:44:55.0   T3dfxSceen.Destroy New
+12:44:55.0   T3dfxSceen.Unload New
+12:44:55.16  T3dfxProcList.Destroy
+12:44:55.15  RendererShutDown
+12:44:55.0   CompTypesShutdown 0
+12:44:55.0   ObjectListShutdown 0
+12:44:55.0   T3dfxObjectList.Destroy ListCount: 0 All Destroyed
+12:44:55.0   LightListShutdown 0
+12:44:55.16  T3dfxLightList.Destroy ListCount: 0 All Destroyed
+12:44:55.0   TextureListShutdown 0
+12:44:55.0   ActionListShutDown
+12:44:55.0   ClassesShutDown
+12:44:55.0   AppSettingsShutDown
+12:44:55.31  -------------------------------- ENDED ------------------------------
+12:44:55.0   T3dfxProcList.Destroy
+12:44:55.16  TMyLog.Destroy

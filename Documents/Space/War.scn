@@ -1,0 +1,280 @@
+<Version=1>
+<Sceen="War">
+<File="E:\My Projects\Grape\Documents\Space\War.scn">
+<Folder="E:\My Projects\Grape\Documents\Space">
+<EyeOrg=-4.97848;10.962;-39.1244>
+<EyeAng=0.128123;0.0610676;-0.00790444;0.989845>
+<Color=0;0;0;0>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=0>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=0>
+<OcclusionOn=0>
+<OcclusionArea=5000>
+<WaitState=-1>
+<Object="T3dfxCube">
+<Uid=8>
+<Org=1;1;1>
+<EyePnt=0.5;0;0>
+<CalcNum=2>
+</Object>
+<Object="T3dfxContainer">
+<Name="Spacer A">
+<Uid=9>
+<Fleet=2>
+<Org=10;-5;0>
+<EyePnt=0;0.320513;-0.66474>
+<LookAtInd=5>
+<Object="T3dfxCompInst">
+<Name="Spacer Engine A">
+<Uid=10>
+<Org=1.69098;-0.2;0>
+<LookAtInd=5>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Engine A.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Engine A">
+<Uid=20>
+<Org=-1.7;-0.2;0>
+<LookAtInd=5>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Engine A.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Body">
+<Uid=21>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Body.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=32>
+<Org=-0.3;-0.1;0.4>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=38>
+<Org=0.3;-0.1;0.4>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=39>
+<Org=0.3;-0.1;-0.1>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=40>
+<Org=-0.3;-0.1;-0.6>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=41>
+<Org=0.3;-0.1;-0.6>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=42>
+<Org=-0.3;-0.1;-0.1>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Cockpit">
+<Uid=43>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Cockpit.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Fin">
+<Uid=56>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Fin.cmp">
+</Object>
+<Object="T3dfxTube">
+<Name="A Gun">
+<Uid=61>
+<Org=-0.176571;0.00289816;-1.54549>
+<Scl=0.3;0.3;0.3>
+<Quat=0.707107;0;0;0.707107>
+<EyePnt=0;-0.320513;0>
+<LookAtInd=3>
+<UpVectorInd=5>
+<Action="TMyObjActionFire">
+<AfCls="Bullet">
+<AfVel=0.2>
+<AfAutoFire=-1>
+<AfReload=100>
+</Action>
+<Size=0.1;0.2;0.1>
+<CalcNum=6>
+</Object>
+<Object="T3dfxTube">
+<Name="A Gun">
+<Uid=62>
+<Org=0.2;0.00289816;-1.54549>
+<Scl=0.3;0.3;0.3>
+<Quat=0.707107;0;0;0.707107>
+<EyePnt=0;-0.320513;0>
+<LookAtInd=3>
+<UpVectorInd=5>
+<Action="TMyObjActionFire">
+<AfCls="Bullet">
+<AfVel=0.2>
+<AfAutoFire=-1>
+<AfReload=100>
+</Action>
+<Size=0.1;0.2;0.1>
+<CalcNum=6>
+</Object>
+</Object>
+<Object="T3dfxContainer">
+<Name="Spacer A">
+<Uid=63>
+<Fleet=1>
+<Org=-14.7691;-4.02132;0>
+<EyePnt=0;0.320513;-0.66474>
+<LookAtInd=5>
+<Object="T3dfxCompInst">
+<Name="Spacer Engine A">
+<Uid=64>
+<Org=1.69098;-0.2;0>
+<LookAtInd=5>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Engine A.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Engine A">
+<Uid=65>
+<Org=-1.7;-0.2;0>
+<LookAtInd=5>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Engine A.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Body">
+<Uid=66>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Body.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=67>
+<Org=-0.3;-0.1;0.4>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=68>
+<Org=0.3;-0.1;0.4>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=69>
+<Org=0.3;-0.1;-0.1>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=70>
+<Org=-0.3;-0.1;-0.6>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=71>
+<Org=0.3;-0.1;-0.6>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=72>
+<Org=-0.3;-0.1;-0.1>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Cockpit">
+<Uid=73>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Cockpit.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Fin">
+<Uid=74>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Fin.cmp">
+</Object>
+<Object="T3dfxTube">
+<Name="A Gun">
+<Uid=75>
+<Org=-0.176571;0.00289816;-1.54549>
+<Scl=0.3;0.3;0.3>
+<Quat=0.707107;0;0;0.707107>
+<EyePnt=0;-0.320513;0>
+<LookAtInd=3>
+<UpVectorInd=5>
+<Action="TMyObjActionFire">
+<AfCls="Bullet">
+<AfVel=0.2>
+<AfAutoFire=-1>
+<AfReload=100>
+</Action>
+<Size=0.1;0.2;0.1>
+<CalcNum=6>
+</Object>
+<Object="T3dfxTube">
+<Name="A Gun">
+<Uid=76>
+<Org=0.2;0.00289816;-1.54549>
+<Scl=0.3;0.3;0.3>
+<Quat=0.707107;0;0;0.707107>
+<EyePnt=0;-0.320513;0>
+<LookAtInd=3>
+<UpVectorInd=5>
+<Action="TMyObjActionFire">
+<AfCls="Bullet">
+<AfVel=0.2>
+<AfAutoFire=-1>
+<AfReload=100>
+</Action>
+<Size=0.1;0.2;0.1>
+<CalcNum=6>
+</Object>
+</Object>
+</Sceen>

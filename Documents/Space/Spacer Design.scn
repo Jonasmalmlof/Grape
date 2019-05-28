@@ -1,0 +1,170 @@
+<Version=1>
+<Sceen="Spacer Design">
+<File="E:\My Projects\Grape\Documents\Space\Spacer Design.scn">
+<Folder="E:\My Projects\Grape\Documents\Space">
+<EyeOrg=6.64879;5.3616;-11.3321>
+<EyeAng=0.166488;-0.240372;0.0418882;0.955379>
+<Color=0;0;0;0>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=-1>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=0>
+<OcclusionOn=0>
+<OcclusionArea=5000>
+<WaitState=0>
+<Object="T3dfxLightContainer">
+<Uid=2>
+<Org=2.73185;4.20214;-4.21886>
+<Scl=2.51252;2.51252;2.51252>
+<Light="T3dfxLightPoint">
+<Use=-1>
+<Name="Light Bulb">
+<Color=1;1;1;1>
+<Factor=4>
+<Ambient=0.8>
+<Diffuse=0.8>
+<Specular=0.8>
+<Range=20>
+</Light>
+<Object="T3dfxGlobe">
+<Uid=3>
+<CalcNum=12>
+<Org=0;0;0>
+<Scl=0.2;0.2;0.2>
+</Object>
+</Object>
+<Object="T3dfxContainer">
+<Name="Spacer A">
+<Uid=4>
+<Org=0;0;0>
+<EyePnt=0;0.320513;-0.66474>
+<LookAtInd=5>
+<Object="T3dfxCompInst">
+<Name="Spacer Engine A">
+<Uid=5>
+<Org=1.69098;-0.2;0>
+<LookAtInd=5>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Engine A.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Engine A">
+<Uid=15>
+<Org=-1.7;-0.2;0>
+<LookAtInd=5>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Engine A.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Body">
+<Uid=16>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Body.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=27>
+<Org=-0.3;-0.1;0.4>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=33>
+<Org=0.3;-0.1;0.4>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=34>
+<Org=0.3;-0.1;-0.1>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=35>
+<Org=-0.3;-0.1;-0.6>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=36>
+<Org=0.3;-0.1;-0.6>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Thruster">
+<Uid=37>
+<Org=-0.3;-0.1;-0.1>
+<Scl=0.5;0.5;0.5>
+<Quat=-0.104807;0;0;0.994492>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Thruster.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Cockpit">
+<Uid=38>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Cockpit.cmp">
+</Object>
+<Object="T3dfxCompInst">
+<Name="Spacer Fin">
+<Uid=51>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Space\Spacer Fin.cmp">
+</Object>
+<Object="T3dfxTube">
+<Name="A Gun">
+<Uid=58>
+<CalcNum=6>
+<Org=-0.176571;0.00289816;-1.54549>
+<Scl=0.3;0.3;0.3>
+<Quat=0.707107;0;0;0.707107>
+<EyePnt=0;-0.320513;0>
+<LookAtInd=3>
+<UpVectorInd=5>
+<Action="TMyObjActionFire">
+<AfCls="Bullet">
+<AfVel=0.2>
+<AfAutoFire=-1>
+<AfReload=100>
+</Action>
+<Size=0.1;0.2;0.1>
+</Object>
+<Object="T3dfxTube">
+<Name="A Gun">
+<Uid=112>
+<CalcNum=6>
+<Org=0.2;0.00289816;-1.54549>
+<Scl=0.3;0.3;0.3>
+<Quat=0.707107;0;0;0.707107>
+<EyePnt=0;-0.320513;0>
+<LookAtInd=3>
+<UpVectorInd=5>
+<Action="TMyObjActionFire">
+<AfCls="Bullet">
+<AfVel=0.2>
+<AfAutoFire=-1>
+<AfReload=100>
+</Action>
+<Size=0.1;0.2;0.1>
+</Object>
+</Object>
+</Sceen>

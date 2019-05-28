@@ -1,0 +1,3253 @@
+Module Documentation:
+
+
+Module: TGenShellUnit.pas
+------------------------------------------------------------------------------
+ Generic Shell Functions
+
+ Has no dependencies to other Units.
+
+ Functions;
+  DoShellCmd        Peform a Shell Command and wait for result;
+  IsProcessRunning  Return true if a specified process is running
+  KillProcess       KIll a running process by asking it
+  KillApplication   KILL an Application using WM_CLOSE
+  GetErrorString    Return a WIndows Error string from DWORD
+------------------------------------------------------------------------------
+
+Module: TGenStrUnit.pas
+------------------------------------------------------------------------------
+  String Generic Functions
+
+  Does not depend on any other Unit.
+
+  Functions available:
+  IsInt       Returns true if string contain an integer
+  IsFloat     Returns true if string contain a float
+  IsHex       Returns true if string contain a hexadecimal number
+  SizeToStr   Converts a Size (int64) to a meaningful string
+  ToStr       Converts int64, TPoint, TRect, TColor, etc. to a string
+  ToInt       Converts string to integer
+  ToFloat     Converts string to double
+  HexToInt    Converts Hex string to integer
+  FixLenStrF  Pads 'space' in front of string to get a specified width
+  FixLenStrB  Pads 'space' in back of string to get a specified width
+  StrCnvToDateTime  Extracts a TDateTime from a string
+------------------------------------------------------------------------------
+
+Module: TGenLogUnit.pas
+------------------------------------------------------------------------------
+  Generic Logging Unit
+
+  It writes Log to application.log file, and can optionally add Log
+  to a TMemo Control.
+
+  It has no dependencies to other units
+
+ Usage
+
+  1) Startit early in your application by calling TLog.StartUp. If you are
+     using a TMemo, it must have been created first.
+     OnCreate Main Form is good.
+  2) Use the Singleton TheLog.Log(string) to write Log Info
+     You can use LogToFile if you dont want it written to the TMemo.
+  3) Close it late in your application by using TGenLog.ShutDown. If you
+     have a TMemo, then it must still exist. OnDestroy Main form is good.
+------------------------------------------------------------------------------
+
+Module: TGenRtfFileUnit.pas
+------------------------------------------------------------------------------
+  Subclasses TRichEdit control used for writing RTF files
+
+
+
+  Testing a number of lines:
+    A                         B               C
+    Ai                        Bi              Ci
+    Aii                       Bii             Cii
+    Aiii                      Biii            Ciii
+    Aiiii                     Biiii           Ciii
+    Aiiiii                    Biiiii          Ciiii
+    Aiiiiii                   Biiiiii         Ci
+    Aiiiiiii                  Biiiiiii        Ci
+    Aiiiiiiii                 Biiiiiiii       Ci
+    Aiiiiiiiii                Biiiiiiiii      Ci
+    Aiiiiiiiiii               Biiiiiiiiii     Ci
+    Aiiiiiiiiiii              Biiiiiiiiiii    Ci
+    Aiiiiiiiiiiii             Biiiiiiiiiiii   Ci
+    Aiiiiiiiiiiiii            Biiiiiiiiiiiii  Ci
+    Aiiiiiiiiiiiiii           Bi              Ci
+    Aiiiiiiiiiiiiiii          Bi              Ci
+    Aiiiiiiiiiiiiiiii         Bi              Ci
+    Aiiiiiiiiiiiiiiiii        Bi              Ci
+    Aiiiiiiiiiiiiiiiiii       Bi              Ci
+    Aiiiiiiiiiiiiiiiiiii      Bi              Ci
+    Aiiiiiiiiiiiiiiiiiiii     Bi              Ci
+    Aiiiiiiiiiiiiiiiiiiiii    Bi              Ci
+    Aiiiiiiiiiiiiiiiiiiiiii   Bi              Ci
+    Aiiiiiiiiiiiiiiiiiiiiiii  Bi              Ci
+
+------------------------------------------------------------------------------
+
+Module: TGenTextFileUnit.pas
+------------------------------------------------------------------------------
+  Generic Text File Object.
+
+  Used for reading and writing text lines to textfiles
+
+ It has no dependencies to other units.
+
+  Usage:
+
+    1) Create the textfile:
+.         TF := TGenTextFile.CreateForRead(filename) or
+.         TF := TGenTextFile.CreateForWrite(filename)
+    2) Reading Lines from TextFile:
+.         while TF.Read(line) do ...
+    3) Writing Lines to File
+.         TF.Write(line);
+    4) Closing TextFile and destroying object:
+.         TF.Free;
+------------------------------------------------------------------------------
+
+Module: TGenIniFileUnit.pas
+------------------------------------------------------------------------------
+  TGenIniFile: This is a subclass of the TIniFile class, and adds some
+               more functionality to this class:
+
+  Create:   Create will open the Inifile using the application's own name
+            but use file extension from .ini instead of .exe
+
+  TColor    Can Read & Write TColor values (ReadColor, WriteColor)
+  TRect     Can Read & Write TRect  values (ReadRect,  WriteRect)
+  TPoint    Can Read & Write TPoint values (ReadPoint, WritePoint)
+
+  It does not depend on any other unit
+
+  Usage: (See TIniFile for more ducumentation)
+
+    1) Create Ini File with the ApplicationName.ini filename
+.      Ini.Create;
+
+    2) Read Section and ITem (Just like TIniFile):
+.      Value := Ini.ReadColor (Section, Ident, Default);
+
+    3) Write Section and Item (Just like ITiniFile):
+.      Ini.WriteColor(Section, Ident, Value);
+
+    4) Closing Ini File and destroying object:
+.      Ini.Free;
+------------------------------------------------------------------------------
+
+Module: TGenGraphicsUnit.pas
+----------------.---------------.---------------------------------------------
+  Graphics Generic Functions
+
+  Control Functions:
+    SetCtrlRect             Set a Control to a bounding TRect
+    InMidScreen             Get Mid position in Screen of a TRect
+
+  Transforming functions:
+    IncRect                 Increment/Decrement a TRect
+    MoveRect                Move a TRect
+    RectCenter              Get Center of a TRect
+
+  Geometric calculations:
+    PointRotate             Rotate a TPoint on a TPoint
+    PointInRect             Is a TPoint inside a TRect
+    PointInEllipse          Is a TPoint in an Ellipse TRect
+    PointOnPolyLine         Is a TPoint on a PolyList (with Trap)
+    PointOnPoint            Is a TPoint on a TPoint
+    PointInArea             Is TPoint in Area
+
+  Line Length:
+    PointDistToLine         Get Distance from a TPoint to a Line
+    RadiansLimit            Set Radian angle between 0 and 2PI
+
+  String conversions:
+    PointToStr              Convert TPoint to a string
+    RectToStr               Convert TRect to a string
+    ColorToStr              Convert TColor to a string
+
+  Bitmap and Color management:
+    ColorToSepia            Convert a TColor to a Sepia TColor
+    BitmapToSepia           Convert a Bitmap to Sepia Colors
+    ImageMirror             Mirror an TImage
+
+  HSV, RGB, TColor conversions:
+    RGBS2HSVS               RGB -> HSV
+    HSVS2RGBS               HSV -> RGB
+    HSVS2STR                HSV -> string
+    RGBS2STR                RGB -> string
+    HSVS2RGB                HSV -> TColor
+    RGB2HSVS                TColor -> HSV
+    HSVS2CMYKS              HSV -> CMYK
+    CMYKS2HSVS              CMYK -> HSV
+    HexToColor              Hex string -> TColor
+    WebToColor              Web Hex string -> TColor
+
+  Drawing functions:
+    DrawFrame               Draw a Frame on Canvas
+    DrawCross               Draw a XOR Cross on Canvas
+    GetFontHeight           Get max TextFont size to fit a TRect
+    DrawArrow               Draw an Arrow on Canvas
+------------------------------------------------------------------------------
+
+Module: TGenPickFontUnit.pas
+------------------------------------------------------------------------------
+  TGenPickFont is a dialog object that makes it easy for the user to pick a
+  Font by property values.
+
+  Usage:
+
+  1) Create the dialog
+.       var dlg : TGenPickFont;
+.       dlg := TGenPickFont.Create;
+
+  2) Set initial Values
+.       dlg.pFontName := ....; // The initial Font Name
+.       dlg.pHeight   := ....; // The initial Font Height
+.       dlg.pBold     := ....; // The initial Font Bold style
+
+  3) Open the Dialog and return tru if OK was clicked
+.       if dlg.Open then ...
+
+  4) Uset the picked folder
+.       xxxx := dlg.pFontName;
+
+  5) Destroy the dialog
+.       dlf.Free;
+------------------------------------------------------------------------------
+
+Module: TGenHsvUnit.pas
+------------------------------------------------------------------------------
+  HSV Object with single precision
+
+  This object stores a HSV color and let user manipulate it by different
+  methods.
+
+  Conversions to and from all possible formats is also available
+------------------------------------------------------------------------------
+
+Module: THsvBaseFrameUnit.pas
+------------------------------------------------------------------------------
+  Base class for different color frames used in TGenColorPick dialog. These
+  objects are generalized and can be used for other purposes as well.
+
+  Each frame needs a TPaintBox to paint on, a TRect defines where on then
+  paintbox it is placed. It got a background color and a CrossHair Point
+
+  Usage:
+
+  1) Create Object
+.    var aTimer : TGenTimer;
+.    aTimer := TGenTimer.Create;
+
+  2) Start Measuring by calling Reset
+.    aTimer.Reset;
+
+  3) Measure time evolved by calling Measure. It will return number
+     of mS since last reset. Precision depends on Hardware
+.    var aTime : single;
+.    aTime := aTimer.measure;
+
+  4) Free the object when ready
+.    aTimer.FRee;
+------------------------------------------------------------------------------
+
+Module: THsvSatValFrameUnit.pas
+------------------------------------------------------------------------------
+  Sublass of TGenBaseFrame and specializes in drawing Saturation And Value
+  inside its TRect. Saturation in X Value in Y
+
+  Usage:
+
+  1) Create Object
+.    var aFrame : THsvSatValFrame;
+.    aFrame := THsvSatValFrame.Create(PaintBox);
+
+  2) Set its TRect, Cross Hair etc.
+.    aFrame.pRect  := ....;
+.    aFrame.pPoint := ....;
+
+  3) Draw the Frame (normally in the OnDraw event of the mother form)
+.    aFrame.Draw;
+
+  4) Set CrossHair using Color.
+.    cHSV := aFrame.pHsv;   // Get Color from Current Point
+.    aFrame.pHSV := ....;   // Will Set Point to Color
+
+  5) Use the Cross Cursor. Its drawn using XOR.
+.    aFrame.pPoint := ....; // First time will draw it away
+.    aFrame.pPoint := ....; // Second time will draw it on
+
+  6) Free the object when ready
+.    aFrame.Free;
+------------------------------------------------------------------------------
+
+Module: THsvHueCircleFrameUnit.pas
+------------------------------------------------------------------------------
+  Sublass of TGenBaseFrame and specializes in drawing Hue in an Eliptical
+  band inside its TRect. Hue is the Angle around the TRects origin
+
+  Usage:
+
+  1) Create Object
+.    var aFrame : THsvHueCircleFrame;
+.    aFrame := THsvHueCircleFrame.Create(PaintBox);
+
+  2) Set its TRect, Cross Hair etc.
+.    aFrame.pRect  := ....;
+.    aFrame.pPoint := ....;
+
+  3) Draw the Frame (normally in the OnDraw event of the mother form)
+.    aFrame.Draw;
+
+  4) Set CrossHair using Color.
+.    cHSV := aFrame.pHsv;   // Get Color from Current Point
+.    aFrame.pHSV := ....;   // Will Set Point to Color
+
+  5) Use the Cross Cursor. Its drawn using XOR.
+.    aFrame.pPoint := ....; // First time will draw it away
+.    aFrame.pPoint := ....; // Second time will draw it on
+
+  6) Free the object when ready
+.    aFrame.Free;
+------------------------------------------------------------------------------
+
+Module: THsvHueSatFrameUnit.pas
+------------------------------------------------------------------------------
+  Sublass of TGenBaseFrame and specializes in drawing a Hue and Saturation
+  values inside its TRect. Hue in X and Saturation in Y
+
+  Usage:
+
+  1) Create Object
+.    var aHueSatFrame : THueHueSatFrame;
+.    aHueSatFrame := THueHueSatFrame.Create(PaintBox);
+
+  2) Set its TRect, Cross Hair etc.
+.    aHueSatFrame.pRect  := ....;
+.    aHueSatFrame.pPoint := ....;
+
+  3) Draw the Frame (normally in the OnDraw event of the mother form)
+.    aHueSatFrame.Draw;
+
+  4) Set CrossHair using Color.
+.    cHSV := aHueSatFrame.pHsv;   // Get Color from Current Point
+.    aHueSatFrame.pHSV := ....;   // Will Set Point to Color
+
+  5) Use the Cross Cursor. Its drawn using XOR.
+.    aHueSatFrame.pPoint := ....; // First time will draw it away
+.    aHueSatFrame.pPoint := ....; // Second time will draw it on
+
+  6) Free the object when ready
+.    aHueSatFrame.Free;
+------------------------------------------------------------------------------
+
+Module: THsvValueFrameUnit.pas
+------------------------------------------------------------------------------
+  Sublass of TGenBaseFrame and specializes in drawing a Value (Dark) values
+  inside its TRect. Value in Y
+
+  Usage:
+
+  1) Create Object
+.    var aValFrame : THsvValueFrame;
+.    aValFrame := THsvValueFrame.Create(PaintBox);
+
+  2) Set its TRect, Cross Hair etc.
+.    aValFrame.pRect  := ....;
+.    aValFrame.pPoint := ....;
+
+  3) Draw the Frame (normally in the OnDraw event of the mother form)
+.    aValFrame.Draw;
+
+  4) Set CrossHair using Color.
+.    cHSV := aValFrame.pHsv;   // Get Color from Current Point
+.    aValFrame.pHSV := ....;   // Will Set Point to Color
+
+  5) Use the Cross Cursor. Its drawn using XOR.
+.    aValFrame.pPoint := ....; // First time will draw it away
+.    aValFrame.pPoint := ....; // Second time will draw it on
+
+  6) Free the object when ready
+.    aValFrame.Free;
+------------------------------------------------------------------------------
+
+Module: THsvSatFrameUnit.pas
+------------------------------------------------------------------------------
+  Sublass of TGenBaseFrame and specializes in drawing a Saturation values
+  inside its TRect. Saturation in Y
+
+  Usage:
+
+  1) Create Object
+.    var aSatFrame : THsvSatFrame;
+.    aSatFrame := THsvSatFrame.Create(PaintBox);
+
+  2) Set its TRect, Cross Hair etc.
+.    aSatFrame.pRect  := ....;
+.    aSatFrame.pPoint := ....;
+
+  3) Draw the Frame (normally in the OnDraw event of the mother form)
+.    aSatFrame.Draw;
+
+  4) Set CrossHair using Color.
+.    cHSV := aSatFrame.pHsv;   // Get Color from Current Point
+.    aSatFrame.pHSV := ....;   // Will Set Point to Color
+
+  5) Use the Cross Cursor. Its drawn using XOR.
+.    aSatFrame.pPoint := ....; // First time will draw it away
+.    aSatFrame.pPoint := ....; // Second time will draw it on
+
+  6) Free the object when ready
+.    aSatFrame.Free;
+------------------------------------------------------------------------------
+
+Module: THsvHueFrameUnit.pas
+------------------------------------------------------------------------------
+  Sublass of TGenBaseFrame and specializes in drawing a Hsv color inside
+  its TRect.
+
+  Usage:
+
+  1) Create Object
+.    var aHsvFrame : THsvHueFrame;
+.    aHsvFrame := THsvHueFrame.Create(PaintBox);
+
+  2) Set its TRect, Color etc.
+.    aHsvFrame.pRect := ....;
+.    aHsvFrame.pHsv  := ....;
+
+  3) Draw the Frame (normally in the OnDraw event of the mother form)
+.    aHsvFrame.Draw;
+
+  4) Use the Cross Cursor. Its drawn using XOR.
+.    aHsvFrame.pPoint := ....; // First time will draw it away
+.                              // Calculate new CrossHair position
+.    aHsvFrame.pPoint := ....; // Second time will draw it on
+
+  5) Free the object when ready
+.    aHsvFrame.Free;
+------------------------------------------------------------------------------
+
+Module: TGenColorPickUnit.pas
+------------------------------------------------------------------------------
+  TGenColorPick is a dialog object that makes it easy to pick a color from
+  a number of different ways:
+    Color Palette
+    RGB in the usual Windows Style with Hue/Saturation and Value
+    HSV with scrollbars for each of Hue, Saturation & Value
+    HSV Circle with Hue around a cricle and Saturation/Value in the middle
+
+  Usage:
+
+  1) Create the dialog
+.       var dlg : TGenColorPick;
+.       dlg := TGenColorPick.Create;
+
+  2) Set initial Values
+.       dlg.pColor := ....; // TColor;
+
+  3) Open the Dialog and return tru if OK was clicked
+.       if dlg.Open then ...
+
+  4) Uset the picked color
+.       xxxx := dlg.pColor;
+
+  5) Destroy the dialog
+.       dlf.Free;
+------------------------------------------------------------------------------
+
+Module: TGenAppPropUnit.pas
+-----------------.------------.---------------.-------------------------------
+  This a boundle of classes with the purpose of managing Application wide
+  properties that can be read from and written to an Ini File in a
+  managble way. Basically it will load all properties at application
+  startup and write the changed ones back at application closure.
+
+  This Unit holds a Number of Classes that work together:
+    TGenAppPropBase           Base Class for all Properties
+    TGenAppPropRect           TRect           Property
+    TGenAppPropPoint          TPoint          Property
+    TGenAppPropColor          TColor          Property
+    TGenAppPropInt            Integer         Property
+    TGenAppPropDouble         Double          Property
+    TGenAppPropBool           Boolean         Property
+    TGenAppPropString         String          Property
+    TGenAppPropStringList     TStringList     Property
+
+  These classes rely on TGenIniFile (TGenIniFileUnit) for storing and
+  reading the Values to the File system (persistant storage)
+
+  Each of these Property Classes works the same way:
+    Create(Section, Ident, Default) Creates a Property with a default Value
+     of the specified Type
+     ReadValue    Reads the Value from the Ini File or use default value
+     WriteValue   Writes the current Value to the Ini File if changed
+     pSection     Property to read Section Name
+     pIdent       Property to read Identity
+     pXxxxx       The Value Property depending on sub class
+
+  Some of these Classes also have generic usefull Methods of their own like:
+    Toggle on boolean
+    Set/GetBounds on TRect
+    Pick on TColor
+    Pick on TFont
+
+  Propertylist:
+    TGenAppPropList object manages a List of Properties of the Classes above
+    It has the normal Create / Destroy methods and some more:
+      AddProp(Property);              Add new Properties to the list
+      DelProp(Property);              Remove (and destroy) properties
+      Find (Section, Ident);          Property; Find properties
+      GetNext(Iter,Property:boolean;  Iterate all Properties
+      ReadValues;                     Reads all Values from the Ini File
+      WriteValues;                    Writes all changed Values to Ini File
+
+  It use TGenIniFileUnit that subclasses TIniFile
+
+  Usage:
+    1) Create an Application Property Object as a Singleton
+       This Objects will hold a pointer to all Properties you need, and
+       also the Property List
+    2) In This Objects Constructor, create all Property objects and also
+       add them to the Property List, Then read the Values from disk
+    3) Add properties for all Property objects that points to them
+    4) In its destructor, Write all properties to disk.
+
+  Example Class Code:
+.   type TGenApp = Class(TObject)
+.     protected
+.       objPropList : TGenAppPropList;
+.       objMainRect : TGenAppPropRect;
+.
+.     public
+.       constructor Create;             // Create Object
+.       destructor  Destroy; override;  // Destroy Object
+.
+.       class procedure Startup;        // Creates the Singleton
+.       class procedure ShutDown;       // Destroys the Singleton
+.
+.     property pMainRect : TGenAppPropRect read objMainRect;
+.   end;
+.
+.   var TheApp : TGenApp = nil;  // Singleton
+------------------------------------------------------------------------------
+
+Module: TGenProgressWinUnit.pas
+------------------------------------------------------------------------------
+  Generic Dialog for managing of a Progress Bar for long takss
+
+  Usage
+
+    1) In the Method where you start (and end) the task, create an dialog
+       Instance. Set Title, Progress Bar Max, and call Open to show it.
+
+    2) Let a pointer to the dialog follow the call chain to the place
+       where the atomic work is performed that can be canceled
+
+    3) At this place(s) test if User has aborted (property pAborted)
+       If not, increment the Progress bar by calling StepIt, SetPos etc.
+
+    4) When walking back the call chain, test for pAborted so you dont
+       start up any work again.
+
+    5) After Work is performed (or aborted) close the Dialog (Close) and
+       destroy the dialog (Feee).
+------------------------------------------------------------------------------
+
+Module: TGenObjectUnit.pas
+------------------------------------------------------------------------------
+  Generic Base Object used for debuging Purposes
+
+  Usage:
+    Use this class as baseclass instead of TObject. When closing your
+    App, make sure GetDebugCount returns zero, or there are some unreleased
+    objects out there in the void.
+
+    Use GetDebugMaxCount to find out how many objects was created over the
+    lifespan of your application
+------------------------------------------------------------------------------
+
+Module: TGenClassesUnit.pas
+------------------------------------------------------------------------------
+  This module incorporates a number of classes used for managing and
+  documentation of source code written in Delphi
+
+  Modules:
+      A module is a normal Unit in Delphi Name, filename, nr of lines, witch
+      modules i references, witch classes, and symbols it contain, loading
+      sequence etc.
+
+  Classes:
+      A Class is a normal class in Delphi Name, Parent Class, Children
+      classes, Module its defined in, Modules its used in, loading sequence
+      etc.
+
+  Symbols:
+      A Symbol is anything else you want to track Name, Module its defined
+      in, loading sequence etc.
+
+  Usage:
+
+  1)  In all units of your code, add an initialization section and add
+.     RecClass(TClass);             // To add a class if classname
+.                                   // matches Modulename
+.     RegClass(TClass, ModuleName); // To add a Class if more than one
+.                                   // class in a module, so name dont match
+.     RegSymbol(Name,Modulename);   //To add symbols
+
+  2)  If you want you can add a pointer to the Module in the Unit.
+      This will make it possible for smarter Logging.
+.       var UM : TMyModule = nil;   // Place in impelementation section
+.       UM := RegClass(Classname);  // In the initialization section
+
+  4)  Add search path(s) for your code (on Application Start):
+.       TGenClasses.AddSearchFolder(searchfolder);
+
+  3)  Write out documentation:
+      Make sure the project folder has a Develop Folder, where the
+      textfiles will be placed. Use the TGenClasses.Write... functions
+
+  4)  Additional info:
+.     L := TGenClasses.NrOfLines;
+.     TGenClasses.LinesPerWeekFrom(EncodeDate(2009,9,1);
+
+  4)  Close Class library at Application termination (late)
+.     TGenClasses.ShutDown;
+
+  Note: You dont need to Startup, this is done automagically.
+------------------------------------------------------------------------------
+
+Module: TTimeZoneDlgUnit.pas
+No Documentation included
+
+Module: TGenTimeUnit.pas
+No Documentation included
+
+Module: T3dfxGuiUnit.pas
+No Documentation included
+
+Module: T3dfxTypesUnit.pas
+------------------------------------------------------------------------------
+
+  Generic Type Definitions that is used in Application
+
+  Also includes Natrural Singletons
+
+------------------------------------------------------------------------------
+
+Module: TGenAverageUnit.pas
+No Documentation included
+
+Module: TGenStrObjUnit.pas
+No Documentation included
+
+Module: TGenOpenDialogUnit.pas
+No Documentation included
+
+Module: T3dfxScenePickUnit.pas
+No Documentation included
+
+Module: TGenPickFolderUnit.pas
+------------------------------------------------------------------------------
+  TGenPickFolder is a dialog object that makes it easy for the to pick a
+  on the computer or networ.
+
+  Usage:
+
+  1) Create the dialog
+.       var dlg : TGenPickFolder;
+.       dlg := TGenPickFolder.Create;
+
+  2) Set initial Values
+.       dlg.pFolder := ....; // The initial selected Folder
+
+  3) Open the Dialog and return tru if OK was clicked
+.       if dlg.Open then ...
+
+  4) Uset the picked folder
+.       xxxx := dlg.pFolder;
+
+  5) Destroy the dialog
+.       dlf.Free;
+------------------------------------------------------------------------------
+
+Module: TResStringUnit.pas
+No Documentation included
+
+Module: TMyObjActionFactoryUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionBase derived from TObject, abstract
+
+  This is the base class for all Object Actions
+
+
+------------------------------------------------------------------------------
+
+Module: TMyFactoryBaseUnit.pas
+No Documentation included
+
+Module: TMyObjActionBaseUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionBase derived from TObject, abstract
+
+  This is the base class for all Object Actions
+
+  Timing of Actions:
+
+    Move        Velocity in LookAt direction (Units / mS)
+    Rotation    Angle Velocity in x,y, and z
+    Scale       Velocity in all Scaling directions
+
+    Track Rand  No own velocity
+    Track Obj   No Own Velocity
+
+    Flash       Start Time (mS) and End Time (ms)
+                Velocity in Mothers LookAt direction
+                Reload time in mS
+    Fire        Velocity in Mothers LookAt direction
+                Reload time in mS
+
+
+
+------------------------------------------------------------------------------
+
+Module: TFpsTimerUnit.pas
+No Documentation included
+
+Module: T3dfxObjectChildListUnit.pas
+------------------------------------------------------------------------------
+ T3dfxObjectChildList Class: Derived from T3dfxObjectListBase.
+
+ This object manages all Children Objects of an Object
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxObjectListBaseUnit.pas
+------------------------------------------------------------------------------
+ T3dfxObjectListBase Class: Derived from TObject. Abstract
+
+ This is the Baseclass for managing Object Lists. Its used for Scene's
+ Objects List, For Children Objects of Objects, and for Component Types
+
+ Properties:
+    Object List    Container for the Objects
+    Dirty          True if Objects are added or extracted.
+
+ Methods:
+    See below
+
+------------------------------------------------------------------------------
+
+Module: T3dfxActionBaseUnit.pas
+------------------------------------------------------------------------------
+ T3dfxActionBase Class: Derived from T3dfxChildBase. Abstract
+
+ This Object adds Actions to T3dfxBase class
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    See below
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  T3dfxActions Class
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                                IMPLEMENTATION
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                               INTERNAL METHODS
+
+------------------------------------------------------------------------------
+  Initiate all properties to default values
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Copy all properties from another object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Get Action List
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Stop Any Action
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                                GET/SET ORIGIN
+
+------------------------------------------------------------------------------
+ Set Objects Position in World Space
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Origin
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Origin
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Origin
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                                GET/SET SCALE
+
+------------------------------------------------------------------------------
+ Set Objects Angles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Objects Scales
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Objects Angles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Objects Angles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                               GET/SET QUARTENION
+
+------------------------------------------------------------------------------
+ Set Object Angle Direction in Euler Angles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Object Angle Direction in Euler Angles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Object Angle Direction in Euler Angles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Object Angle Direction in Euler Angles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                            GET/SET STARTING VALUES
+
+------------------------------------------------------------------------------
+ Get Starting Origin
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Get Starting Angle
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Get Starting Scale
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Make Sure Action List exist
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Make Sure Action List is destroyed
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Copy Actions from another Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Get Action Count
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Get LookAt Velocity from Object's Move Action
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get Velocity
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Set Tracking Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Get Tracking Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Save the Objects generic properties only. Called by inherited classes
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Try to Load a Property contained in sLine, return true if found
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                           EXTERNAL OVERRIDDEN METHODS
+
+------------------------------------------------------------------------------
+  Destroy T3dfxActionBase object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Get a Property Type of a specific Property Uid
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Set a Property Type of a specific Property Uid
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Save the Objects Relations to other objects
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Save the Objects Relations to other objects
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Perform Fire Action
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                            EXTERNAL ACTION METHODS
+
+------------------------------------------------------------------------------
+  Add an Action Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Get a specific Action Type
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Remove an Action Type
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Remove an Action TYpe
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Test is an Action Type Exists
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Perform all Actions of the Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                                      INIT
+------------------------------------------------------------------------------
+
+Module: T3dfxChildBaseUnit.pas
+------------------------------------------------------------------------------
+ T3dfxChildBase Class: Derived from T3dfxBase. Abstract
+
+ This Class adds Children and Parent to the T3dfxBase class.
+
+ Its purely an Iplemenation Class. All External and Internal methods
+ and Properties are derived from the Base Class (overridden)
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Base Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                                CLASS FUNCTIONS
+
+------------------------------------------------------------------------------
+ T3dfxBaseClass is the base class of T3dfxBase and used for Loading Files
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                            INTERNAL OVERRIDDEN METHODS
+
+------------------------------------------------------------------------------
+  Initiate all properties to default values
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Copy all properties from another obj
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set the Use of the Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Mark objects for killing (and its Childrens)
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Save the Objects generic properties only. Called by inherited classes
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Return The Extent in Model Space
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Stop Any Action
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Get the absolute Origin in Scene World Space
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                           INTERNAL CHILDREN METHODS
+
+------------------------------------------------------------------------------
+  Rules:
+    a) We must test if objChildren exist before calling it
+    b) If we write to objChildren we first create it
+    c) We dont give the objChildren pointer to external objects or subclasses
+
+------------------------------------------------------------------------------
+ Internal Readonly: Are there any Children.
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal Write: Remove all Children from this Object
+                 Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                      INTERNAL OVERRIDDEN CHILDREN METHODS
+
+------------------------------------------------------------------------------
+ Internal ReadOnly: Return the First Children if any children at all
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Return the Scene
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Set The List it belongs to
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Return Scene it belongs to
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal Readonly: Get Number of Children
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal Readonly: Get Total Number of Children recursivly
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal Readonly: Get a Child from a Tag
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal Readonly: Return if Object can have Children
+                    A Class function. Dont know anything about instances
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal ReadOnly: Return true if Children Should be Saved
+                    A Class function. Dont know anything about instances
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal ReadOnly: Return true if Children Should not be visible for use
+                    A Class function. Dont know anything about instances
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                       INTERNAL OVERRIDDEN PARENT METHODS
+ 
+------------------------------------------------------------------------------
+ Internal ReadOnly: Get Objects Parent
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal ReadOnly: Get Objects Parent
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Internal Readonly: Get First Parent (or self if no parent)
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                          EXTERNAL OVERRIDDEN METHODS
+
+------------------------------------------------------------------------------
+  Destroy 3dfx object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Save the Objects Relations to other objects
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Save the Objects Relations to other objects
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Return The Extent in Model Space
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Return The Extent in Model Space
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Perform Fire Action
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Log Info about the Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ External ReadOnly: Render Children of the Object (R3dfxRendererUnit)
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                          EXTERNAL CHILDREN METHODS
+
+------------------------------------------------------------------------------
+ External Write: Add an Object as Child to this object
+                 Will CReate LIst if it doesnt exist
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ External ReadOnly: Get a Children from its Index
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ External ReadOnly: Get This or a Children from its Uid
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ External ReadOnly: Get This or a Children from its Fid
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ External ReadOnly: Test recursivly if pObj is a Children of this Object
+                    Used through T3dfxSceenUnit and its Object List
+                    Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Remove or Extract Children that are marked for it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ External Write: Extract a Child object from this Parent  (T3dfxSceenUnit)
+                 It will not be deleted, just removed from list
+                 Tests if Children exists, Will not create it
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Return Pointer to Children List (Used internally by CopyProp)
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+                                      INIT
+-----------------------------------------------------------------------------
+
+Module: T3dfxViewBaseUnit.pas
+------------------------------------------------------------------------------
+ T3dfxViewBase Class: Derived from T3dfxBase. Abstract
+
+ Add View Properties to Base Class
+
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Base Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+                                CLASS FUNCTIONS
+
+------------------------------------------------------------------------------
+ T3dfxBaseClass is the base class of T3dfxBase and used for Loading Files
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Overridden: Set default Values
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Copy all properties from another obj
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Save the Objects generic properties only. Called by inherited classes
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Try to Load a Property contained in sLine, return true if found
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Get a Property Type of a specific Property Uid
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Set a Property Type of a specific Property Uid
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+                                    VIEW
+
+------------------------------------------------------------------------------
+ Get Review On/Off
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Set Review On/Off
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Get View Matrix
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get View On/Off
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Set View On
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get Eye Point
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+ Set The Eye Point relative the Object Origo (0,0,0)
+-----------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get Eye Point
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+ Set The Look At Direction relative the Object Origo (0,0,0)
+-----------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get Eye Point
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+ Set The Up Vector relative the Object Origo (0,0,0)
+-----------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get Eye Point
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+ Set View Angles X, Y and Z relative to its origo
+-----------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get Eye Point
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+ Set The View Projection Angle (Binocular View)
+-----------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Abstract: Get Eye Point
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Setup World and View Matrices in Device
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+ Calculate World and View Matrices. Its not added to Device
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+                                      INIT
+-----------------------------------------------------------------------------
+
+Module: T3dfxBaseUnit.pas
+------------------------------------------------------------------------------
+ T3dfxBaseInt Class: Derived from TObject. Abstract
+
+ Is the abstract baseclass for all Drawing Objects
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    See below
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Base Object
+------------------------------------------------------------------------------
+--
+
+Module: T3dfxLightPointUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLightPoint Class: Derived from T3dfxLight. Instantiated
+
+ Is a Point Light
+
+ All Lights are contained in T3dfxLightListUnit
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxLightUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLight Class: Derived from TObject. Instantiated
+
+ Is the baseclass for all Light Objects. The Light Object must
+ always be contained in a T3dfxBase object (or any decendant)
+
+ When the Light is rendered it will find the origo and its direction (if
+ a spotlight) from its owner Object.
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    T3dfxLightPointUnit
+    T3dfxLightSpotUnit
+    T3dfxLightFlashUnit
+
+------------------------------------------------------------------------------
+
+Module: T3dfxObjectListUnit.pas
+------------------------------------------------------------------------------
+ T3dfxObjectList Class: Derived from T3dfxObjectListBase. Instantiated Once
+
+ This object manages all Created Draw Objects in a TObjectList
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxContainerUnit.pas
+------------------------------------------------------------------------------
+ T3dfxContainer Class: Derived from T3dfxBase. Instantiable
+
+ This Object Contains other Objects. It uses no extra properties or
+ methods, i.e. it relies totaly on T3dfxBase abstract baseclass
+
+ It is used for grouping together objects that then can be moved, scaled
+ rotated all together. Other properties like Color, Material etc have no
+ meaning since only the individual objects renders
+
+ Properties:
+    No extra Properties
+
+ Methods:
+    No extra properties
+
+ Sub Classes:
+    Many...
+
+------------------------------------------------------------------------------
+
+Module: T3dfxPropBaseUnit.pas
+------------------------------------------------------------------------------
+ T3dfxBaseInt Class: Derived from TObject. Abstract
+
+ Is the abstract baseclass for all Drawing Objects
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    See below
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Property Base Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Add Properties specific for this Object
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Get a Property Type of a specific Property Uid
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+  Set a Property Type of a specific Property Uid
+------------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+                                      INIT
+-----------------------------------------------------------------------------
+
+Module: T3dfxLightFactoryUnit.pas
+No Documentation included
+
+Module: T3dfxLightListUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLightList Class: Derived from TObject. Instantiated Once
+
+ This object manages all Created Lights in a TObjectList
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxUnit.pas
+No Documentation included
+
+Module: T3dfxLightFlashUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLightFlash Class: Derived from T3dfxLight. Instantiated
+
+ Is a Flash Light that have a Start Time and a Duration
+ It will decrease its Power after 50% of duration and go to 0 when duration
+ is reached, then it will be destroyed. Its a Temporary light and will
+ not be saved or loaded from file
+
+ Properties:
+  Created     Time when its created
+  Start       Start time (mS) after its created
+  Duration    Durantion (mS)
+  StartPower  Starting Power
+
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: TMyMessageFactoryUnit.pas
+No Documentation included
+
+Module: T3dfxPrimUnit.pas
+------------------------------------------------------------------------------
+ T3dfxPrim Class: Derived from T3dfxBase. Abstract
+
+ This Class add Material / Color to the Base Class. Its still Abstract
+ and dont have any primitives ant cant draw anything at all
+
+ Properties:
+    Material & Transparency Properties
+
+ Methods:
+    All properties for Materal and Color
+
+ Sub Classes:
+    Those that handle Vertexes and Meshes of different kind
+
+------------------------------------------------------------------------------
+
+Module: T3dfxMeshUnit.pas
+------------------------------------------------------------------------------
+ T3dfxMesh Class: Derived from T3dfxBase. Abstract.
+
+ Base class for all Meshes, File and Text
+
+ Properties:
+    None
+
+ Methods:
+    Init             Loads Mesh
+    IntersectRayInt  For intersect detecting with the texture trangles
+    CalcExtent       Calculate Bounding Box from all the Triangles
+    Render           Draws the A Triangle Strip
+    Save             Save specific properties
+
+ Sub Classes:
+    No Subclasses    No Subclasses needed unless some moving is necessary
+
+ Todo: Need going over
+
+------------------------------------------------------------------------------
+
+Module: T3dfxMeshTextUnit.pas
+------------------------------------------------------------------------------
+ T3dfxMeshText Class: Derived from T3dfxMesh. Instaniated.
+
+  Text Mesh
+
+ Properties:
+     Text Font Name
+
+ Methods:
+
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxMeshFileUnit.pas
+------------------------------------------------------------------------------
+ T3dfxMeshFile Class: Derived from T3dfxMesh. Instaniated.
+
+  Handles Loading of Mesh FIles
+
+ Properties:
+     Mesh File Name
+
+ Methods:
+
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVertexUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVertexList Class: Derived from TObject. Instantiable
+
+ Is the Base Class for all Vertex Lists
+
+ Extent: A vertex List will recalculate its Extention on the fly when
+         possible (Addetc. If not possible the ReExt flag will be set.
+         When the extent is read this flag will start a recalculate of
+         the Extent, that will then be returned. The flag will be cleared
+
+ Properties:
+    objList   : TObjectList;  List of Vertex Objects
+    objDirty  : boolean;      The Vertex List has Changed
+    objExtent : T3dfxExtent;  Bounding Box Extent
+    objReExt  : boolean;      Extent need to be recalculated
+
+ Methods:
+
+
+ Used In:
+    T3dfxLineUnit           Line Primitive
+    T3dfxTriEditUnit        Triangle List Edit Component
+    T3dfxTriCompUnit        Triangle List Component
+    T3dfxVertexBufferUnit   Vertex Buffer
+
+ Sub Classes                 Used in                   Type      State
+    None at the Moment
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVertexedUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVertexed Class: Derived from T3dfxPrim. Abstract
+
+ This Class adds a Vertex Buffer or/and a Vertex List to T3dfxPrim Class
+ There is nothing to Save or load, but CopyProp is needed
+
+ Properties:
+    objVertexList   : T3dfxVertexList;   // Vertex List
+    objVertexBuffer : T3dfxVertexBuffer; // Vertex Buffer
+    objVbType       : T3dfxVbType;       // Vertex Buffer Type (t)
+    objClassVb      : boolean;           // Class Vertex Buffer
+
+ Methods:
+
+ Sub Classes:
+    Many...
+
+------------------------------------------------------------------------------
+
+Module: T3dfxTriStripeUnit.pas
+------------------------------------------------------------------------------
+ T3dfxTriStripe Class: Derived from T3dfxVertexed. Abstract.
+
+ Base Class for all Triangle Stripes classes.
+
+ Properties:
+    There are no extra properties that need to be saved or loaded
+
+ Methods:
+    Create         Adds Precision to base Crate
+    GetPlane       Returns a Plane from Triangle Stripes
+    PickPrimitive  Overridden for Triangle Strips Picking
+
+------------------------------------------------------------------------------
+
+Module: T3dfxPointListUnit.pas
+------------------------------------------------------------------------------
+ Point List Class: Derived from Base. Abstract.
+
+ Is a Base object that has a Pointlist Vertex Buffer. No other functionality
+
+ Properties:
+    No additional Properties
+
+ Methods:
+    CalcExtent       Calculate Bounding Box from all the Points
+    Render           Draws the Pointlist
+
+ Sub Classes:
+    T3dfxGalaxy      T3dfxGalaxUnit
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbScrapsUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbScraps Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws A Scraps
+
+ Properties:
+    No Extra
+
+ Methods:
+    Render          Draws a Shockwave transparent
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVertexBufferUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVertexBuffer Class: Derived from TObject. Instantiable
+
+ Is the Base Class for all Vertex Buffers
+
+ Extent: A vertex List will recalculate its Extention on the fly when
+         possible (Addetc. If not possible the ReExt flag will be set.
+         When the extent is read this flag will start a recalculate of
+         the Extent, that will then be returned. The flag will be cleared
+
+ Properties:
+    objVbInit  : boolean;                Vertex Buffer is initialed (t)
+    objVbType  : T3dfxVbType;            Vertex Buffer Type (t)
+    objVb      : IDirect3DVertexBuffer9; Vertex Buffer (t)
+    objVbNum   : integer;                Number of Vertices in Buffer (t)
+    objVbSize  : integer;                Length of Vertex Buffer in bytes (t)
+    objPriType : TD3DPrimitiveType;      Primitive Type (t)
+    objPriNum  : integer;                Number of Primitives to draw (t)
+    objExtent  : T3dfxExtent;            Bounding Box Extent
+    objReExt   : boolean;                Recalculation is needed
+ Methods:
+    Init             Initiate vertexec
+    Render           Draws the Pointlist
+
+ Sub Classes (With Extent)      Used in                   Type      Note
+    T3dfxVbLineListUnit         T3dfxLineListUnit         Line      Ok
+
+    T3dfxVbSphereNormalUnit     T3dfxGlobeUnit            Sphere    Ok
+    T3dfxVbTubeTextureUnit      T3dfxTubeUnit             Tube      Ok
+    T3dfxVbTubeNormalUnit       T3dfxTubeUnit             Tube      Ok
+    T3dfxVbRectTextureUnit      T3dfxRectUnit             Rect      Ok
+    T3dfxVbRectNormalUnit       T3dfxRectUnit             Rect      Ok
+    T3dfxVbCubeTextureUnit      T3dfxCubeUnit             Cube      Ok
+    T3dfxVbCubeNormalUnit       T3dfxCubeUnit             Cube      Ok
+    T3dfxVbTriStripeUnit        T3dfxTriCompUnit          TriComp   Ok
+    T3dfxVbPositionsUnit        T3dfxTriEditUnit          TriEdit   Ok
+    T3dfxVbNormalsUnit          T3dfxTriEditUnit          TriEdit   Ok
+
+ Sub Classes with fixed vertexes (will not Change):
+    These Vertex Buffers are used for specalized Objects that cant
+    be resized, i.e. the buffers are fixed.
+
+    T3dfxVbBoardUnit            T3dfxBoardUnit            Board     ClassVb
+    T3dfxVbGalaxUnit            T3dfxGalaxUnit            Galax     ClassVb
+    T3dfxVbBulletUnit           T3dfxBulletUnit           Bullet    ClassVb
+    T3dfxVbArrowUnit            T3dfxArrowUnit            Arrow     ClassVb
+    T3dfxVbShockWaveUnit        T3dfxShockWaveUnit        Shockwave ClassVb
+    T3dfxVbScrapsUnit           T3dfxScrapsUnit           Scraps    ClassVb
+    T3dfxVbRocketUnit           T3dfxRocketUnit           Rocket    ClassVb
+    T3dfxVbGridUnit             T3dfxGridUnit             Grid      ClassVb
+
+ Sub Classes (objNoExt = true)  Used in                   Type      Notes
+    These Vertex Buffers are specialized, handle their own Material,
+    Renders different combinations of Lines and Points
+
+    T3dfxVbWorldUnit            T3dfxWorldUnit            3L        3 Mtrl
+    T3dfxVbLookAtUnit           T3dfxEyeViewUnit          2L        2 Mtrl
+    T3dfxVbRayUnit              T3dfxScreenLineUnit       1L, 3P    1 Mtrl
+    T3dfxVbExtentBoxSimpleUnit  T3dfxExtentBoxSimpleUnit  8L        1 Mtrl
+
+------------------------------------------------------------------------------
+
+Module: T3dfxScrapsUnit.pas
+No Documentation included
+
+Module: T3dfxVbUnit.pas
+No Documentation included
+
+Module: T3dfxVbShockWaveUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbShockWave Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws A Shockwave
+
+ Properties:
+    No Extra
+
+ Methods:
+    Render          Draws a Shockwave transparent
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxShockWaveUnit.pas
+------------------------------------------------------------------------------
+ T3dfxShockWave Class: Derived from T3dfxBase. Instantiable
+
+ ShockWave object. Uses a Tube that expand, retackts and then expands again
+ It uses Class Vertexes. Its temporary and dont need saving
+
+ Properties:
+    See below
+
+ Methods:
+    Init             Initiate vertexec
+    Move             Moves the SchockWave
+    Render           Draws the SchockWave
+
+ Sub Classes:
+    No sub classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbRocketUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbRocket Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws A Rocket
+
+ Properties:
+    Temporary Only
+
+ Methods:
+    Render          Draws a Rocket with different colored Engines
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbScentUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbScent Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws A Scent
+
+ Properties:
+    No Extra
+
+ Methods:
+    Render          Draws a Shockwave transparent
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxBeaconUnit.pas
+No Documentation included
+
+Module: TTempDataBaseUnit.pas
+------------------------------------------------------------------------------
+  Generic Base Object used Temp Data on Objects
+
+  Usage:
+    Its used by Base objects to store Temperal Data on T3dfxBase object
+    It has its own Debug Counter
+------------------------------------------------------------------------------
+
+Module: TMyObjActionBaseProcUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionBaseProc derived from TMyObjActionBase (abstract)
+
+  This Action has the Basic Process that are used for new Processes
+  The Activities in this Process doent do anything, it must be subclassed
+  Base Activities i order called:
+    1) ProcInit        Is performed once at Perform Activity first call
+    2) ProcCalc        Performes first, used for calculations
+    3) ProcContinue    Used for validation that the Process should continue
+    4) ProcFail        Finsh the Process and perform Fail Action
+    5) ProcIsGoal      Test if the Part Proc Goal is fulfilled
+    6) ProcNewGoal     Get a new Process Goal to fulfill
+    7) ProcIsSuccess   Test if Proc result is Fulfilled
+    8) ProcFinish      Finish the Process
+    9) ProcDo          Do the Main Task of the Process
+   10) ProcLast        Do some thing at end of Proc (if not Finished)
+------------------------------------------------------------------------------
+
+Module: TMyObjActionTrackRandomUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionTrackRandom based on TMyObjActionBase
+
+  Track Random Tracks an Object randomly, i.e. at start it
+  finds an object in the scene randomly and starts moving
+  towards it.
+   a) The Movement is managed by a Move Action.
+   b) The tracking only slerps the object in the direction of the target.
+  Action Process:
+   1) Init:  pTrackObj is set to nil
+   2) 
+------------------------------------------------------------------------------
+
+Module: TMyObjActionSearchEnemyUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionSearch derived from TMyObjActionBaseProc
+
+  This Action is applied to Scout Ships and searches for any Enemy
+  within a specified Zone Extenet. It Drops beacons at distance intervals
+
+  Base Activities i order called:
+    1) ProcInit        Calc Max Distance, and Sets Goal to Point out there
+    2) ProcCalc        Calc CurDist, Beacon Dist, and object Energy
+    3) ProcContinue    Return false if Max Dist is reached
+    4) ProcFail        Start Going Home reporting No Enemy Found
+    5) ProcIsGoal      Has Reached its Tracking Position
+    6) ProcNewGoal     Sets e new Tracking Position
+    7) ProcIsSuccess   Test if near any Enemy
+    8) ProcFinish      Go Home Again and report Enemy Found
+    9) ProcDo          Go towards the Tracking Position
+   10) ProcLast        Drop Beacons at Beacon Intervals
+------------------------------------------------------------------------------
+
+Module: TMyObjActionGoHomeUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionGoHome derived from TMyObjActionTrackRandom
+  This is used by all Ship Types that want to go home to Mother
+
+  Base Activities i order called:
+    1) ProcInit        Log Start and find a new Goal
+    2) ProcCalc        Calc DeltaDist, CurDist, and Object Energy
+    3) ProcContinue    False if out of energy
+    4) ProcFail        Kill Object and add some nice explosions
+    5) ProcIsGoal      True if Tracked to Beacon
+    6) ProcNewGoal     Find a New Beacon or Mother
+    7) ProcDo          Inherited Used
+    8) ProcIsSuccess   True if Mother was Hit
+    9) ProcFinish      Not Used, overriden by Sub classes
+   10) ProcLast        Not Used
+------------------------------------------------------------------------------
+
+Module: TGenAmmoDataUnit.pas
+------------------------------------------------------------------------------
+  Manages Scout Ship Data
+
+------------------------------------------------------------------------------
+
+Module: TMyObjActionGoEnemyUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionGoHome derived from TMyObjActionBase
+
+  This Action will find its way to an Enemy. Its Basically the same as
+  Base Activities i order called:
+    1) ProcInit        Object Data is retreived, LastPos, and Slerp set
+    2) ProcCalc        Calc DeltaDist, CurDist, and Object Energy
+    3) ProcContinue    False if Low energy or no Beacon was found
+    4) ProcFail        Go Home and tell Mother Enemy wasnt found
+    5) ProcIsGoal      True if Tracked to Beacon
+    6) ProcNewGoal     Find a New Beacon or Enemy
+    7) ProcIsSuccess   True if Enemy was found
+    8) ProcFinish      Must be overridden by sub classes
+    9) ProcDo          Inherited Used
+   10) ProcLast        Not Used
+------------------------------------------------------------------------------
+
+Module: T3dfxVbBulletUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbBullet Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws a simple Bullet
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Vertexes of a Bullet
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxBulletUnit.pas
+------------------------------------------------------------------------------
+ T3dfxBullet Class: Derived from T3dfxTriStripe. Instaniated.
+
+ A Temporary Bullet. Uses a Class Vertex Buffer
+
+ Properties:
+    No additional Properties (No Save Needed)
+
+ Methods:
+    Init             Crate Bullet Vertexes
+    CalcExtent       Calculate Bounding Box from all the Triangles
+    Move             Move the Bullet
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: TMyObjActionBombEnemyUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionBombEnemy derived from TMyObjActionGoHome
+
+  This Action Will Start Bombing at this Position if it can find any Enemy
+  When Ammo is Zero it will Go Home
+  1) Start with Stopping any Motion (Velocity = 0)
+
+------------------------------------------------------------------------------
+
+Module: TMyObjActionBomberToEnemyUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionBombEnemy derived from TMyObjActionGoEnemy
+
+  This is a Bomber Action and will take the Bomber to the Enemy
+------------------------------------------------------------------------------
+
+Module: TMyObjActionLaunchShipUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionLaunchShip derived from TMyObjActionBaseProc
+
+  This Action Takes Control of a Ship and Docks it into Mother Ship
+
+  Base Activities i order called:
+    1) ProcInit        Set Velocity, Slerp, calc Tracking Positions
+    2) ProcCalc        -
+    3) ProcContinue    -
+    4) ProcFail        -
+    5) ProcIsGoal      Has Reached its Tracking Position Phase
+    6) ProcNewGoal     Sets New Phase
+    7) ProcDo          Go towards the current Tracking Position
+    8) ProcIsSuccess   All Phases finished
+    9) ProcFinish      Die
+   10) ProcLast        -
+------------------------------------------------------------------------------
+
+Module: TMyObjActionDockShipUnit.pas
+------------------------------------------------------------------------------
+  TMyObjActionDockShip derived from TMyObjActionBaseProc
+
+  This Action Takes Control of a Ship and Docks it into Mother Ship
+
+  Base Activities i order called:
+    1) ProcInit        Set Velocity, Slerp, calc Tracking Positions
+    2) ProcCalc        -
+    3) ProcContinue    -
+    4) ProcFail        -
+    5) ProcIsGoal      Has Reached its Tracking Position Phase
+    6) ProcNewGoal     Sets New Phase
+    7) ProcDo          Go towards the current Tracking Position
+    8) ProcIsSuccess   All Phases finished
+    9) ProcFinish      Die
+   10) ProcLast        -
+------------------------------------------------------------------------------
+
+Module: TMyObjActionMoveUnit.pas
+No Documentation included
+
+Module: T3dfxComponentUnit.pas
+------------------------------------------------------------------------------
+ T3dfxComponent Class: Derived from T3dfxContainer. Instantiable
+
+ This Object Contains other Objects, but they are read only.
+ They are read at loading time from the filename
+
+ Properties:
+    objFileName     FileName of the Component to read
+
+ Methods:
+    No extra
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: TBombShipDataUnit.pas
+------------------------------------------------------------------------------
+  Manages Scout Ship Data
+
+------------------------------------------------------------------------------
+
+Module: TGenShipDataUnit.pas
+------------------------------------------------------------------------------
+  Manages Scout Ship Data
+
+------------------------------------------------------------------------------
+
+Module: TScoutShipDataUnit.pas
+------------------------------------------------------------------------------
+  Manages Scout Ship Data
+
+------------------------------------------------------------------------------
+
+Module: TMyObjActionMotherShipUnit.pas
+No Documentation included
+
+Module: T3dfxRocketUnit.pas
+------------------------------------------------------------------------------
+ T3dfxRocket Class: Derived from T3dfxTriStripe. Instaniated.
+
+  A Temporary Rocket. Its uses a Class Vertex Buffer
+  It add itself to Cur Scene and removes itself when killed (by itself)
+  It is related to a Target (has a pointer to it) that needs to be removed
+  if the Target is killed
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbArrowUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbArrow Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws an Arrow
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Vertexes of an Arrow
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxArrowUnit.pas
+------------------------------------------------------------------------------
+ T3dfxArrow Class: Derived from T3dfxTriStripe. Instaniated.
+
+  A Circular Arrow
+
+ Properties:
+     No Extra Properties
+
+ Methods:
+    Init             Crate Arrow Vertexes
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbBoardUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbBoard Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws an Simple Cube Board
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Vertexes of an Arrow
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxBoardUnit.pas
+------------------------------------------------------------------------------
+ T3dfxBoard Class: Derived from T3dfxTriStripe. Instaniated.
+
+  A simple Box with Class Vertexes
+
+ Properties:
+    No extra Properties
+
+ Methods:
+    Init             Crate Cube Vertexes
+    CalcExtent       Calculate Bounding Box Extent
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxTextureD3DUnit.pas
+No Documentation included
+
+Module: T3dfxTextureUnit.pas
+------------------------------------------------------------------------------
+ T3dfxTexture Class: Derived from T3dfxTriStripe. Abstract
+
+ This Class adds Textures to Triangle Stripe Objects
+
+ This means that the can have Texture Files mapped on the Triangle Stripe
+ Vertexes.
+
+ We dont need to have Textures, We can use Normal Vertexes also
+
+ Properties:
+    See below
+
+ Methods:
+
+
+ Sub Classes:
+    Many...
+
+------------------------------------------------------------------------------
+
+Module: T3dfxDynamicUnit.pas
+------------------------------------------------------------------------------
+ T3dfxDynamic Class: Derived from T3dfxTriStripe. Abstract
+
+ This Class adds Dynamic Vertex Buffers to Triangle Objects
+
+ This means that the can have Size (X=Width, Y=Height, X= Depth). The Size
+ will rebuild the Vertex Buffer to new Vectors depending on Size
+
+ It Also means thay are capable of Adjusting Precision
+
+ Properties:
+    Size        Size of Object in X,Y and Z direction
+
+ Methods:
+
+
+ Sub Classes:
+    Many...
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbSphereTextureUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbSphereTexture Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Tubes with Color
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbSphereNormalUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbSphereNormal Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Tubes with Color
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxGlobeUnit.pas
+------------------------------------------------------------------------------
+ T3dfxGlobe Class: Derived from T3dfxTriStripe. Instaniated.
+
+  A Circular Sphere
+
+ Properties:
+    No extra Properties
+
+ Methods:
+    Init             Crate Sphere Vertexes
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbTubeTextureUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbTubeTexture Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Tubes with Textures
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbTubeNormalUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbTubeNormal Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Tubes with Color
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxTubeUnit.pas
+------------------------------------------------------------------------------
+ T3dfxTube Class: Derived from T3dfxTriStripe. Instaniated.
+
+  A Circular Tube that can be a Cone (different width up/down)
+
+ Properties:
+    None extra
+
+ Methods:
+    Init             Crate Rectangle Vertexes
+    Save             Save extra properties
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxLineListUnit.pas
+------------------------------------------------------------------------------
+ Line List Class: Derived from Base. Abstract.
+
+ Is a Base object that has a Linelist Vertex Buffer. No other functionality
+
+ Properties:
+    Line Points stored in the Vertex Buffer
+
+ Methods:
+    CalcExtent       Calculate Bounding Box from all the Lines
+    Render           Draws the A Line List (not a LineStrip)
+    Save             Save Line vectors
+
+ Sub Classes:
+    T3dfxLine               T3dfxLineUnit
+    T3dfxScreenLine         T3dfxScreenLineUnit  (temp)
+    T3dfxExtentBoxSimple    T3dfxExtentBoxSimpleUnit   (temp)
+    T3dfxWorld              T3dfxWorldUnit       (temp)
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbLineListUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbLineList Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws the LInes of a Line object
+
+ Properties:
+    None
+
+ Methods:
+    Render          
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxLineUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLine: Derived from T3dfxLineList. Instaniated.
+
+ Contains a Number of Lins added by a Line Array at creation time
+
+ Properties:
+    The Actual Line Vertexes
+
+ Methods:
+    Init     Initate the Line List Vectors
+    Render   Render LineStrip instead of LineList
+
+ Sub Classes:
+    No Sub Classes
+
+  Todo:     Width is not used yet
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbCubeTextureUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbCubeTexture Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Cube with Texture
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbCubeNormalUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbCubeNormal Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Tubes with Color
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxCubeUnit.pas
+------------------------------------------------------------------------------
+ T3dfxCube Class: Derived from T3dfxDynamic. Instaniated.
+
+  The T3dfxCube Object is subclassed from the T3dfxDynamic abstract class.
+  Its inherits from T3dfxDynamix so the Vertex Buffer can be rebuilt with
+  different precision to increase framerate when far from the Eye.
+  It consists of 6 rectangles where you can set # of cols/rows to get
+  an apropriate precision. Also Size can be set in x,y and z
+
+ Properties:
+    None Extra
+
+ Methods:
+    Init             Crate Cube Vertexes
+    IntersectRayInt  Calculate Bounding Box Hit Different from the Cube
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbRectTextureUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbRectTexture Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Tubes with Color
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbRectNormalUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbRectNormal Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Tubes with Color
+
+ Properties:
+    No Extra
+
+ Methods:
+    Rebuild          Rebuilds a Vertex Buffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxRectUnit.pas
+------------------------------------------------------------------------------
+ T3dfxRect Class: Derived from T3dfxDynamic. Instaniated.
+
+  A Rectangle
+
+ Properties:
+     No extra properties
+
+ Methods:
+    Init             Crate Rectangle Vertexes
+    Save             Save extra properties
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbLaserLineUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbLaserLine Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws an Simple Cube Board
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Vertexes of an Arrow
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxLaserLineUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLaserLine Class: Derived from T3dfxTriStripe. Instaniated.
+
+ A Temporary Bullet. Uses a Class Vertex Buffer
+
+ Properties:
+    No additional Properties (No Save Needed)
+
+ Methods:
+    Init             Crate Bullet Vertexes
+    CalcExtent       Calculate Bounding Box from all the Triangles
+    Move             Move the Bullet
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbPointFireUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbPointFire Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws the Points of a PointFire
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Points of the Galax    
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxPointFireUnit.pas
+------------------------------------------------------------------------------
+ Fire. Inherited from T3dfxPointList. Instansiated
+
+ Consists of ca 2000 Points that make up a Fire, MIst or something
+
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbGalaxUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbGalax Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws the Points of a Galax
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Points of the Galax    
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxGalaxUnit.pas
+------------------------------------------------------------------------------
+ Galaxy. Inherited from T3dfxPointList. Instansiated
+
+ Consists of ca 2000 Points is a spiral Galaxy pattern. Rotates slowly
+
+ Properties:
+    No additional Properties
+
+ Methods:
+    Init             Creates the Points that makes out the Galaxy Stars
+
+ Sub Classes:
+    No Sub classes
+
+------------------------------------------------------------------------------
+
+Module: TGenSaveAsDialogUnit.pas
+No Documentation included
+
+Module: T3dfxBaseFactoryUnit.pas
+------------------------------------------------------------------------------
+ T3dfxBaseFactoryUnit Class: Derived from TObject. Concrete.
+
+ Handles Registration of T3dfxBaseClass Classes. Each T3dfx... Class
+ must register itself in its Initalization section.
+
+ Have Methods of Saving and Creation of all Objects. These Methods
+ only knows about T3dfxBase Object classes
+
+ Note: The Base Factory doesnt know anything about Scenes, COmponents
+       and the callers of these function must handle this
+
+ Methods:
+    ObjectFactoryStartUp     Startup the Factory is automatically when
+                             first Registration of a Base Class is done
+
+    RegClass                 Used for registrating a Base Class
+    CreateObjectFromTf       Crate an Object from an opened File
+    CreateObjectFromFileName Crate an Object from an existing FileName
+    SaveObjectAs             Save an Object as a File
+
+    ObjectFactoryShutDown    Closes the Factory
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbExtentBoxSimpleUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbExtentBoxSimple Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws a simple Extent Box
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Points of the Galax    
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxExtentBoxSimpleUnit.pas
+------------------------------------------------------------------------------
+ T3dfxExtentBox: Derived from T3dfxLineList. Instaniated.
+
+ This is used to Render the Boundin Box for a Selected Object
+ Its not selectable, and its temporary
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbRayUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbRay Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws the Selected objects Look At and Up Vector. No Extent
+
+ Properties:
+    None
+
+ Methods:
+    SetVectors      Sets the Vectors of the Look At
+    Render          ! Line and several Points
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxScreenLineUnit.pas
+No Documentation included
+
+Module: T3dfxVbXyzLinesUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbXyzLines Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws a Coordinate System of three Lines X = red, Y = green and Z = blue
+
+ Properties:
+    None
+
+ Methods:
+    Render          Three Lines with different Material
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxXyxLinesUnit.pas
+------------------------------------------------------------------------------
+ T3dfxXyxLines Class: Derived from TObject. Instantiable
+
+ Used for showing the Eye Look At and Up Vectors. Temporary
+ The Vertexes is updated to reflect EyePoint, Look At and UpVector
+ On each rendering
+
+ Properties:
+    See below (not saved)
+
+ Methods:
+    Init             Initiate vertexec
+    Render           Using Identity Matrix
+
+ Sub Classes:
+    No sub classes
+
+ ToDo: The Vertex Buffer is updated each time the Eye Point is rendered
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbLookAtUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbLookAt Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws the Selected objects Look At and Up Vector. No Extent
+
+ Properties:
+    None
+
+ Methods:
+    SetVectors      Sets the Vectors of the Look At
+    Render          Two Lines with different Material
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxEyeViewUnit.pas
+------------------------------------------------------------------------------
+ T3dfxEyeView Class: Derived from TObject. Instantiable
+
+ Used for showing the Eye Look At and Up Vectors. Temporary
+ The Vertexes is updated to reflect EyePoint, Look At and UpVector
+ On each rendering
+
+ Properties:
+    See below (not saved)
+
+ Methods:
+    Init             Initiate vertexec
+    Render           Using Identity Matrix
+
+ Sub Classes:
+    No sub classes
+
+ ToDo: The Vertex Buffer is updated each time the Eye Point is rendered
+
+------------------------------------------------------------------------------
+
+Module: T3dfxHitUnit.pas
+No Documentation included
+
+Module: T3dfxDebugLineUnit.pas
+------------------------------------------------------------------------------
+ T3dfxDebugLine: Derived from T3dfxLine Instaniated.
+
+ Contains a Number of Lines that will be Debug Measures
+
+------------------------------------------------------------------------------
+
+Module: T3dfxCompObjectListUnit.pas
+------------------------------------------------------------------------------
+ T3dfxCompObjectList Class: Derived from T3dfxObjectListBase. Instantiated
+
+ This is the Object List for managing Objects in T3dfxCompType.
+ It Contains all The Objects inside a Component Type.
+
+ Currently all Properties and Methods is placed in the Matrix.
+ This might Change so we keep it here for the moment
+
+ Properties:
+    No Extra
+
+ Methods:
+    No Extra
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxCompTypeUnit.pas
+------------------------------------------------------------------------------
+ T3dfxCompType Class: Derived from TObject. Instantiable
+
+ ThisObject is a Component Objects Type. Its not rendered by it self it's
+ a referenced by a Component Instance object T3dfxCompInst and used by that
+ for picking and rendering.
+
+ It is represented by a File and always loaded from that file. The Component
+ Instance loads this (on the fly) when the first Instance is Loaded.
+
+ An instance can be opened and thus the inner parts of the component type is
+ exposed for adjustment. When changed it gets dirty and will be resaved to
+ store the changes. Otherwise they will be lost.
+
+ An instance can also be exploded to a Copy of the Type, i.e it will loose
+ its reference to the type and just become ordinary Objects.
+
+ Any existing Object or combination of objects can be stored as Component
+ and can also be treated directly as a Component where it exist.
+
+ Its not a T3dfxBase type, i.e it doesnt have any property other than the
+ File Name and the contained objects in a TObjectList. Mostly it resembels
+ The Object List Object containg all objects in as Scene
+
+ These Types are also contained in an Object List (ObjectTypes) where they
+ can be found and referenced
+
+ Properties:
+    FileName          The file name
+    Object List       All contained Objects
+
+ Methods:
+    Save              Save all COntained objects and Component TYpe Data
+    Load              Load the Component Type
+    Pick
+    Render
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxCompInstUnit.pas
+------------------------------------------------------------------------------
+ T3dfxCompInst Class: Derived from T3dfxBase. Instantiable
+
+ This Object is a Component Instance. Its basically a sort of Container
+ but instead of containing other objects, it references a Component Type
+ that holds all the Objects
+
+
+ Properties:
+    Comp Type   Reference to its Component Type
+
+ Methods:
+
+ Sub Classes:
+    Many...
+
+------------------------------------------------------------------------------
+
+Module: T3dfxCompFactoryUnit.pas
+------------------------------------------------------------------------------
+ T3dfxCompTypeList Class: Derived from TObject. Instantiated Once
+
+  This is the List that manage all stored Component Types (T3dfxCompType)
+  It its instantiated only Once and holds all loaded Component Types over
+  the Whole lifecycle of the Application
+
+ Properties:
+    Component Types List  The Container for all loaded Component Types
+    Dirty                 True if Component Types has Changed
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxSceneFactoryUnit.pas
+No Documentation included
+
+Module: T3dfxEyeUnit.pas
+------------------------------------------------------------------------------
+ T3dfxEye Class: Derived from T3dfxGlobe. Instantiated.
+
+ A Globe Texture Object specifically used as Viewing object
+
+ Properties:
+    No extra properties
+
+
+ Sub Classes:
+    No Sub classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxSceenUnit.pas
+------------------------------------------------------------------------------
+ T3dfxSceen Class: Derived from TObject. Instatiable
+
+ A full Scene including its Objects.
+
+------------------------------------------------------------------------------
+
+Module: TMyObjActionTrackObjUnit.pas
+No Documentation included
+
+Module: TMyObjActionFlashUnit.pas
+No Documentation included
+
+Module: TMyObjActionFireUnit.pas
+No Documentation included
+
+Module: TMyObjActionListUnit.pas
+No Documentation included
+
+Module: T3dfxStrUnit.pas
+No Documentation included
+
+Module: T3dfxGeometryUnit.pas
+No Documentation included
+
+Module: T3dfxObjectFileIdsUnit.pas
+No Documentation included
+
+Module: T3dfxObjectFileUnit.pas
+No Documentation included
+
+Module: TMySettingsUnit.pas
+No Documentation included
+
+Module: T3dfxStrObjUnit.pas
+No Documentation included
+
+Module: TPropNodeUnit.pas
+No Documentation included
+
+Module: T3dfxVbConLineUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbConLine Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws an Simple Cube Board
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Vertexes of an Arrow
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxConLineUnit.pas
+------------------------------------------------------------------------------
+ Connection Line Class: Derived from T3dfxVertexed. Concrete.
+
+ Handles a Connection Lines between two other objects
+
+ Properties:
+    Connection Start and End
+
+------------------------------------------------------------------------------
+
+Module: T3dfxProcConLineEditUnit.pas
+No Documentation included
+
+Module: T3dfxProcBaseUnit.pas
+No Documentation included
+
+Module: T3dfxProcLineEditUnit.pas
+No Documentation included
+
+Module: T3dfxProcObjEditUnit.pas
+No Documentation included
+
+Module: TGenSleepUnit.pas
+No Documentation included
+
+Module: T3dfxLightContainerUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLightContainer Class: Derived from T3dfxContainer. Instantiable
+
+ This object is used to contain a Light Source. The only contribution is
+ a Object Name and its Symbol Image Id
+
+------------------------------------------------------------------------------
+
+Module: T3dfxLightSpotUnit.pas
+------------------------------------------------------------------------------
+ T3dfxLightSpot Class: Derived from T3dfxLight. Instantiated
+
+ Is a Spot Light
+
+ All Lights are contained in T3dfxLightListUnit
+
+ Properties:
+   Ang     : TD3DXVector3; // Light Direction
+   Theta   : single;       // Inner Angle of Spotlight
+   Phi     : single;       // Outer Angle of Spotlight
+   FallOff : single;       // FallOff for this Light (spotlights)
+
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: TMyMenuUnit.pas
+No Documentation included
+
+Module: TLogFrameUnit.pas
+No Documentation included
+
+Module: TTrackFrameUnit.pas
+No Documentation included
+
+Module: T3dfxProcRenderUnit.pas
+No Documentation included
+
+Module: T3dfxVbGridUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbGrid Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Holds Vertexes for World Coordinates
+ Does not need to calculate Extent
+
+ Properties:
+    No extra
+
+ Methods:
+    Render           Draws the World Lines
+
+ Sub Classes:                   Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxGridUnit.pas
+------------------------------------------------------------------------------
+ T3dfxGrid. Inherited from T3dfxPointList. Instansiated Once
+
+ Consists of ca 2000 Points in a Grid Pattern from +/- 1 in any direction
+
+ Properties:
+    No additional Properties
+
+ Methods:
+    Init             Creates the Points that makes out grid points
+
+ Sub Classes:
+    No Sub classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbWorldUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbWorld Class: Derived from T3dfxVertexBuffer. Instantiated Once
+
+ Holds Vertexes for World Coordinates
+ Does not need to calculate Extent
+
+ Properties:
+    No extra
+
+ Methods:
+    Render           Draws the World Lines using specific Material
+                     for each Line
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxWorldUnit.pas
+No Documentation included
+
+Module: T3dfxVbTriStripeUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbTriStripe Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws Triangle Stripes With both Textures and Normals
+
+ Properties:
+    No Extra
+
+ Methods:
+    CopyToVb          Copies VertexList to VertexBuffer
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxTriCompUnit.pas
+------------------------------------------------------------------------------
+ T3dfxTriComp Class: Derived from T3dfxTriStripe. Abstract.
+
+ Is a Base object that has a Linelist Vertex Buffer. No other functionality
+
+ Properties:
+    Its Vertex Buffer need to be saved
+
+ Methods:
+    CalcExtent       Calculate Bounding Box from Vertices
+
+ Sub Classes:
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbNormalsUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbNormals Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws A Points and Lines for edit Positions
+
+ Properties:
+    Temporary Only
+
+ Methods:
+    Render          Normal Points and Lines between Positions
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbPositionsUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbPositions Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws A Points and Lines for edit Normals
+
+ Properties:
+    Temporary Only
+
+ Methods:
+    Render          Normal Points and Lines between Position and Normals
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxTriEditUnit.pas
+------------------------------------------------------------------------------
+ T3dfxTriEdit Class: Derived from T3dfxTriStripe. Instantiated Once
+
+ IS the Edit Mode
+
+ Properties:
+    No additional Properties
+
+ Methods:
+
+ Sub Classes:
+
+------------------------------------------------------------------------------
+
+Module: T3dfxViewPortUnit.pas
+No Documentation included
+
+Module: T3dfxExtentUnit.pas
+No Documentation included
+
+Module: T3dfxVbRaysUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbRays Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws a number of Rays
+
+ Properties:
+    None
+
+ Methods:
+    Render          
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxOcclusionBoxUnit.pas
+------------------------------------------------------------------------------
+ T3dfxOcclusionBox: Derived from T3dfxLineList. Instaniated.
+
+ Used for Occlusion detection. It contains a Bounding Box mapped on a
+ Drawing Object and is used for rendering Occlusion Boxes as well as
+ calculating occlusion of objects behind it
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    No Sub Classes
+
+------------------------------------------------------------------------------
+
+Module: T3dfxRendererUnit.pas
+------------------------------------------------------------------------------
+ T3dfxRenderObj Class: Derived from TObject. Instantiable
+
+ Handles all Rendering
+
+
+
+
+ Properties:
+
+
+ Methods:
+
+
+
+
+
+ Sub Classes:
+
+
+------------------------------------------------------------------------------
+
+Module: T3dfxProcKeysUnit.pas
+------------------------------------------------------------------------------
+ T3dfxProcKeys derived from T3dfxProcBase
+
+  Manages all Key and Wheel events for the Application
+
+  Current Key Used
+
+  A               DevBase           Move Object Backwards
+  Q               DevBase           Move Object Forward
+  S               DevBase           Brake Object to Stop
+
+  VK_SPACE        DevBase           Highlight selected object On/Off
+  VK_DELETE       Menus             Delete Object
+
+  VK_LEFT         DevBase           Roll Eye Left
+  VK_RIGHT        DevBase           Roll Eye Right
+  VK_UP           DevBase           Moves Eye Forward
+  VK_DOWN         DevBase           Moves Eye Backwards
+
+  VK_F1           Cur Scene         Perspective / Orthogonal View
+  VK_F2           DevBase           View Front (+Z) of Selected Object
+  VK_F3           DevBase           View Side  (X)  of Selected Object
+  VK_F4           DevBase           View Back  (-Z) of Selected Object
+
+  VK_F5                             Toggle: Solid, Frame, ExtentBox
+  VK_F6           Cur Scene         Fog On
+  VK_F7           DevBase           Stop
+  VK_F8           DevBase           Slow Speed
+
+  VK_F9
+  VK_F10
+  VK_F11
+  VK_F12
+
+
+------------------------------------------------------------------------------
+
+Module: T3dfxProcMainShutDownUnit.pas
+No Documentation included
+
+Module: T3dfxProcAppInitUnit.pas
+No Documentation included
+
+Module: TMyObjActionScaleUnit.pas
+No Documentation included
+
+Module: TMyObjActionTimeUnit.pas
+No Documentation included
+
+Module: TMyObjActionRotateUnit.pas
+No Documentation included
+
+Module: TSubPropFrameUnit.pas
+------------------------------------------------------------------------------
+ TSubPropFrame Class: Derived from Tframe. Instaniated.
+
+ Handles all Properties for all Objects and Lights
+
+ Primary Primitives:
+
+                    Num Pos Siz Cnt Scl Ang Vew Mtl Txt
+ T3dfxGlobeUnit      X   X   X   X   X   X   X   X   a) OK
+ T3dfxTubeUnit       X   X   1)  X   X   X   X   X   a) OK
+ T3dfxRectUnit       X   X   2)  3)  3)  X   X   X   a) OK
+ T3dfxCubeUnit       X   X   X   X   X   X   X   X   b) OK
+ T3dfxTriCompUnit    -   X   -   X   X   X   X   4)  a)
+ T3dfxMeshFileUnit   -   X   -   X   X   X   X   4)  -  OK
+ T3dfxMeshTextUnit   X   X   -   X   X   X   X   X   -  OK
+ T3dfxBoardUnit      -   X   -   X   X   X   X   X   -  OK
+ T3dfxArrowUnit      -   X   -   X   X   X   X   X   -  OK
+ T3dfxGalaxUnit      -   X   -   X   X   X   X   X   -  OK
+
+ T3dfxContainerUnit  -   X   -   X   X   X   X   -   -
+
+  a) These can only have Texture on All sides
+  b) A Cube have Front, Front & Back and All sides textures
+  1) A Tube has Height, Width Up/Down instead of Size X,Y, and Z
+  2) A Rect dont have Size/Scale in Z. Its fixed to 0.01 for Extent
+  3) A Rect can not have center on Size Z
+  4) Only Transparency is working
+
+ Objects that are not Primitives:
+
+ T3dfxGridUnit
+ T3dfxTriEditUnit
+ T3dfxWorldUnit
+ T3dfxEyeViewUnit
+ T3dfxScreenLineUnit
+ T3dfxExtentBoxSimpleUnit
+
+------------------------------------------------------------------------------
+
+Module: ObjectFrameUnit.pas
+------------------------------------------------------------------------------
+ TObjectFrame Class: Derived from Tframe. Instantiated Once
+
+ This Frame holds all SubFrames that disaplay the Selected Object's Properties
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    See below
+
+------------------------------------------------------------------------------
+
+Module: TObjectListFrameUnit.pas
+------------------------------------------------------------------------------
+ TObjectListFrame Class: Derived from Tframe. Instantiated Once
+
+ User Interface for Object List
+
+ Properties:
+    See below
+
+ Methods:
+    See below
+
+ Sub Classes:
+    None
+
+------------------------------------------------------------------------------
+
+Module: TSceenFrameUnit.pas
+No Documentation included
+
+Module: TTextureFrameUnit.pas
+No Documentation included
+
+Module: TFrame1Unit.pas
+No Documentation included
+
+Module: DirectX7Unit.pas
+No Documentation included
+
+Module: T3dfxVbExtentBoxUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbExtentBox Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws a Extent Box
+
+ Properties:
+    None
+
+ Methods:
+    Create      Creates the Extent Box and Edit Points
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxVbTriangleUnit.pas
+------------------------------------------------------------------------------
+ T3dfxVbTriangle Class: Derived from T3dfxVertexBuffer. Instantiable
+
+ Draws a Triangle on Screen from World Space Vectors
+
+ Properties:
+    None
+
+ Methods:
+    Render          
+
+ Sub Classes (With Extent)      Used in                   Type    Ok
+    None
+
+------------------------------------------------------------------------------
+
+Module: T3dfxProcObjBaseUnit.pas
+No Documentation included
+

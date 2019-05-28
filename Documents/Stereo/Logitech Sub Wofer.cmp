@@ -1,0 +1,16 @@
+<Version=1>
+<Comp="Logitech Sub Wofer">
+<Object="T3dfxCube">
+<Name="Logitech Sub Wofer">
+<Uid=2>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.33;0.33;0.42>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.165;0;0>
+<Color=1;1;0;1>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\LogitechSub.jpg">
+</Object>
+</Comp>

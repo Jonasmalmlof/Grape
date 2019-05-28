@@ -1,0 +1,383 @@
+13:52:39.276   Memory (b)                    53580 (53580)
+13:52:39.279 
+13:52:39.281 String Resources.StartUp:
+13:52:39.290   Memory (b)                    62648 (9068)
+13:52:39.292 
+13:52:39.295 TMySettings.StartUp:
+13:52:39.298   Memory (b)                    63288 (640)
+13:52:39.301 
+13:52:39.303 TMyMessageFactory.StartUp
+13:52:39.306   Memory (b)                    63468 (180)
+13:52:39.308 
+13:52:39.310 TGrapeMain.Create:
+13:52:39.313   TTextureFrame.Create          78460 (14992)
+13:52:39.316   TFrame1.Create                74024 (-4436)
+13:52:39.319   TTrackFrame.Create            82276 (8252)
+13:52:39.327   TObjectListFrame.Create       90516 (8240)
+13:52:39.331   TLogFrame.Create              97320 (6804)
+13:52:39.338   TSubPropFrame.Create          113308 (15988)
+13:52:39.341   TObjectFrame.Create           108924 (-4384)
+13:52:39.346   TSceenFrame.Create            115332 (6408)
+13:52:39.352 Timer Min 1 Max 1000000
+13:52:39.359   T3dfxProcAppInit.Create       112416 (-2916)
+13:52:39.362 
+13:52:39.364 T3dfxProcAppInit.Perform 1:
+13:52:39.368   TGrapeMain.StartUp            112752 (336)
+13:52:39.371   TLogFrame.StartUp             112800 (48)
+13:52:39.377   TTextureFrame.StartUp         113360 (560)
+13:52:39.380   TFrame1.StartUp               113352 (-8)
+13:52:39.382   TTrackFrame.StartUp           113356 (4)
+13:52:39.392 Frame W 860 H 852
+13:52:39.417 WM_RESIZEMAIN
+13:52:39.424 
+13:52:39.427 TGrapeMain.MainLoop:
+13:52:39.430   Run                           126004 (12648)
+13:52:39.432 
+13:52:39.435 T3dfxProcAppInit.Perform 2:
+13:52:39.437   T3dfxProcAppInit.StartUp      126096 (92)
+13:52:39.440   T3dfx.StartUp                 126236 (140)
+13:52:39.464   T3dfx.CreateDevice
+13:52:39.524   Capabilities:
+13:52:39.528   Fog Range                     On
+13:52:39.532   Max Lights                    10
+13:52:39.536   N-Pathces                     Off
+13:52:39.536   B-splines                     Off
+13:52:39.544   RT-patches                    Off
+13:52:39.544   RT-Pathces Zero               Off
+13:52:39.544 Screen Height 1080
+13:52:39.548 Screen Width  1920
+13:52:39.552 Want Height 860 Got 852
+13:52:39.552 Want Width  852 Got 860
+13:52:39.560   Texture Memory                4092,000(Mb)
+13:52:39.564   Query Device                  Ok
+13:52:39.564   T3dfx.InitD3D                 127008 (772)
+13:52:39.568   T3dfxTextureD3D.StartUp       143380 (16372)
+13:52:39.572   T3dfxCompFactory.StartUp      143468 (88)
+13:52:39.572   Load Scene                    D:\Programming\Pappas\Grape\New.scn
+13:52:39.580 
+13:52:39.580 Scene Loading: On
+13:52:39.584 
+13:52:39.588 ERROR: T3dfxEye Property is undefined <Vel=0> (Eye (8))
+13:52:39.596 ERROR: T3dfxEye Property is undefined <VelMax=0.1> (Eye (8))
+13:52:39.596 ERROR: T3dfxEye Property is undefined <AngVel=0;0;0> (Eye (8))
+13:52:39.600 ERROR: T3dfxEye Property is undefined <AngVelMax=0.01> (Eye (8))
+13:52:39.604 ERROR: T3dfxEye Property is undefined <TrackAhead=0> (Eye (8))
+13:52:39.604 ERROR: T3dfxEye Property is undefined <LookAt=1;0;0> (Eye (8))
+13:52:39.608 ERROR: T3dfxEye Property is undefined <UpVector=0;1;0> (Eye (8))
+13:52:39.616 GetTextureRef: E:\My Projects\Grape\Documents\Eye2.jpg
+13:52:39.624 ERROR: T3dfxEye Property is undefined <TxtStyle=2> (Eye (8))
+13:52:39.632 ERROR: T3dfxCube Property is undefined <Vel=0> (Cube (9))
+13:52:39.632 ERROR: T3dfxCube Property is undefined <VelMax=0.1> (Cube (9))
+13:52:39.636 ERROR: T3dfxCube Property is undefined <AngVel=0;0;0> (Cube (9))
+13:52:39.640 ERROR: T3dfxCube Property is undefined <AngVelMax=0.002> (Cube (9))
+13:52:39.644 ERROR: T3dfxCube Property is undefined <TrackAhead=0> (Cube (9))
+13:52:39.644 ERROR: T3dfxCube Property is undefined <LookAt=1;0;0> (Cube (9))
+13:52:39.652 ERROR: T3dfxCube Property is undefined <UpVector=0;1;0> (Cube (9))
+13:52:39.656 
+13:52:39.660 Scene Loading: Off
+13:52:39.668 
+13:52:39.672 Post Msg TMsgSceneChg Sub 4
+13:52:39.676 Post Msg TMsgObjSelect Sub 4
+13:52:39.680 Loaded Scene New (109mS)
+13:52:39.680   TSceenFrame.StartUp           150980 (7512)
+13:52:39.688   TObjectListFrame.StartUp      150988 (8)
+13:52:39.692   TObjectFrame.StartUp          150984 (-4)
+13:52:39.696   TSubPropFrame.StartUp         179188 (28204)
+13:52:39.704   Entering Loop                 179152 (-36)
+13:52:39.704 
+13:52:39.708 --------------------------- INITATED ----------------------------
+13:52:42.152 
+13:52:42.152 ---------------------------- CLOSING ----------------------------
+13:52:42.160 
+13:52:42.160 TGrapeMain.ShutDown:
+13:52:42.164   Memory (b)                    179912 (760)
+13:52:42.164   T3dfxProcMainShutDown.Perform
+13:52:42.168   Memory (b)                    179984 (72)
+13:52:42.168 
+13:52:42.176 T3dfxSceen.ShutDown:
+13:52:42.180   Memory (b) Before             180052 (68)
+13:52:42.180 
+13:52:42.184 T3dfxSceneFactory.ShutDown
+13:52:42.184   T3dfxSceen Size (b)           100
+13:52:42.184   Debug Count Before            1
+13:52:42.188 
+13:52:42.196 T3dfxObjectList.ShutDown:
+13:52:42.196   SceneObjects Orphans          0
+13:52:42.200   SceneObjects Objects          0
+13:52:42.200   SceneObjects used             2
+13:52:42.204   SceneObjects Allocated        2
+13:52:42.204   Objects Cur Count             6
+13:52:42.212   Memory (b) After              177908 (-2144)
+13:52:42.212 
+13:52:42.216 TGrapeMain.ShutDown (Begin):
+13:52:42.216   Memory (b) Before             178004 (96)
+13:52:42.220 
+13:52:42.220 TTrackFrame.ShutDown:
+13:52:42.224   Tracking Frame                Off
+13:52:42.224   Tracking Type                 Unknown
+13:52:42.232   Memory (b)                    178004 (0)
+13:52:42.232 
+13:52:42.236 TObjectListFrame.ShutDown:
+13:52:42.236   Nr of TreeNodes               2
+13:52:42.240   Memory (b)                    177888 (-116)
+13:52:42.248 
+13:52:42.248 TSceenFrame.ShutDown:
+13:52:42.252   Nr of TreeNodes               37
+13:52:42.252 
+13:52:42.256 TPropNodeList.ShutDown by TSceenFrame:
+13:52:42.256   Nr of PropNodes               37
+13:52:42.260   Max Nodes                     198
+13:52:42.260   Nodes Before                  198
+13:52:42.268   Nodes After                   161
+13:52:42.268   Lists After                   1
+13:52:42.272   Memory (b)                    172044 (-5844)
+13:52:42.276 
+13:52:42.284 TPropNodeList.ShutDown by TSubPropFrame:
+13:52:42.284   Nr of PropNodes               161
+13:52:42.288   Max Nodes                     198
+13:52:42.288   Nodes Before                  161
+13:52:42.292   Nodes After                   0
+13:52:42.292   Lists After                   0
+13:52:42.296   Memory (b)                    143912 (-28132)
+13:52:42.296 
+13:52:42.304 TLogFrame.ShutDown:
+13:52:42.304   Memory (b)                    143912 (0)
+13:52:42.308 
+13:52:42.308 TFrame1.ShutDown:
+13:52:42.312   Memory (b)                    143332 (-580)
+13:52:42.312 
+13:52:42.320 TGrapeMain.ShutDown (End):
+13:52:42.324   Memory (b) After              143424 (92)
+13:52:42.324   T3dfxShockWave.ShutDown 0
+13:52:42.328   T3dfxScraps.ShutDown 0
+13:52:42.328   T3dfxBullet.ShutDown 0
+13:52:42.332   T3dfxPointFire.ShutDown       0
+13:52:42.332   T3dfxLaserLine.ShutDown 0
+13:52:42.340   T3dfxRocket.ShutDown 0
+13:52:42.340 
+13:52:42.344 T3dfx.Destroy (Begin):
+13:52:42.344   Memory (b) Before             143508 (84)
+13:52:42.348   T3dfxGrid.ShutDown            0
+13:52:42.356   T3dfxExtentBox.ShutDown       0
+13:52:42.356   T3dfxProcList Size (b)        8
+13:52:42.356   T3dfxProcBase Size (b)        4
+13:52:42.360   Max Processes                 7
+13:52:42.364   Number of Processes           4
+13:52:42.364     T3dfxProcObjEdit
+13:52:42.368     T3dfxProcLineEdit
+13:52:42.368     T3dfxProcConLineEdit
+13:52:42.376     T3dfxProcRender
+13:52:42.376   Debug Count Before            7
+13:52:42.380   Debug Count After             3
+13:52:42.380 
+13:52:42.384 T3dfxRenderer.ShutDown:
+13:52:42.392   Memory (b) Before             139740 (-3768)
+13:52:42.392   Render Engine Size (b)        160
+13:52:42.392   RndObj Size (b)               156
+13:52:42.396   Max Objects                   2
+13:52:42.400   Free Objects                  2
+13:52:42.400   Current Obj Count             2
+13:52:42.404   Debug Obj Count               0
+13:52:42.404 
+13:52:42.412 T3dfx.Destroy (End):
+13:52:42.412   Memory (b) After              126068 (-13672)
+13:52:42.416 
+13:52:42.420 T3dfxCompFactory.ShutDown
+13:52:42.420   CompTypeList Size (b)         12
+13:52:42.428   T3dfxCompType Size (b)        20
+13:52:42.428   T3dfxCompInst Size (b)        124
+13:52:42.428   Current CompTypes             0
+13:52:42.432   Max CompInst                  0
+13:52:42.436   Debug Types Before            0
+13:52:42.436   Debug Inst Before             0
+13:52:42.444   Memory (b)                    126036 (-32)
+13:52:42.444 
+13:52:42.448 T3dfxTextureFactory.ShutDown
+13:52:42.448   Texture Class Size (b)        16
+13:52:42.452   T3dfxTexture Size (b)         0
+13:52:42.452   Nr of Textures                1
+13:52:42.456   T3dfxTexture Count            0
+13:52:42.456   T3dfxTexture Max Count        3
+13:52:42.464   Debug Count Before            1
+13:52:42.480   Memory (b)                    125928 (-108)
+13:52:42.480 
+13:52:42.484 TMyMenuList.ShutDown
+13:52:42.484   TMyMenuBase Size (b)          16
+13:52:42.488   TMyMenuList Size (b)          20
+13:52:42.492   Current Nr of Menus           59
+13:52:42.492   Nr of Images                  18
+13:52:42.500   Menu Opened                   0
+13:52:42.500   Debug Count Before            59
+13:52:42.504   Memory (b)                    124688 (-1240)
+13:52:42.504 
+13:52:42.508 MyClassesClass Shutdown;
+13:52:42.516   Classes                       239
+13:52:42.520   Modules                       214
+13:52:42.520   Symbols                       9
+13:52:42.524   Lines                         3063
+13:52:42.528   Memory (b)                    81560 (-43128)
+13:52:42.536 
+13:52:42.536 T3dfxObjectFileIdList.ShutDown
+13:52:42.540   File Id Size (b)              8
+13:52:42.540   File Id List Size (b)         8
+13:52:42.544   Nr of File Ids                157
+13:52:42.544   Debug Count Before            157
+13:52:42.552   Memory (b)                    70148 (-11412)
+13:52:42.556 
+13:52:42.556 T3dfxBaseFactory.ShutDown
+13:52:42.560   Classes                       44
+13:52:42.564   T3dfxBase                     260
+13:52:42.564    T3dfxViewBase                104
+13:52:42.572     T3dfxChildBase              12
+13:52:42.572      T3dfxActionBase            4
+13:52:42.576       T3dfxPropBase             0
+13:52:42.576        T3dfxContainer           0
+13:52:42.580         T3dfxComponent          4
+13:52:42.580         T3dfxLightContainer     0
+13:52:42.588        T3dfxPrim                44
+13:52:42.592         T3dfxMesh               32
+13:52:42.592          T3dfxMeshText          20
+13:52:42.596          T3dfxMeshFile          4
+13:52:42.596         T3dfxVertexed           12
+13:52:42.600          T3dfxTriStripe         0
+13:52:42.600           T3dfxBullet           40
+13:52:42.608           T3dfxRocket           64
+13:52:42.608           T3dfxArrow            0
+13:52:42.612           T3dfxBoard            0
+13:52:42.616           T3dfxTexture          40
+13:52:42.616            T3dfxDynamic         24
+13:52:42.624             T3dfxGlobe          0
+13:52:42.624              T3dfxEye           0
+13:52:42.628             T3dfxTube           4
+13:52:42.628             T3dfxCube           32
+13:52:42.632             T3dfxRect           4
+13:52:42.632            T3dfxTriComp         4
+13:52:42.636           T3dfxTriEdit          32
+13:52:42.636          T3dfxPointList         0
+13:52:42.644           T3dfxScraps           28
+13:52:42.644           T3dfxBeacon           0
+13:52:42.648           T3dfxPointFire        0
+13:52:42.652           T3dfxGalax            0
+13:52:42.652           T3dfxGrid             0
+13:52:42.660          T3dfxShockWave         24
+13:52:42.660          T3dfxLineList          0
+13:52:42.664           T3dfxLine             4
+13:52:42.664            T3dfxDebugLine       4
+13:52:42.668           T3dfxLaserLine        64
+13:52:42.672           T3dfxExtentBoxSimple  8
+13:52:42.680           T3dfxScreenLine       0
+13:52:42.680           T3dfxWorld            0
+13:52:42.684           T3dfxOcclusionBox     72
+13:52:42.684          T3dfxConLine           40
+13:52:42.688        T3dfxCompInst            4
+13:52:42.688   Memory (b)                    69664 (-484)
+13:52:42.696 
+13:52:42.700 T3dfxLightFactory.ShutDown
+13:52:42.700   Light Class Size (b)          160
+13:52:42.704   Max Lights in Device          10
+13:52:42.704   Number of Classes             4
+13:52:42.708   Current Nr of Lights          0
+13:52:42.708   Max Nr of Lights              0
+13:52:42.716   Tot Nr of Lights              0
+13:52:42.716   Debug Count Before            0
+13:52:42.720   Light Count                   0
+13:52:42.724   Memory (b)                    69560 (-104)
+13:52:42.724 
+13:52:42.732 TGrapeMain:Processes.ShutDown:
+13:52:42.732   T3dfxProcList Size (b)        8
+13:52:42.736   T3dfxProcBase Size (b)        4
+13:52:42.736   Max Processes                 7
+13:52:42.736   Number of Processes           3
+13:52:42.740     T3dfxProcAppInit
+13:52:42.744     T3dfxProcMainShutDown
+13:52:42.744     T3dfxProcKeys
+13:52:42.752   Debug Count Before            3
+13:52:42.752   Debug Count After             0
+13:52:42.756 
+13:52:42.760   T3dfxProcMainShutDown.Performed
+13:52:42.760   Memory (b)                    69176 (-384)
+13:52:42.768 
+13:52:42.768 TMySettings.ShutDown:
+13:52:42.772   TMySettings Size (b)          108
+13:52:42.772   Document Folder               D:\Programming\Pappas\Grape\Documents\Rooms
+13:52:42.776   Ini FileName                  D:\Programming\Pappas\Grape\DirectX7Project.ini
+13:52:42.776   Ini Lines                     100
+13:52:42.780   Memory (b) Before             69332 (156)
+13:52:42.804   Memory (b) After              68652 (-680)
+13:52:42.804   Mem Allocated                 -696
+13:52:42.808   Memory (b)                    68152 (-500)
+13:52:42.812 
+13:52:42.812 TMyMessageFactory.ShutDown
+13:52:42.812   TMyMessage Size (b)           24
+13:52:42.816   MsgQeue Size (b)              236
+13:52:42.816   Messages Internal             2
+13:52:42.824   Messages Parallell            2
+13:52:42.828   Messages Received             2
+13:52:42.828   Messages Delivered            4
+13:52:42.832   Subscribers                   5
+13:52:42.832     TObjectListFrame            Uid = 1
+13:52:42.840     TObjectFrame                Uid = 2
+13:52:42.840     TSceenFrame                 Uid = 3
+13:52:42.844     T3dfxViewPort               Uid = 4
+13:52:42.844     TSubPropFrame               Uid = 5
+13:52:42.848   Subscriptions                 8
+13:52:42.848     TMsgObjSelect               TObjectListFrame (1)
+13:52:42.856     TMsgSceneChg                TObjectListFrame (1)
+13:52:42.860     TMsgObjStruct               TObjectListFrame (1)
+13:52:42.860     TMsgObjSelect               TObjectFrame (2)
+13:52:42.864     TMsgSceneChg                TSceenFrame (3)
+13:52:42.864     TMsgObjSelect               T3dfxViewPort (4)
+13:52:42.868     TMsgObjMoved                TSubPropFrame (5)
+13:52:42.868     TMsgObjSelect               TSubPropFrame (5)
+13:52:42.876   Undelivered                   0
+13:52:42.876   PostMsg                       4,778
+13:52:42.880   GetMsg                        0,004
+13:52:42.880   Mem Allocated                 -416
+13:52:42.884   Memory (b)                    67736 (-416)
+13:52:42.884 
+13:52:42.892 TMyObjActionFactory.ShutDown
+13:52:42.896   Action Size                   12
+13:52:42.896   Action Count                  0
+13:52:42.900   Action Count Max              0
+13:52:42.900   Action CLasses                19
+13:52:42.904     TMyObjActionBaseProc
+13:52:42.904     TMyObjActionGenShipProc
+13:52:42.912     TMyObjActionMove
+13:52:42.912     TMyObjActionSearchEnemy
+13:52:42.916     TMyObjActionGoHome
+13:52:42.916     TMyObjActionMotherBombEnemy
+13:52:42.920     TMyObjActionDockShip
+13:52:42.920     TMyObjActionBombEnemy
+13:52:42.928     TMyObjActionMotherShip
+13:52:42.932     TMyObjActionGoEnemy
+13:52:42.932     TMyObjActionBomberToEnemy
+13:52:42.936     TMyObjActionLaunchShip
+13:52:42.936     TMyObjActionTrackObj
+13:52:42.940     TMyObjActionTrackRandom
+13:52:42.940     TMyObjActionFlash
+13:52:42.948     TMyObjActionFire
+13:52:42.948     TMyObjActionScale
+13:52:42.952     TMyObjActionTime
+13:52:42.952     TMyObjActionRotate
+13:52:42.956   ActionList Size               56
+13:52:42.964   ActionList Count              0
+13:52:42.964   ActionList Count Max          0
+13:52:42.968 
+13:52:42.968 Main Ending.ShutDown:
+13:52:42.972   T3dfxBase Count               0
+13:52:42.972   T3dfxBase Max                 9
+13:52:42.976   T3dfxExt Count                0
+13:52:42.976   T3dfxHit Count                0
+13:52:42.984   T3dfxVertex Count             0
+13:52:42.984   T3dfxVertexList Count         0
+13:52:42.988   T3dfxVertexBuffer Count       0
+13:52:42.988   TTempDataBase Count           0
+13:52:42.992 
+13:52:43.000 TGenObject.ShutDown:
+13:52:43.000   TGenObject Count              0
+13:52:43.004   TGenObject Max                1159
+13:52:43.004   TDebugObjectList Count        0
+13:52:43.008   TDebugObjectList Max          13
+13:52:43.008   TMyTextFile Count             0
+13:52:43.44    Memory (b) Project End        58688 (-9048)
+13:52:43.48    Memory (b) Main Destroyed     56824 (-10912)

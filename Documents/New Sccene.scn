@@ -1,0 +1,26 @@
+<Version=1>
+<Sceen="New Sccene">
+<File="E:\My Projects\Grape\Documents\New Sccene.scn">
+<Folder="E:\My Projects\Grape\Documents">
+<EyeOrg=0;0;-10>
+<EyeAng=0;-1;0;0>
+<Color=0;0;0;0>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=0>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=0>
+<OcclusionOn=0>
+<OcclusionArea=5000>
+<WaitState=0>
+</Sceen>

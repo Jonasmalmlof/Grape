@@ -1,0 +1,105 @@
+<Version=1>
+<Comp="Sun System">
+<Object="T3dfxContainer">
+<Name="Sun System">
+<Uid=2>
+<CalcNum=0>
+<Org=0;0;0>
+<Scl=1;1;-1>
+<Quat=0;-0.759008;0;-0.655281>
+<Light="T3dfxLightPoint">
+<Use=-1>
+<Name="Sun">
+<Color=1;1;1;0>
+<Factor=5>
+<Ambient=0.6>
+<Diffuse=0.6>
+<Specular=0.6>
+<Range=100>
+</Light>
+<Object="T3dfxGlobe">
+<Name="Sun Surface">
+<Uid=3>
+<CalcNum=20>
+<Org=0;0;0>
+<Quat=-0.000711869;0.00759192;-0.000722764;-0.999598>
+<EyePnt=0.5;0;0>
+<Action="TMyObjActionRotate">
+<AfMaxRng=0;0;0>
+<AfAngVel=0;2.57771;0>
+</Action>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Space\Sun2.jpg">
+<Size=0.3;0.3;0.3>
+</Object>
+<Object="T3dfxContainer">
+<Name="Earth System">
+<Uid=4>
+<CalcNum=0>
+<Org=5;0;0>
+<Object="T3dfxGlobe">
+<Name="Earth Surface">
+<Uid=5>
+<CalcNum=20>
+<Org=0;0;0>
+<Quat=0;0.645382;0;-0.763618>
+<EyePnt=0.5;0;0>
+<Action="TMyObjActionRotate">
+<AfMaxRng=0;0;0>
+<AfAngVel=0;-0.64443;0>
+</Action>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Space\earth.jpg">
+</Object>
+<Object="T3dfxGlobe">
+<Name="Moon Surface">
+<Uid=6>
+<CalcNum=20>
+<Org=1.25899;0;0>
+<EyePnt=0.5;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Space\Moon2.jpg">
+<Size=0.3;0.3;0.3>
+</Object>
+<Action="TMyObjActionRotate">
+<AfMaxRng=0;0;0>
+<AfAngVel=0;-1.61107;0>
+</Action>
+</Object>
+<Object="T3dfxContainer">
+<Name="Jupiter System">
+<Uid=7>
+<CalcNum=0>
+<Org=0;0;0>
+<Quat=-0.000712312;-0.31732;-0.000356264;-0.952346>
+<Object="T3dfxGlobe">
+<Name="Jupiter">
+<Uid=8>
+<CalcNum=20>
+<Org=10;0;0>
+<Scl=0.3;0.3;0.3>
+<Quat=0;0.785287;0;0.610332>
+<EyePnt=0.15;0;0>
+<Object="T3dfxTube">
+<Name="Jupiter Rings">
+<Uid=9>
+<CalcNum=20>
+<Org=0;0;0>
+<Quat=0.149438;0;0;0.988771>
+<EyePnt=0.5;0;0>
+<Color=1;0.2;0;0>
+<Size=1.2;0;1.9>
+</Object>
+<Color=1;0.5;0;0>
+</Object>
+<Action="TMyObjActionRotate">
+<AfMaxRng=0;0;0>
+<AfAngVel=0;-0.64443;0>
+</Action>
+</Object>
+<Action="TMyObjActionRotate">
+<AfMaxRng=0;0;0>
+<AfAngVel=0;0.161107;0>
+</Action>
+</Object>
+</Comp>

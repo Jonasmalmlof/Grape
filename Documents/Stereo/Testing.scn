@@ -1,0 +1,32 @@
+<Version=1>
+<Sceen="Testing">
+<File="E:\My Projects\Grape\Documents\Stereo\Testing.scn">
+<Folder="E:\My Projects\Grape\Documents\Stereo">
+<EyeOrg=1.93422;1.99882;-2.82153>
+<EyeAng=0.179915;-0.224694;0.0422536;0.956743>
+<Color=0;0;0;0>
+<Fog=0>
+<FogMin=10>
+<FogMax=20>
+<Ambient=0.3>
+<Persp=-1>
+<LookAtInd=0>
+<WorldLines=-1>
+<XyzLines=-1>
+<GridOn=0>
+<GridSize=0.1;0.1;0.1>
+<GridAng=0.0872665>
+<GridScl=0.1>
+<SnapOn=0>
+<Precision=0>
+<FrustumOn=0>
+<OcclusionOn=0>
+<OcclusionArea=5000>
+<WaitState=0>
+<Object="T3dfxCompInst">
+<Name="TV Table">
+<Uid=8>
+<Org=0;0;0>
+<CompFile="E:\My Projects\Grape\Documents\Stereo\TV Table.cmp">
+</Object>
+</Sceen>

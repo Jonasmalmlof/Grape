@@ -1,0 +1,735 @@
+Classes in Hiearchy:
+
+TObject
+  Size: 4(b)
+  Sub Classes:
+    T3dfxProcList
+      Size: 8(b)
+      Module: T3dfxProcBaseUnit.pas
+    T3dfxRenderer
+      Size: 160(b)
+      Module: T3dfxRendererUnit.pas
+    T3dfxRenderObj
+      Size: 156(b)
+      Module: T3dfxRendererUnit.pas
+    T3dfxViewPort
+      Size: 468(b)
+      Module: T3dfxViewPortUnit.pas
+    TCustomIniFile
+      Size: 8(b)
+      Sub Classes:
+        TIniFile
+          Size: 8(b)
+          Sub Classes:
+            TGenIniFile
+              Size: 8(b)
+              Module: TGenIniFileUnit.pas
+    TGenAppPropBase
+      Size: 20(b)
+      Module: TGenAppPropUnit.pas
+      Sub Classes:
+        TGenAppPropBool
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropColor
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropCustomColors
+          Size: 28(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropDouble
+          Size: 32(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropFont
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropInt
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropPoint
+          Size: 28(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropRect
+          Size: 36(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropString
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+        TGenAppPropStringList
+          Size: 24(b)
+          Module: TGenAppPropUnit.pas
+    TGenAppPropList
+      Size: 8(b)
+      Module: TGenAppPropUnit.pas
+    TGenHsv
+      Size: 16(b)
+      Module: TGenHsvUnit.pas
+    TGenLog
+      Size: 480(b)
+      Module: TGenLogUnit.pas
+    TGenObject
+      Size: 4(b)
+      Module: TGenObjectUnit.pas
+      Sub Classes:
+        T3dfx
+          Size: 88(b)
+          Module: T3dfxUnit.pas
+        T3dfxBase
+          Size: 264(b)
+          Module: T3dfxBaseUnit.pas
+          Sub Classes:
+            T3dfxViewBase
+              Size: 368(b)
+              Module: T3dfxViewBaseUnit.pas
+              Sub Classes:
+                T3dfxChildBase
+                  Size: 380(b)
+                  Module: T3dfxChildBaseUnit.pas
+                  Sub Classes:
+                    T3dfxActionBase
+                      Size: 384(b)
+                      Module: T3dfxActionBaseUnit.pas
+                      Sub Classes:
+                        T3dfxPropBase
+                          Size: 384(b)
+                          Module: T3dfxPropBaseUnit.pas
+                          Sub Classes:
+                            T3dfxCompInst
+                              Size: 388(b)
+                              Module: T3dfxCompInstUnit.pas
+                            T3dfxContainer
+                              Size: 384(b)
+                              Module: T3dfxContainerUnit.pas
+                              Sub Classes:
+                                T3dfxComponent
+                                  Size: 388(b)
+                                  Module: T3dfxComponentUnit.pas
+                                T3dfxLightContainer
+                                  Size: 384(b)
+                                  Module: T3dfxLightContainerUnit.pas
+                            T3dfxPrim
+                              Size: 428(b)
+                              Module: T3dfxPrimUnit.pas
+                              Sub Classes:
+                                T3dfxMesh
+                                  Size: 460(b)
+                                  Module: T3dfxMeshUnit.pas
+                                  Sub Classes:
+                                    T3dfxMeshFile
+                                      Size: 464(b)
+                                      Module: T3dfxMeshFileUnit.pas
+                                    T3dfxMeshText
+                                      Size: 480(b)
+                                      Module: T3dfxMeshTextUnit.pas
+                                T3dfxVertexed
+                                  Size: 440(b)
+                                  Module: T3dfxVertexedUnit.pas
+                                  Sub Classes:
+                                    T3dfxConLine
+                                      Size: 480(b)
+                                      Module: T3dfxConLineUnit.pas
+                                    T3dfxEyeView
+                                      Size: 440(b)
+                                      Module: T3dfxEyeViewUnit.pas
+                                    T3dfxLineList
+                                      Size: 440(b)
+                                      Module: T3dfxLineListUnit.pas
+                                      Sub Classes:
+                                        T3dfxExtentBoxSimple
+                                          Size: 448(b)
+                                          Module: T3dfxExtentBoxSimpleUnit.pas
+                                        T3dfxLaserLine
+                                          Size: 504(b)
+                                          Module: T3dfxLaserLineUnit.pas
+                                        T3dfxLine
+                                          Size: 444(b)
+                                          Module: T3dfxLineUnit.pas
+                                          Sub Classes:
+                                            T3dfxDebugLine
+                                              Size: 448(b)
+                                              Module: T3dfxDebugLineUnit.pas
+                                        T3dfxOcclusionBox
+                                          Size: 512(b)
+                                          Module: T3dfxOcclusionBoxUnit.pas
+                                        T3dfxScreenLine
+                                          Size: 440(b)
+                                          Module: T3dfxScreenLineUnit.pas
+                                        T3dfxWorld
+                                          Size: 440(b)
+                                          Module: T3dfxWorldUnit.pas
+                                    T3dfxPointList
+                                      Size: 440(b)
+                                      Module: T3dfxPointListUnit.pas
+                                      Sub Classes:
+                                        T3dfxBeacon
+                                          Size: 448(b)
+                                          Module: T3dfxBeaconUnit.pas
+                                        T3dfxGalax
+                                          Size: 440(b)
+                                          Module: T3dfxGalaxUnit.pas
+                                        T3dfxGrid
+                                          Size: 440(b)
+                                          Module: T3dfxGridUnit.pas
+                                        T3dfxPointFire
+                                          Size: 440(b)
+                                          Module: T3dfxPointFireUnit.pas
+                                        T3dfxScraps
+                                          Size: 468(b)
+                                          Module: T3dfxScrapsUnit.pas
+                                    T3dfxShockWave
+                                      Size: 464(b)
+                                      Module: T3dfxShockWaveUnit.pas
+                                    T3dfxTriStripe
+                                      Size: 440(b)
+                                      Module: T3dfxTriStripeUnit.pas
+                                      Sub Classes:
+                                        T3dfxArrow
+                                          Size: 440(b)
+                                          Module: T3dfxArrowUnit.pas
+                                        T3dfxBoard
+                                          Size: 440(b)
+                                          Module: T3dfxBoardUnit.pas
+                                        T3dfxBullet
+                                          Size: 476(b)
+                                          Module: T3dfxBulletUnit.pas
+                                        T3dfxRocket
+                                          Size: 504(b)
+                                          Module: T3dfxRocketUnit.pas
+                                        T3dfxTexture
+                                          Size: 480(b)
+                                          Module: T3dfxTextureUnit.pas
+                                          Sub Classes:
+                                            T3dfxDynamic
+                                              Size: 504(b)
+                                              Module: T3dfxDynamicUnit.pas
+                                              Sub Classes:
+                                                T3dfxCube
+                                                  Size: 536(b)
+                                                  Module: T3dfxCubeUnit.pas
+                                                T3dfxGlobe
+                                                  Size: 504(b)
+                                                  Module: T3dfxGlobeUnit.pas
+                                                  Sub Classes:
+                                                    T3dfxEye
+                                                      Size: 504(b)
+                                                      Module: T3dfxEyeUnit.pas
+                                                T3dfxRect
+                                                  Size: 508(b)
+                                                  Module: T3dfxRectUnit.pas
+                                                T3dfxTube
+                                                  Size: 508(b)
+                                                  Module: T3dfxTubeUnit.pas
+                                            T3dfxTriComp
+                                              Size: 484(b)
+                                              Module: T3dfxTriCompUnit.pas
+                                        T3dfxTriEdit
+                                          Size: 472(b)
+                                          Module: T3dfxTriEditUnit.pas
+                                    T3dfxXyxLines
+                                      Size: 440(b)
+                                      Module: T3dfxXyxLinesUnit.pas
+        T3dfxCompType
+          Size: 20(b)
+          Module: T3dfxCompTypeUnit.pas
+        T3dfxExtent
+          Size: 32(b)
+          Module: T3dfxExtentUnit.pas
+        T3dfxHit
+          Size: 176(b)
+          Module: T3dfxHitUnit.pas
+        T3dfxLight
+          Size: 160(b)
+          Module: T3dfxLightUnit.pas
+          Sub Classes:
+            T3dfxLightFlash
+              Size: 184(b)
+              Module: T3dfxLightFlashUnit.pas
+            T3dfxLightPoint
+              Size: 160(b)
+              Module: T3dfxLightPointUnit.pas
+            T3dfxLightSpot
+              Size: 160(b)
+              Module: T3dfxLightSpotUnit.pas
+        T3dfxLightList
+          Size: 24(b)
+          Module: T3dfxLightListUnit.pas
+        T3dfxObjectFileId
+          Size: 8(b)
+          Module: T3dfxObjectFileIdsUnit.pas
+        T3dfxObjectListBase
+          Size: 24(b)
+          Module: T3dfxObjectListBaseUnit.pas
+          Sub Classes:
+            T3dfxCompObjectList
+              Size: 24(b)
+              Module: T3dfxCompObjectListUnit.pas
+            T3dfxObjectChildList
+              Size: 28(b)
+              Module: T3dfxObjectChildListUnit.pas
+            T3dfxObjectList
+              Size: 28(b)
+              Module: T3dfxObjectListUnit.pas
+        T3dfxProcBase
+          Size: 4(b)
+          Module: T3dfxProcBaseUnit.pas
+          Sub Classes:
+            T3dfxProcAppInit
+              Size: 4(b)
+              Module: T3dfxProcAppInitUnit.pas
+            T3dfxProcConLineEdit
+              Size: 44(b)
+              Module: T3dfxProcConLineEditUnit.pas
+            T3dfxProcKeys
+              Size: 8(b)
+              Module: T3dfxProcKeysUnit.pas
+            T3dfxProcLineEdit
+              Size: 52(b)
+              Module: T3dfxProcLineEditUnit.pas
+            T3dfxProcMainShutDown
+              Size: 4(b)
+              Module: T3dfxProcMainShutDownUnit.pas
+            T3dfxProcObjBase
+              Size: 12(b)
+              Module: T3dfxProcObjBaseUnit.pas
+            T3dfxProcObjEdit
+              Size: 100(b)
+              Module: T3dfxProcObjEditUnit.pas
+            T3dfxProcRender
+              Size: 76(b)
+              Module: T3dfxProcRenderUnit.pas
+        T3dfxSceen
+          Size: 100(b)
+          Module: T3dfxSceenUnit.pas
+        T3dfxScenePick
+          Size: 16(b)
+          Module: T3dfxScenePickUnit.pas
+        T3dfxTextureD3D
+          Size: 16(b)
+          Module: T3dfxTextureD3DUnit.pas
+        T3dfxVertex
+          Size: 40(b)
+          Module: T3dfxVertexUnit.pas
+        T3dfxVertexBuffer
+          Size: 36(b)
+          Module: T3dfxVertexBufferUnit.pas
+          Sub Classes:
+            T3dfxVbArrow
+              Size: 36(b)
+              Module: T3dfxVbArrowUnit.pas
+            T3dfxVbBoard
+              Size: 36(b)
+              Module: T3dfxVbBoardUnit.pas
+            T3dfxVbBullet
+              Size: 36(b)
+              Module: T3dfxVbBulletUnit.pas
+            T3dfxVbConLine
+              Size: 36(b)
+              Module: T3dfxVbConLineUnit.pas
+            T3dfxVbCubeNormal
+              Size: 100(b)
+              Module: T3dfxVbCubeNormalUnit.pas
+            T3dfxVbCubeTexture
+              Size: 128(b)
+              Module: T3dfxVbCubeTextureUnit.pas
+            T3dfxVbExtentBox
+              Size: 48(b)
+              Module: T3dfxVbExtentBoxUnit.pas
+            T3dfxVbExtentBoxSimple
+              Size: 44(b)
+              Module: T3dfxVbExtentBoxSimpleUnit.pas
+            T3dfxVbGalax
+              Size: 36(b)
+              Module: T3dfxVbGalaxUnit.pas
+            T3dfxVbGrid
+              Size: 36(b)
+              Module: T3dfxVbGridUnit.pas
+            T3dfxVbLaserLine
+              Size: 36(b)
+              Module: T3dfxVbLaserLineUnit.pas
+            T3dfxVbLineList
+              Size: 36(b)
+              Module: T3dfxVbLineListUnit.pas
+            T3dfxVbLookAt
+              Size: 36(b)
+              Module: T3dfxVbLookAtUnit.pas
+            T3dfxVbNormals
+              Size: 44(b)
+              Module: T3dfxVbNormalsUnit.pas
+            T3dfxVbPointFire
+              Size: 60(b)
+              Module: T3dfxVbPointFireUnit.pas
+            T3dfxVbPositions
+              Size: 52(b)
+              Module: T3dfxVbPositionsUnit.pas
+            T3dfxVbRay
+              Size: 36(b)
+              Module: T3dfxVbRayUnit.pas
+            T3dfxVbRays
+              Size: 10072(b)
+              Module: T3dfxVbRaysUnit.pas
+            T3dfxVbRectNormal
+              Size: 36(b)
+              Module: T3dfxVbRectNormalUnit.pas
+            T3dfxVbRectTexture
+              Size: 36(b)
+              Module: T3dfxVbRectTextureUnit.pas
+            T3dfxVbRocket
+              Size: 56(b)
+              Module: T3dfxVbRocketUnit.pas
+            T3dfxVbScent
+              Size: 36(b)
+              Module: T3dfxVbScentUnit.pas
+            T3dfxVbScraps
+              Size: 36(b)
+              Module: T3dfxVbScrapsUnit.pas
+            T3dfxVbShockWave
+              Size: 36(b)
+              Module: T3dfxVbShockWaveUnit.pas
+            T3dfxVbSphereNormal
+              Size: 36(b)
+              Module: T3dfxVbSphereNormalUnit.pas
+            T3dfxVbSphereTexture
+              Size: 36(b)
+              Module: T3dfxVbSphereTextureUnit.pas
+            T3dfxVbTriangle
+              Size: 40(b)
+              Module: T3dfxVbTriangleUnit.pas
+            T3dfxVbTriStripe
+              Size: 52(b)
+              Module: T3dfxVbTriStripeUnit.pas
+            T3dfxVbTubeNormal
+              Size: 36(b)
+              Module: T3dfxVbTubeNormalUnit.pas
+            T3dfxVbTubeTexture
+              Size: 36(b)
+              Module: T3dfxVbTubeTextureUnit.pas
+            T3dfxVbWorld
+              Size: 36(b)
+              Module: T3dfxVbWorldUnit.pas
+            T3dfxVbXyzLines
+              Size: 48(b)
+              Module: T3dfxVbXyzLinesUnit.pas
+        T3dfxVertexList
+          Size: 16(b)
+          Module: T3dfxVertexUnit.pas
+        TFpsTimer
+          Size: 32(b)
+          Module: TFpsTimerUnit.pas
+        TGenAverage
+          Size: 16(b)
+          Module: TGenAverageUnit.pas
+        TGenClasses
+          Size: 4(b)
+          Module: TGenClassesUnit.pas
+        TGenSleep
+          Size: 16(b)
+          Module: TGenSleepUnit.pas
+        TGenStrObj
+          Size: 8(b)
+          Module: TGenStrObjUnit.pas
+          Sub Classes:
+            T3dfxStrObj
+              Size: 8(b)
+              Module: T3dfxStrObjUnit.pas
+        TMyClass
+          Size: 32(b)
+          Module: TGenClassesUnit.pas
+        TMyClassList
+          Size: 8(b)
+          Module: TGenClassesUnit.pas
+        TMyFactoryBase
+          Size: 4(b)
+          Module: TMyFactoryBaseUnit.pas
+          Sub Classes:
+            T3dfxBaseFactory
+              Size: 28(b)
+              Module: T3dfxBaseFactoryUnit.pas
+            T3dfxCompFactory
+              Size: 12(b)
+              Module: T3dfxCompFactoryUnit.pas
+            T3dfxLightFactory
+              Size: 12(b)
+              Module: T3dfxLightFactoryUnit.pas
+            T3dfxObjectFileIdList
+              Size: 8(b)
+              Module: T3dfxObjectFileIdsUnit.pas
+            T3dfxSceneFactory
+              Size: 4(b)
+              Module: T3dfxSceneFactoryUnit.pas
+            T3dfxTextureFactory
+              Size: 8(b)
+              Module: T3dfxTextureD3DUnit.pas
+            TMyMenuList
+              Size: 20(b)
+              Module: TMyMenuUnit.pas
+            TMyMessageFactory
+              Size: 60(b)
+              Module: TMyMessageFactoryUnit.pas
+            TMyObjActionFactory
+              Size: 16(b)
+              Module: TMyObjActionFactoryUnit.pas
+        TMyMenuBase
+          Size: 16(b)
+          Module: TMyMenuUnit.pas
+        TMyModule
+          Size: 32(b)
+          Module: TGenClassesUnit.pas
+        TMyModuleList
+          Size: 20(b)
+          Module: TGenClassesUnit.pas
+        TMyObjActionList
+          Size: 56(b)
+          Module: TMyObjActionListUnit.pas
+        TMySettings
+          Size: 108(b)
+          Module: TMySettingsUnit.pas
+        TMySubscription
+          Size: 12(b)
+          Module: TMyMessageFactoryUnit.pas
+        TMySymbol
+          Size: 20(b)
+          Module: TGenClassesUnit.pas
+        TMySymbolList
+          Size: 8(b)
+          Module: TGenClassesUnit.pas
+        TPropNode
+          Size: 84(b)
+          Module: TPropNodeUnit.pas
+          Sub Classes:
+            TPropNodeBool
+              Size: 92(b)
+              Module: TPropNodeUnit.pas
+            TPropNodeNovalue
+              Size: 88(b)
+              Module: TPropNodeUnit.pas
+            TPropNodeSingle
+              Size: 116(b)
+              Module: TPropNodeUnit.pas
+              Sub Classes:
+                TPropNodeInteger
+                  Size: 120(b)
+                  Module: TPropNodeUnit.pas
+            TPropNodeText
+              Size: 88(b)
+              Module: TPropNodeUnit.pas
+            TPropNodeTypes
+              Size: 100(b)
+              Module: TPropNodeUnit.pas
+    TGenPickFolder
+      Size: 16(b)
+      Module: TGenPickFolderUnit.pas
+    TGenTextFile
+      Size: 476(b)
+      Module: TGenTextFileUnit.pas
+      Sub Classes:
+        T3dfxObjectFile
+          Size: 500(b)
+          Module: T3dfxObjectFileUnit.pas
+    TGenTime
+      Size: 200(b)
+      Module: TGenTimeUnit.pas
+    THsvBaseFrame
+      Size: 44(b)
+      Module: THsvBaseFrameUnit.pas
+      Sub Classes:
+        THsvHueCircleFrame
+          Size: 68(b)
+          Module: THsvHueCircleFrameUnit.pas
+        THsvHueFrame
+          Size: 44(b)
+          Module: THsvHueFrameUnit.pas
+        THsvSatFrame
+          Size: 44(b)
+          Module: THsvSatFrameUnit.pas
+        THsvSatValFrame
+          Size: 44(b)
+          Module: THsvSatValFrameUnit.pas
+        THsvValueFrame
+          Size: 44(b)
+          Module: THsvValueFrameUnit.pas
+    THsvHueSatFrame
+      Size: 44(b)
+      Module: THsvHueSatFrameUnit.pas
+    TList
+      Size: 16(b)
+      Sub Classes:
+        TObjectList
+          Size: 20(b)
+          Sub Classes:
+            TDebugObjectList
+              Size: 20(b)
+              Module: TGenObjectUnit.pas
+    TMyMessage
+      Size: 24(b)
+      Module: TMyMessageFactoryUnit.pas
+    TMyObjActionBase
+      Size: 12(b)
+      Module: TMyObjActionBaseUnit.pas
+      Sub Classes:
+        TMyObjActionBaseProc
+          Size: 28(b)
+          Module: TMyObjActionBaseProcUnit.pas
+          Sub Classes:
+            TMyObjActionDockShip
+              Size: 112(b)
+              Module: TMyObjActionDockShipUnit.pas
+            TMyObjActionLaunchShip
+              Size: 36(b)
+              Module: TMyObjActionLaunchShipUnit.pas
+            TMyObjActionSearchEnemy
+              Size: 88(b)
+              Module: TMyObjActionSearchEnemyUnit.pas
+            TMyObjActionTrackRandom
+              Size: 52(b)
+              Module: TMyObjActionTrackRandomUnit.pas
+              Sub Classes:
+                TMyObjActionBombEnemy
+                  Size: 68(b)
+                  Module: TMyObjActionBombEnemyUnit.pas
+                TMyObjActionGoEnemy
+                  Size: 88(b)
+                  Module: TMyObjActionGoEnemyUnit.pas
+                  Sub Classes:
+                    TMyObjActionBomberToEnemy
+                      Size: 88(b)
+                      Module: TMyObjActionBomberToEnemyUnit.pas
+                TMyObjActionGoHome
+                  Size: 80(b)
+                  Module: TMyObjActionGoHomeUnit.pas
+        TMyObjActionFire
+          Size: 68(b)
+          Module: TMyObjActionFireUnit.pas
+        TMyObjActionFlash
+          Size: 76(b)
+          Module: TMyObjActionFlashUnit.pas
+        TMyObjActionMotherShip
+          Size: 44(b)
+          Module: TMyObjActionMotherShipUnit.pas
+        TMyObjActionMove
+          Size: 40(b)
+          Module: TMyObjActionMoveUnit.pas
+        TMyObjActionRotate
+          Size: 76(b)
+          Module: TMyObjActionRotateUnit.pas
+        TMyObjActionScale
+          Size: 40(b)
+          Module: TMyObjActionScaleUnit.pas
+        TMyObjActionTime
+          Size: 28(b)
+          Module: TMyObjActionTimeUnit.pas
+        TMyObjActionTrackObj
+          Size: 40(b)
+          Module: TMyObjActionTrackObjUnit.pas
+    TPersistent
+      Size: 4(b)
+      Sub Classes:
+        TComponent
+          Size: 48(b)
+          Sub Classes:
+            TCommonDialog
+              Size: 88(b)
+              Sub Classes:
+                TOpenDialog
+                  Size: 180(b)
+                  Sub Classes:
+                    TGenOpenDialog
+                      Size: 192(b)
+                      Module: TGenOpenDialogUnit.pas
+                    TSaveDialog
+                      Size: 184(b)
+                      Sub Classes:
+                        TGenSaveAsDialog
+                          Size: 192(b)
+                          Module: TGenSaveAsDialogUnit.pas
+            TControl
+              Size: 348(b)
+              Sub Classes:
+                TWinControl
+                  Size: 516(b)
+                  Sub Classes:
+                    TCustomEdit
+                      Size: 544(b)
+                      Sub Classes:
+                        TCustomMemo
+                          Size: 556(b)
+                          Sub Classes:
+                            TCustomRichEdit
+                              Size: 648(b)
+                              Sub Classes:
+                                TGenRtfFile
+                                  Size: 664(b)
+                                  Module: TGenRtfFileUnit.pas
+                    TScrollingWinControl
+                      Size: 540(b)
+                      Sub Classes:
+                        TCustomForm
+                          Size: 760(b)
+                          Sub Classes:
+                            TForm
+                              Size: 760(b)
+                              Sub Classes:
+                                TGenColorPick
+                                  Size: 2248(b)
+                                  Module: TGenColorPickUnit.pas
+                                TGenPickFont
+                                  Size: 828(b)
+                                  Module: TGenPickFontUnit.pas
+                                TGenProgressWin
+                                  Size: 780(b)
+                                  Module: TGenProgressWinUnit.pas
+                                TGrapeMain
+                                  Size: 864(b)
+                                  Module: DirectX7Unit.pas
+                                TTimeZoneDlg
+                                  Size: 788(b)
+                                  Module: TTimeZoneDlgUnit.pas
+                        TCustomFrame
+                          Size: 544(b)
+                          Sub Classes:
+                            TFrame
+                              Size: 544(b)
+                              Sub Classes:
+                                TFrame1
+                                  Size: 552(b)
+                                  Module: TFrame1Unit.pas
+                                TLogFrame
+                                  Size: 588(b)
+                                  Module: TLogFrameUnit.pas
+                                TObjectFrame
+                                  Size: 600(b)
+                                  Module: ObjectFrameUnit.pas
+                                TObjectListFrame
+                                  Size: 596(b)
+                                  Module: TObjectListFrameUnit.pas
+                                TSceenFrame
+                                  Size: 604(b)
+                                  Module: TSceenFrameUnit.pas
+                                TSubPropFrame
+                                  Size: 652(b)
+                                  Module: TSubPropFrameUnit.pas
+                                TTextureFrame
+                                  Size: 616(b)
+                                  Module: TTextureFrameUnit.pas
+                                TTrackFrame
+                                  Size: 728(b)
+                                  Module: TTrackFrameUnit.pas
+    TPropNodeList
+      Size: 12(b)
+      Module: TPropNodeUnit.pas
+    TTempDataBase
+      Size: 4(b)
+      Module: TTempDataBaseUnit.pas
+      Sub Classes:
+        TGenAmmoData
+          Size: 12(b)
+          Module: TGenAmmoDataUnit.pas
+        TGenShipData
+          Size: 60(b)
+          Module: TGenShipDataUnit.pas
+          Sub Classes:
+            TBombShipData
+              Size: 60(b)
+              Module: TBombShipDataUnit.pas
+            TScoutShipData
+              Size: 60(b)
+              Module: TScoutShipDataUnit.pas

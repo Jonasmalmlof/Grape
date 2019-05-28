@@ -1,0 +1,15 @@
+<Version=1>
+<Comp="Fire DCB">
+<Object="T3dfxCube">
+<Name="Fire DCB">
+<Uid=25>
+<CalcNum=1>
+<Org=0;0;0>
+<Scl=0.21;0.04;0.16>
+<CenterY=0>
+<VelMax=0.1>
+<EyePnt=0.105;0;0>
+<TxtUse=-1>
+<TxtFile="E:\My Projects\Grape\Documents\Stereo\FireDv.jpg">
+</Object>
+</Comp>
